@@ -1,0 +1,34 @@
+\documentclass[11pt]{article}
+\usepackage{acl2012}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+
+\title{GMM 2012 Project Ideas}
+
+\author{Aidan Coyne \\
+    UT Austin\\
+    Computer Science\\
+  {\tt coynea90@gmail.com} \\}
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Idea: second-order vectors for geolocation}
+second order vector spaces (if I understand this correctly) first build a normal vector space, then 
+builds the second-order vector for each target word by combining the first-order vector for each context-word.
+This could be useful for geolocation.
+A possible design: first, generate a standard first-order lexical, distributional space over the input documents.
+Then, for each location-thing in the geo model, find its context words. Combine
+the first-order vectors for those context words.
+Feed this into the geolocation model (textgrounder).
+TODO: find and assemble references for second-order vectors, geolocation.
+
+\end{document}
