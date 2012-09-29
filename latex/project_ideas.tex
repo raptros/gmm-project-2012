@@ -22,13 +22,42 @@
 \maketitle
 
 \section{Idea: second-order vectors for geolocation}
-second order vector spaces (if I understand this correctly) first build a normal vector space, then 
-builds the second-order vector for each target word by combining the first-order vector for each context-word.
-This could be useful for geolocation.
-A possible design: first, generate a standard first-order lexical, distributional space over the input documents.
-Then, for each location-thing in the geo model, find its context words. Combine
-the first-order vectors for those context words.
-Feed this into the geolocation model (textgrounder).
-TODO: find and assemble references for second-order vectors, geolocation.
+\cite{schutze98} suggests that second-order co-occurrence representations are
+less sparse than first order models.
+Such a model might be helpful for geolocation tasks, which have to use the
+relatively limited resources of geotagged text.
 
+As explained in \cite{skiles12}, geolocation can be considered an
+information-retrieval task; by combining the text of geotagged documents that
+fall in the same cells, pseudo-documents can be constructed to represent each
+region on the map - location prediction is then pseudo-document retrieval.
+A simple model constructs cells by simply dividing the world up into a uniform grid,
+but more advanced techniques for determining regions are possible;
+for instance, the adaptive grid approach of \cite{adaptivegrid}.
+This approach deals with document-density differences across regions by using
+kd-trees to divide the world into varying-sized cells; the model works to
+obtain evenly-sized pseudo-documents over all the cells. This adds other
+parameters, such as bucket-size cutoff, to already present geolocation
+parameters (definitions of region center and document similarity, among others).
+
+These geolocation-as-IR models use first-order frequency to build their
+pseudo-document representations. One possible way to apply the idea of a
+second-order model would be to build both the first-order geographical model
+and a first-order lexical model over the geotagged training set, and then
+construct each second-order pseudo-document by using the weights from the first
+order geographic model to combine the appropriate lexical vectors. 
+The produced model will have the same format as the first-order model, so the
+evaluation techniques of \cite{skiles12} and \cite{adaptivegrid} can still be
+applied.
+Of course, applying such a second order model introduces a further set of
+parameters for tuning, such as the application of frequency-modifications
+(e.g. tf-idf) at any of the stages in producing the model.
+To avoid having to test all the combinations of the text model parameters and
+geographic model parameters, it would make sense to compare to the tunings of
+previous work wherever possible.
+
+
+
+\bibliographystyle{acl2012}
+\bibliography{refs}
 \end{document}
