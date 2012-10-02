@@ -56,7 +56,17 @@ To avoid having to test all the combinations of the text model parameters and
 geographic model parameters, it would make sense to compare to the tunings of
 previous work wherever possible.
 
-
+\section{Label-propogation on Wikipedia}
+An idea related to the above was discussed in class; it involves using label
+propogation to push locational information into non-geotagged wikipedia
+articles.
+The labels for propogation would be cells over the globe.
+The text of each article would then be added to each cell, for use by
+TextGrounder, weighted by the cell's weight on the article.
+This would take advantage of the structural properties of wikipedia to extend 
+the application of geolocation to information in articles outside of the
+geotagged set, and like the previous idea, might reduce the sparseness of the
+geolocation model advantageously.
 
 \bibliographystyle{acl2012}
 \bibliography{refs}
