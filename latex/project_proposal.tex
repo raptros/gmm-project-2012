@@ -1,0 +1,60 @@
+\documentclass[11pt]{article}
+\usepackage{acl2012}
+\usepackage{times}
+\usepackage{latexsym}
+\usepackage{amsmath}
+\usepackage{multirow}
+\usepackage{url}
+\DeclareMathOperator*{\argmax}{arg\,max}
+\setlength\titlebox{6.5cm}    % Expanding the titlebox
+
+
+\title{GMM 2012 Project Proposal}
+
+\author{Aidan Coyne \\
+    UT Austin\\
+    Computer Science\\
+  {\tt coynea90@gmail.com} \\ 
+  \And
+  Prateek Maheshwari\\
+  UT Austin\\} %todo fill this out
+
+\date{}
+
+\begin{document}
+\maketitle
+
+\section{Introduction}
+%motivation - why do we want to do this?
+%well, so that we can investigate the geolocation thing on the much larger non-geotagged section of wikipedia!
+%of course, this isn't straightforward
+Prior work applying geolocation models to Wikipedia has been limited to a small portion of its articles;
+this is simply because most Wikipedia articles do not have geolocation tags.
+This should not be suprising, since most articles on wikipedia are not about specific locations, or objects at specific locations.
+However, there are plenty of articles that may be associated with multiple places; for example, biographical articles may refer to the various locations the subject has lived.
+Using label propogation, it may be possible to get sensible locations associated with the larger set of unlocated Wikipedia articles.
+
+\section{Related Work}
+\par Textgrounder:
+\cite{rolleretal:12}
+
+\par Junto:
+\cite{talukdar:09} \cite{talukdar:10}
+
+\section{Plans}
+\par %simple eval
+How does label propagation perform in comparison to Textgrounder?
+In order to evaluate this, it can be tested on the labeled set of articles the same way as textgrounder is tested -
+labels are left off for a test set, label propogation is run, then the predicted labels are compared to the actual locations of the test set.
+
+\par issues:\\
+-predicted locations from label propogation\\
+-what are the labels going to be? uniform bins vs. kd-trees\\
+-extending to full set.
+
+
+what other things do we want to try?
+
+\bibliographystyle{acl2012}
+\bibliography{refs}
+\end{document}
