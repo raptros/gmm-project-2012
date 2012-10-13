@@ -35,10 +35,16 @@ However, there are plenty of articles that may be associated with multiple place
 Using label propogation, it may be possible to get sensible locations associated with the larger set of unlocated Wikipedia articles.
 
 \section{Related Work}
-\par Textgrounder:
-\cite{rolleretal:12}
+%Geolocation
+Geolocation has been implemented as an information-retrieval task, as in
+\cite{skiles:12}; IR-based implementations divide the world up into cells, each
+of which are considered to be a pseudo-document consisting of text from every
+document appearing in that cell.
+The simplest approach is to divide the world into uniformly-sized cells, but
+\cite{rolleretal:12} use kd-trees to build cells with uniform amounts of text.
+This adaptive grid approach is available in the Textgrounder package.
 
-\par Junto:
+\par
 \cite{talukdar:09} \cite{talukdar:10}
 
 \section{Plans}
@@ -46,6 +52,8 @@ Using label propogation, it may be possible to get sensible locations associated
 How does label propagation perform in comparison to Textgrounder?
 In order to evaluate this, it can be tested on the labeled set of articles the same way as textgrounder is tested -
 labels are left off for a test set, label propogation is run, then the predicted labels are compared to the actual locations of the test set.
+Labels will have to be cells on the map; in the simple case, these are uniformly sized cells.
+A more complex version would use cells produced by Textgrounder's kd-trees.
 
 \par issues:\\
 -predicted locations from label propogation\\
