@@ -17,7 +17,9 @@
   {\tt coynea90@gmail.com} \\ 
   \And
   Prateek Maheshwari\\
-  UT Austin\\} %todo fill this out
+  UT Austin\\
+  Computer Science\\
+  {\tt prateekm@utexas.edu}}
 
 \date{}
 
@@ -48,20 +50,38 @@ This adaptive grid approach is available in the Textgrounder package.
 \cite{talukdar:09} \cite{talukdar:10}
 
 \section{Plans}
-\par %simple eval
-How does label propagation perform in comparison to Textgrounder?
-In order to evaluate this, it can be tested on the labeled set of articles the same way as textgrounder is tested -
-labels are left off for a test set, label propogation is run, then the predicted labels are compared to the actual locations of the test set.
-Labels will have to be cells on the map; in the simple case, these are uniformly sized cells.
-A more complex version would use cells produced by Textgrounder's kd-trees.
-
-\par issues:\\
--predicted locations from label propogation\\
--what are the labels going to be? uniform bins vs. kd-trees\\
--extending to full set.
-
-
-what other things do we want to try?
+\par
+Various options will have to be examined in setting up the label propagation system.
+The labels being propagated will have to represent regions of the world, using
+the same bucket principle as IR-based geolocation; the world can be cut up
+using uniform cells, or using the kd-trees based adaptive grid of
+\cite{rolleretal:12}, among other conceivable methods, though we only intend to
+explore those two.
+Another source of options comes from defining the location prediction output
+from running label propagation.
+The most obvious option for this is to use the highest-valued label as the predicted cell;
+as for the location of that cell, \cite{rolleretal:12} found that the centroid
+of document locations in each cell tended to get the best performance.
+Another possibility that might be worth examining is to take the top $k$ cell
+locations and output their centroid.
+Other issues involve the structure of the graph; for instance, we will have to
+determine if a directed or undirected graph is more suitable.
+Another question is how the density of the graph will affect the performance of
+the label propagation system. % this needs expanding, I don't really get this bit. -Aidan
+\par
+In order to explore these options, it will be helpful to have something to test against;
+the geolocation task itself can be employed.
+Applying a label-propagation model to geolocation should be fairly straightforward; 
+provide known correct labeling for the nodes in the training set, run the label
+propagation system, and examine the labeling of the nodes in the test set.
+To score the models, we will use measures based on error distances.
+\par
+The motivation for all of this is to extend geolocation to the vast unlabeled
+section of wikipedia; with two different models, each with a variety of
+parameters, there are multiple ways to go about this.
+One scheme would be to use the geolocated portion to train Textgrounder and
+compare its predictions for the unlabeled set to the predictions yielded by
+running label propagation over the combined sets.
 
 \bibliographystyle{acl2012}
 \bibliography{refs}
