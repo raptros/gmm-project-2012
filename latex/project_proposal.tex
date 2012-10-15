@@ -9,16 +9,16 @@
 \setlength\titlebox{6.5cm}    % Expanding the titlebox
 
 
-\title{GMM 2012 Project Proposal}
+\title{Geolocating Wikipedia Articles Using Label Propagation}
 
 \author{Aidan Coyne \\
-    UT Austin\\
-    Computer Science\\
+    Department of Computer Science\\
+    The University of Texas at Austin\\
   {\tt coynea90@gmail.com} \\ 
   \And
   Prateek Maheshwari\\
-  UT Austin\\
-  Computer Science\\
+     Department of Computer Science\\
+    The University of Texas at Austin\\
   {\tt prateekm@utexas.edu}}
 
 \date{}
@@ -30,11 +30,20 @@
 %motivation - why do we want to do this?
 %well, so that we can investigate the geolocation thing on the much larger non-geotagged section of wikipedia!
 %of course, this isn't straightforward
-Prior work applying geolocation models to Wikipedia has been limited to a small portion of its articles;
+Prior work applying geolocation models to Wikipedia articles 
+% \cite{wing and baldridge} \cite{rolleretal:12} \cite {efran et al}
+has been limited to a small subset of Wikipedia articles;
 this is simply because most Wikipedia articles do not have geolocation tags.
-This should not be suprising, since most articles on wikipedia are not about specific locations, or objects at specific locations.
-However, there are plenty of articles that may be associated with multiple places; for example, biographical articles may refer to the various locations the subject has lived.
-Using label propogation, it may be possible to get sensible locations associated with the larger set of unlocated Wikipedia articles.
+This should not be surprising, since most articles on wikipedia are not about specific locations, 
+or objects at specific locations.
+However, there are plenty of articles that may be associated with multiple places; 
+for example, biographical articles may refer to the various locations the subject has lived.
+Using label propagation, it may be possible to get sensible locations associated with the larger set of non-geolocated Wikipedia articles.
+Our hypothesis is that we can infer the location for non-geotagged articles 
+by using the location information present in other geotagged articles that they link to. 
+Unlike prior work, this approach makes use of the actual content of the articles in addition to the metadata. 
+We propose to infer the location using label propagation.
+We also propose that these additional geolocatable articles can help improve the language models used for geo-locating other articles.
 
 \section{Related Work}
 %Geolocation
@@ -42,10 +51,11 @@ Geolocation has been implemented as an information-retrieval task, as in
 \cite{skiles:12}; IR-based implementations divide the world up into cells, each
 of which are considered to be a pseudo-document consisting of text from every
 document appearing in that cell.
-The simplest approach is to divide the world into uniformly-sized cells, but
-\cite{rolleretal:12} use kd-trees to build cells with uniform amounts of text.
+The simplest approach is to divide the world into uniformly-sized cells % cite{wing and baldridge}
+, but \cite{rolleretal:12} use kd-trees to build cells with uniform amounts of text.
 This adaptive grid approach is available in the Textgrounder package.
 
+%something on label propogation
 \par
 \cite{talukdar:09} \cite{talukdar:10}
 
@@ -69,6 +79,8 @@ determine if a directed or undirected graph is more suitable.
 Another question is how the density of the graph will affect the performance of
 the label propagation system. % this needs expanding, I don't really get this bit. -Aidan
 \par
+
+\section{Evaluation}
 In order to explore these options, it will be helpful to have something to test against;
 the geolocation task itself can be employed.
 Applying a label-propagation model to geolocation should be fairly straightforward; 
