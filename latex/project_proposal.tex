@@ -97,12 +97,22 @@ While outside the scope of this project, an important problem is to determine th
 that can benefit from label propagation and should be included in the final language model.
 
 \section{Evaluation}
-In order to explore these options, it will be helpful to have something to test against;
-the geolocation task itself can be employed.
-Applying a label-propagation model to geolocation should be fairly straightforward; 
-provide known correct labeling for the nodes in the training set, run the label
-propagation system, and examine the labeling of the nodes in the test set.
-To score the models, we will use measures based on error distances.
+We test the performance of label propagation against the geolocation results from textgrounder. 
+It should be noted that the aim of the project is not to beat the results obtained using textgrounder,
+but instead to get a reasonable geolocation accuracy on non-geotagged articles 
+so that they can be included in the language model for textgrounder cells. 
+If we can obtain an accuracy close to that of textgrounder on the geotagged corpus, 
+we can be sure that the results for non-geotagged documents will be useful.
+
+%Applying a label-propagation model to geolocation should be fairly straightforward; 
+%provide known correct labeling for the nodes in the training set, run the label
+%propagation system, and examine the labeling of the nodes in the test set.
+% - this goes in the plan of work section
+
+To evaluate the performance of the models, we will use measures based on error distances, 
+e.g, mean and median error between predicted and actual distance,  
+instead of IR based methods like precision or recall.
+
 \par
 The motivation for all of this is to extend geolocation to the vast unlabeled
 section of wikipedia; with two different models, each with a variety of
