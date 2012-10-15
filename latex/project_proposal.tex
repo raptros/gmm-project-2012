@@ -32,18 +32,22 @@
 %of course, this isn't straightforward
 Prior work applying geolocation models to Wikipedia articles 
 % \cite{wing and baldridge} \cite{rolleretal:12} \cite {efran et al}
-has been limited to a small subset of Wikipedia articles;
-this is simply because most Wikipedia articles do not have geolocation tags.
-This should not be surprising, since most articles on wikipedia are not about specific locations, 
-or objects at specific locations.
-However, there are plenty of articles that may be associated with multiple places; 
-for example, biographical articles may refer to the various locations the subject has lived.
-Using label propagation, it may be possible to get sensible locations associated with the larger set of non-geolocated Wikipedia articles.
+has been limited to a small subset of Wikipedia articles; 
+namely, those articles that already have geotags associated with them. 
+These articles constitute a relatively small fraction %find actual figure
+of the wikipedia corpus. This isn't surprising, since most articles on wikipedia are not about specific locations, or objects at specific locations.
+However, there are many other articles that may be associated with one or more places; 
+for example, biographical articles may refer to the various locations the subject has lived or worked at.
+
+Even within the geotagged articles, earlier approaches only use the geo-information present in the article metadata, and the article text is used only on a coarse level %rephrase
+by building language models out of it.
+
 Our hypothesis is that we can infer the location for non-geotagged articles 
 by using the location information present in other geotagged articles that they link to. 
-Unlike prior work, this approach makes use of the actual content of the articles in addition to the metadata. 
+Unlike prior work, this approach makes use of the link structure of the articles in addition to the metadata and text based language models. 
 We propose to infer the location using label propagation.
-We also propose that these additional geolocatable articles can help improve the language models used for geo-locating other articles.
+
+We also propose that these additional geo-located articles can help improve the language models used for geo-locating other articles by appropriately smoothing them.
 
 \section{Related Work}
 %Geolocation
@@ -56,29 +60,41 @@ The simplest approach is to divide the world into uniformly-sized cells % cite{w
 This adaptive grid approach is available in the Textgrounder package.
 
 %something on label propogation
-\par
 \cite{talukdar:09} \cite{talukdar:10}
 
-\section{Plans}
-\par
-Various options will have to be examined in setting up the label propagation system.
-The labels being propagated will have to represent regions of the world, using
-the same bucket principle as IR-based geolocation; the world can be cut up
-using uniform cells, or using the kd-trees based adaptive grid of
-\cite{rolleretal:12}, among other conceivable methods, though we only intend to
-explore those two.
-Another source of options comes from defining the location prediction output
-from running label propagation.
-The most obvious option for this is to use the highest-valued label as the predicted cell;
-as for the location of that cell, \cite{rolleretal:12} found that the centroid
-of document locations in each cell tended to get the best performance.
-Another possibility that might be worth examining is to take the top $k$ cell
-locations and output their centroid.
-Other issues involve the structure of the graph; for instance, we will have to
-determine if a directed or undirected graph is more suitable.
-Another question is how the density of the graph will affect the performance of
-the label propagation system. % this needs expanding, I don't really get this bit. -Aidan
-\par
+\section{Plan of Work}
+We will use the Junto toolkit \cite{junto} for label propagation using the Modified Adsorption algorithm.
+We will also use the tesxtgrounder toolkit for evaluating our results and obtaining a grid structure.
+
+In the first stage of the project, we will examine the accuracy of label propagation alone in
+geolocating wikipedia documents. For this, we will divide geotagged wikipedia documents
+into training and testing sets and measure the prediction accuracy over the testing set.
+
+
+%Various options will have to be examined in setting up the label propagation system.
+To use label propagation, we need to divide regions of the world based on a grid; 
+the world can be divided into smaller grid cells using a number of schemes. 
+While several such schemes are conceivable, we will use uniform grid cells or the KD-trees based adaptive grid of \cite{rolleretal:12}, for ease of use and comparable evaluation. 
+The nodes in the graph are wikipedia documents, and the labels are the "bins" or 
+grid cells that they fall in. The edge weights are a measure of similarity between the nodes, 
+and the notion of similarity between documents needs to be decided upon. 
+Some of the options are %options to explore
+
+Other issues to explore involve determining the structure of the graph 
+(directed or undirected, dense or sparse, edge weights), the algorithm to use 
+(three possible algorithms) and optimum parameters for the selected algorithm. 
+
+Based on the work in \cite{rolleretal:12}, the predicted location of a document will be chosen as the 
+centroid of the label (grid cell) with the highest weight. Alternatively, we can explore the possibility of
+using the top $k$ labels for predicting the location.
+%not sure if this is a good idea, top k cells don't have to be adjacent.
+
+Once we predict the location of the unlabeled documents, 
+we can include the text from those documents
+while constructing the language models for the cells they belong to 
+to provide additional information or smoothing.
+While outside the scope of this project, an important problem is to determine this set of documents 
+that can benefit from label propagation and should be included in the final language model.
 
 \section{Evaluation}
 In order to explore these options, it will be helpful to have something to test against;
