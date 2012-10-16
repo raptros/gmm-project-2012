@@ -95,33 +95,46 @@ We will use the Junto toolkit \cite{junto} for label propagation using the Modif
 In the first stage of the project, we will determine the accuracy of label propagation for
 geolocating wikipedia documents. For this, we will train and test on pre-geotagged wikipedia documents
 into training and testing sets and measure the prediction accuracy over the testing set.
+If time permits, we will examine the accuracy of geolocation on augmenting the pseudo-documents
+in textgrounder with additional info from non-geotagged documents.
 
-%Various options will have to be examined in setting up the label propagation system.
-To use label propagation, we need to divide regions of the world based on a grid; 
-the world can be divided into smaller grid cells using a number of schemes. 
-While several such schemes are conceivable, we will use uniform grid cells or the 
-KD-trees based adaptive grid of \cite{rolleretal:12}, for ease of use and comparable evaluation. 
-The nodes in the graph are wikipedia documents, and the labels are the "bins" or 
-grid cells that they fall in. The edge weights are a measure of similarity between the nodes, 
-and the notion of similarity between documents needs to be decided upon. 
-Some of the options are %options to explore
 
-Other issues to explore involve determining the structure of the graph 
-(directed or undirected, dense or sparse, edge weights), the algorithm to use 
-(three possible algorithms) and optimum parameters for the selected algorithm. 
+For geolocation, the world can be divided into smaller grid cells using a number of ways. We will initially evaluate and tune the performance of label propagation
+using a uniform grid for ease of use and so that we can compare our model to that of \cite{wing-baldridge:11}. Later, we can easily substitute it with 
+the more accurate KD-trees based adaptive grid of \cite{rolleretal:12}.
 
 Based on the work in \cite{rolleretal:12}, the predicted location of a document will be chosen as the 
 centroid of the label (grid cell) with the highest weight. Alternatively, we can explore the possibility of
 using the top $k$ labels for predicting the location.
 %not sure if this is a good idea, top k cells don't have to be adjacent.
 
-Once we predict the location of the unlabeled documents, we can include the text from those documents
-while constructing the language models for the cells they belong to provide additional information or smoothing.
-While outside the scope of this project, an important problem is to determine this set of documents 
-that can benefit from label propagation and should be included in the final language model.
+The nodes in the graph to be used for propagating labels will be wikipedia documents, and the labels will be the grid cells that the documents fall in.
+We will use a fixed subset of the geotagged portion of wikipedia as the seed nodes. It would be informative to examine the accuracy of label propagation
+as a function of the number of seed documents. 
+
+Since each document can potentially be related to more than one location, one question to examine is whether 
+it is better to clamp the label distribution on the seed documents to the unique, original label, or to allow it to evolve and acquire nonzero weights for other locations.
+One reason to do that would be to allow a document label to be influenced by closely tied geographic locations. For example, the distribution for the document for 
+Lake Austin would have nonzero weight for the location for Travis County, from their mutual references to the document for Austin.
+
+
+Other issues to explore involve determining the structure of the graph to be used for label propagation. One aspect to examine is whether the graph 
+should be directed, with edges pointing from referring document to the referred document, or undirected. Another important consideration is the method to be used
+for inducing the edges between documents; for example, whether the edges are based solely on hyperlinks between nodes (i.e., present only when one document
+refers another), whether the edges are transitive (i.e, if the document for Austin links to the document for Houston, and the document for Houston links to the document for Dallas, 
+should the document for Austin have a link to the document for Dallas. A related issue is to determine whether the label propogation algorithm works better with a dense graph 
+with many edges between nodes, or with a sparse graph with a few strong connections.
+  
+A third issue is to determine the weights of edges. Intuitively, the weight of an edge is proportional to the similarity of the two nodes (documents) it is connecting. 
+Formalizing this notion of similarity is important, and can be done in a number of ways. One way to do that would be to take the 
+similarity between the language models for the two documents as the edge weights. This could be the cosine similarity, tf-idf weighted cosine similarity, the KL divergence, etc.
+Another option is to use a fixed and constant edge weight for each pair of documents that refer to one another. Additionally, we could induce an edge between all documents 
+that fall in a particular grid cell to increase locality, or between documents in adjacent cells, to introduce smoothing.
+ 
+We will also explore the optimum parameters for the label propagation algorithm (initial seed weights, etc).
 
 \section{Evaluation}
-We test the performance of label propagation against the geolocation results from textgrounder. 
+We will test the performance of label propagation against the geolocation results from textgrounder. 
 It should be noted that the aim of the project is not to beat the results obtained using textgrounder,
 but instead to get a reasonable geolocation accuracy on non-geotagged articles 
 so that they can be included in the language model for textgrounder cells. 
@@ -137,8 +150,19 @@ To evaluate the performance of the models, we will use measures based on error d
 e.g, mean and median error between predicted and actual distance,  
 instead of IR based methods like precision or recall.
 
+\section{Timeline}
+1. dataset preparation
+2. tools exploration
+3. measuring efficiency of label propagation on geotagged documents
+
 \section{Future Work}
 Although beyond the scope of this project, there are other ideas that could be tried in conjugation with our work.
+
+Once we predict the location of the unlabeled documents, we can include the text from those documents
+while constructing the language models for the cells they belong to provide additional information or smoothing.
+While outside the scope of this project, an important problem is to determine this set of documents 
+that can benefit from label propagation and should be included in the final language model.
+
 Using mean-shift clustering as in \cite{Grauman} for detecting locations instead of a discrete grid.
 Using NER to detect location references in addition to explicit links.
 Using label propagation for geolocating twitter users from their connection graph.
