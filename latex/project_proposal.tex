@@ -34,17 +34,17 @@
 \section{Introduction}
 \comment{You can now enclose text in a comment block to comment it out inline}
 Geographic information is relevant in many different contexts, for example, geographic information retrieval for exploring document collections \cite{}, 
-toponym resolution in historical texts \cite{perseus project},  summarizing travelogues and travel recommendation \cite{hao},
-socio-linguistic studies \cite{eisenstien}, targeted advertising on the internet etc. With the widespread use of mobile devices, geographic information is becoming increasingly 
-ubiquitous and important. In this project we propose a method for predicting the geographic location of wikipedia articles 
+toponym resolution in historical texts \cite{perseus project},  summarizing travelogues and travel recommendation \cite{hao-et-al:10},
+socio-linguistic studies \cite{eisenstein-smith-xing:11}, targeted advertising on the internet etc. With the widespread use of mobile devices, geographic information is becoming increasingly 
+ubiquitous and important. In this project we propose a method for predicting the geographic location of Wikipedia articles 
 with a graph based semi-supervised algorithm and a small amount of labeled data.
 
 Prior work on geolocating Wikipedia articles (\cite{wing-baldridge:11} \cite{rolleretal:12}) has so far only used 
 a subset of the English language Wikipedia for training; specifically, it uses those articles that already have geolocation tags associated with them.  
-These articles constitute a relatively small portion of the english language wikipedia. \comment{find actual figure}
-This isn't surprising, since most articles on wikipedia are not about geographic locations, or objects at specific locations.
+These articles constitute a relatively small portion of the english language Wikipedia. \comment{find actual figure}
+This isn't surprising, since most articles on Wikipedia are not about geographic locations, or objects at specific locations.
 On the other hand, the number of articles that have links to or from such geolocated articles is much larger, 
-which can be a potential source of useful information. \comment{ find figure  of the wikipedia corpus}
+which can be a potential source of useful information. \comment{ find figure  of the Wikipedia corpus}
 
 Within the geotagged articles, earlier approaches use the article content indirectly by building unigram language models from the text of the articles during training,
 and then comparing similarity of test documents with these language models. This ignores the potentially useful information present in the form of hyperlinks between articles,
@@ -56,13 +56,10 @@ geographically distributed concepts such as states (e.g., Texas) or personal bio
 
 Our hypothesis is that we can infer the location for non-geotagged articles by using the location information present in other geotagged articles that they link to, or receive incoming links from. 
 Unlike prior work, our approach makes use of the link structure of the articles in addition to the location metadata and text based language models. 
-We use the label propagation algorithm \cite{} to infer the location of non geotagged articles. We also lift the single location restriction by allowing each article 
-to have a distribution over all locations, and including the articles in the language models for multiple locations that are associated with it.
-
-The major motivation and hypothesis behind our project is that these additional geo-located articles can provide additional information for improving the language models based approach 
-used in prior work by appropriately smoothing the language models.
-
-
+Label propagation allows us to infer locations of non-geotagged articles, and
+provide distributions over all locations for every article, which would allow
+their text to be included the language models for multiple locations.
+The new geolocation models provided by the approach may provide additional information and smoothing that will improve existing models.
 
 \section{Related Work}
 \subsection{Geolocation}
@@ -70,18 +67,18 @@ used in prior work by appropriately smoothing the language models.
 Geolocation has traditionally been done \comment{improve this part} using information from gazetteers \cite{} or as an IR task, as explained in \cite{skiles:12}. 
 Most IR-based approaches divide the world into discrete grid cells, each of which are treated as a pseudo-documents that consist of texts from documents located in them.
 Documents are then geolocated by comparing their language model with the language models of each of the grid cells and assigning the document to the cell with which 
-they have the highest similarity scores. \cite{eisenstein sociaologaige} exemplify this language modeling approach by explicitly removing geo-references from documents 
+they have the highest similarity scores. \cite{eisenstein-smith-xing:11} exemplify this language modeling approach by explicitly removing geo-references from documents 
 and predicting location using only the linguistic and dialectical features present in the document text.
 
-The use of wikipedia for article geolocation, classification and toponym resolution was suggested in \cite{Overall09}. 
+The use of Wikipedia for article geolocation, classification and toponym resolution was suggested in \cite{Overall09}. 
 While he only uses the metadata associated with the articles, others have extended his approach by adopting the language modeling approach and 
 using the article text to predict article location.This is the approach used by \cite{wing-baldridge:11}, who divide the world into a uniform grid of equal cell size in degrees.
 \cite{rolleretal:12} develop an adaptive grid based on KD-trees that splits cells such that they contain roughly equal number of documents each.
 A different model for geolocation is presented by \cite{eisensteinetal:11}; who use a general generative model as an alternative to LDA, and model distributions 
 as a mixture of gaussians over the earth's surface instead of discrete grid cells. 
 
-Furthermore, (kumar2011supervised) have shown that language models learnt from wikipedia can be used for prediction tasks in other domains. This is an 
-promising result that suggests that the language models learnt from wikipedia may be used for geolocating other documents. This is however beyond the scope
+Furthermore, \cite{kumar-et-al:11} have shown that language models learned from Wikipedia can be used for prediction tasks in other domains. This is an 
+promising result that suggests that the language models learned from Wikipedia may be used for geolocating other documents. This is however beyond the scope
 of this project.
 
 
@@ -99,26 +96,26 @@ classification and ranking \cite{something} \comment{and recommendation, youtube
 
 \section{Plan of Work}
 \subsection{Dataset and Tools}
-Following the methodology in \cite{wing-baldridge:11}, we will use the 2010 wikipedia dump for evaluation. 
+Following the methodology in \cite{wing-baldridge:11}, we will use the 2010 Wikipedia dump for evaluation. 
 After cleanup and processing, the dump contains 3,431,722  articles, of which 488,269 are geotagged. 
 The number of articles that link directly to geotagged articles is to be determined.
 
-We will use the textgrounder \cite{textgrounder} toolkit for creating the grids to be used for document geolocation and for evaluating 
+We will use the Textgrounder \footnote{https://github.com/utcompling/textgrounder} toolkit for creating the grids to be used for document geolocation and for evaluating 
 and comparing our results with prior work.
  
-We will use the Junto toolkit \cite{junto} for label propagation using the Modified Adsorption algorithm.
+We will use the Junto toolkit \footnote{https://github.com/parthatalukdar/junto} for label propagation using the Modified Adsorption algorithm.
 
 \subsection{Issues to Explore}
-In the first stage of the project, we will determine the accuracy of label propagation for geolocating wikipedia documents. 
-For this, we will train and test on geotagged wikipedia documents, and compare the performance of label propogation with prior work that uses language models.
-If label propogation give promising results, we can examine the possibility of augmenting the pseudo-documents in language-models based approaches 
-with the additional info from the new documents geolocated using label propogation.
+In the first stage of the project, we will determine the accuracy of label propagation for geolocating Wikipedia documents. 
+For this, we will train and test on geotagged Wikipedia documents, and compare the performance of label propagation with prior work that uses language models.
+If label propagation give promising results, we can examine the possibility of augmenting the pseudo-documents in language-models based approaches 
+with the additional info from the new documents geolocated using label propagation.
 
 We will initially evaluate and tune the performance of label propagation using a uniform grid, since it is easier to set up and use. 
 In a later stage, we can easily substitute it with the more accurate KD-trees based adaptive grid of \cite{rolleretal:12}.
 
-The nodes in the graph to be used for propagating labels will be wikipedia documents, and the labels will be the grid cells that the documents fall in.
-We will use a fixed subset of the geotagged portion of wikipedia as the seed nodes. It would be instructive to examine the accuracy of label propagation
+The nodes in the graph to be used for propagating labels will be Wikipedia documents, and the labels will be the grid cells that the documents fall in.
+We will use a fixed subset of the geotagged portion of Wikipedia as the seed nodes. It would be instructive to examine the accuracy of label propagation
 as a function of the number of seed documents used. 
 
 There are some other considerations in determining the structure of the graph. The first question is whether the graph should be directed, 
@@ -151,17 +148,20 @@ If we can obtain an accuracy close to that of textgrounder on the geotagged corp
 we can be sure that the results for non-geotagged documents will be useful.
 
 To evaluate the performance of the models, we will use measures based on error distances, e.g, mean and median error between predicted and actual distance,  
-instead of IR based methods like precision or recall. \cite{Roller et al} show that using the centroid of locations of documents in the grid cell as the cell's location 
+instead of IR based methods like precision or recall. \cite{rolleretal:12} show that using the centroid of locations of documents in the grid cell as the cell's location 
 results in more accurate predictions than using the mean of document locations (as in \cite{wing-baldridge:11}), even in the uniform-grid case. Therefore, we will
 use this approach in our evaluation.
 
+\comment{I suggest we remove the next two sections: we're already running over the page limit! -Aidan}
 
 \section{Milestones}
-1. Dataset preparation and tools exploration
-2. Establishing the hypotheses to be tested
-3. Comparing the alternatives and determining the best model.
-4. Measuring accuracy of label propagation on geotagged documents and comparing with language model approaches.
-5. [Optional] 
+\begin{enumerate}
+    \item Dataset preparation and tools exploration
+    \item Establishing the hypotheses to be tested
+    \item Comparing the alternatives and determining the best model.
+    \item Measuring accuracy of label propagation on geotagged documents and comparing with language model approaches.
+    \item  [Optional] 
+\end{enumerate}
 
 \section{Future Work}
 
@@ -176,7 +176,7 @@ Using label propagation for geolocating twitter users from their connection grap
 
 %\par
 %The motivation for all of this is to extend geolocation to the vast unlabeled
-%section of wikipedia; with two different models, each with a variety of
+%section of Wikipedia; with two different models, each with a variety of
 %parameters, there are multiple ways to go about this.
 %One scheme would be to use the geolocated portion to train Textgrounder and
 %compare its predictions for the unlabeled set to the predictions yielded by
