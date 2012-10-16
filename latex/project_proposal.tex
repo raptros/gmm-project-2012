@@ -51,13 +51,19 @@ We also propose that these additional geo-located articles can help improve the 
 
 \section{Related Work}
 %Geolocation
-Geolocation has been implemented as an information-retrieval task, as in
-\cite{skiles:12}; IR-based implementations divide the world up into cells, each
+Geolocation can be implemented as an IR task, as explained in \cite{skiles:12};
+IR-based implementations divide the world up into cells, each
 of which are considered to be a pseudo-document consisting of text from every
 document appearing in that cell.
-The simplest approach is to divide the world into uniformly-sized cells % cite{wing and baldridge}
-, but \cite{rolleretal:12} use kd-trees to build cells with uniform amounts of text.
-This adaptive grid approach is available in the Textgrounder package.
+The simple approach, used by \cite{wing-baldridge:11}, is to divide the world
+into cells of uniform size (or rather, equal degrees);
+\cite{rolleretal:12} develop an adaptive grid based on kd-trees that splits cells in order to
+allocate uniform amounts of text to each cell; 
+they also determine that using the centroid of document geolocations as the
+cell center tends to perform better than using the cell midpoint (as in
+\cite{wing-baldridge:11}), even in the uniform-grid case.
+A different model for geolocation is presented by \cite{eisensteinetal:11}; it
+is a general generative model presented as an alternative to LDA.
 
 %something on label propogation
 \cite{talukdar:09} \cite{talukdar:10}
