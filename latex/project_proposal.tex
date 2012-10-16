@@ -11,15 +11,17 @@
 
 \title{Geolocating Wikipedia Articles Using Label Propagation}
 
-\author{Aidan Coyne \\
+\author{
+  Aidan Coyne \\
     Department of Computer Science\\
     The University of Texas at Austin\\
   {\tt coynea90@gmail.com} \\ 
   \And
   Prateek Maheshwari\\
-     Department of Computer Science\\
+    Department of Computer Science\\
     The University of Texas at Austin\\
-  {\tt prateekm@utexas.edu}}
+  {\tt prateekm@utexas.edu}
+}
 
 \date{}
 
@@ -27,14 +29,15 @@
 \maketitle
 
 \section{Introduction}
-%motivation - why do we want to do this?
-%well, so that we can investigate the geolocation thing on the much larger non-geotagged section of wikipedia!
-%of course, this isn't straightforward
-Prior work applying geolocation models to Wikipedia articles 
-% \cite{wing and baldridge} \cite{rolleretal:12} \cite {efran et al}
-has been limited to a small subset of Wikipedia articles; 
-namely, those articles that already have geotags associated with them. 
-These articles constitute a relatively small fraction %find actual figure
+% Add a brief introduction to geolocation and why it is useful.
+% Why choose wikipedia?
+Other work (cite kumar, bald ridge, lease) has shown that language models learnt from wikipedia can be used for prediction tasks in other domains.
+
+Prior work on geolocating Wikipedia articles has focused on (used for training) a subset of the english language Wikipedia; 
+% \cite{wing and baldridge} \cite{rolleretal:12} \cite {efran et al} 
+specifically, those articles that already have geotags associated with them. % is this true? or do they only use this for training?
+These articles constitute a relatively small fraction of the english language wikipedia. %find actual figure
+On the other hand, the fraction of articles that link to geolocated articles is %find figure
 of the wikipedia corpus. This isn't surprising, since most articles on wikipedia are not about specific locations, or objects at specific locations.
 However, there are many other articles that may be associated with one or more places; 
 for example, biographical articles may refer to the various locations the subject has lived or worked at.
