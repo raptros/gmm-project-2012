@@ -1,0 +1,15 @@
+Article title: Blalabama
+Article ID: 303
+Article coordinates: 33.0,-86.6666666667
+Article title: Algeria
+Article ID: 358
+Article coordinates: 36.7,3.21666666667
+Article title: Andorra
+Article ID: 600
+Article coordinates: 42.5,1.51666666667
+Article title: Alaska
+Article ID: 624
+Article coordinates: 64.0,-153.0
+Article title: Apollo 11
+Article ID: 662
+Article coordinates: 13.3166666667,-169.15

@@ -1,0 +1,500 @@
+Beginning operation at Mon Jul 30 21:11:58 EST 2012
+Arguments: --input-corpus ./data/gutonly-big --kd --kdbs 1050 --kdsm median --cm centroid --eval-set test
+
+Non-default parameter values:
+                  input-corpus: List(./data/gutonly-big)
+                      eval-set: test
+                       kd-tree: true
+                kd-bucket-size: 1050
+                 center-method: centroid
+               kd-split-method: median
+
+Parameter values:
+                      language: eng
+                stopwords-file: null
+                whitelist-file: null
+                  input-corpus: List(./data/gutonly-big)
+                     eval-file: List()
+         num-nearest-neighbors: 4
+       num-top-cells-to-output: 5
+                      eval-set: test
+             num-training-docs: 0
+                 num-test-docs: 0
+        skip-initial-test-docs: 0
+            every-nth-test-doc: 1
+                     word-dist: pseudo-good-turing
+                   interpolate: default
+                jelinek-factor: 0.3
+              dirichlet-factor: 500.0
+           preserve-case-words: false
+include-stopwords-in-document-dists: false
+            minimum-word-count: 1
+                        tf-idf: false
+         naive-bayes-weighting: equal
+   naive-bayes-baseline-weight: 0.5
+                lru-cache-size: 400
+                   no-parallel: false
+                       test-kl: false
+            max-time-per-stage: 0.0
+         no-individual-results: false
+              results-by-range: false
+                oracle-results: false
+                         debug: null
+              degrees-per-cell: 1.0
+                miles-per-cell: 0.0
+                   km-per-cell: 0.0
+           width-of-multi-cell: 1
+                       kd-tree: true
+                kd-bucket-size: 1050
+                 center-method: centroid
+               kd-split-method: median
+                    kd-backoff: false
+         kd-interpolate-weight: 0.0
+              combined-kd-grid: false
+                   eval-format: internal
+                      strategy: List(partial-kl-divergence)
+                coord-strategy: top-ranked
+                        k-best: 10
+             mean-shift-window: 1.0
+         mean-shift-max-stddev: 1.0E-10
+     mean-shift-max-iterations: 100
+             baseline-strategy: List(internal-link)
+
+Reading stopwords from /home/hanb/tool/textgrounder/src/main/resources/data/eng/stopwords.txt...
+Processing directory ./data/gutonly-big...
+Processing file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt...
+--------------------------------------------------------
+Beginning reading pass 1 documents at Mon Jul 30 21:12:02 EST 2012.
+
+At 9:12:17 PM: Elapsed time: 0 minutes 15.0 seconds, 1648 documents processed
+Processing rate: 109.87 items per second (0.0091 seconds per item)
+At 9:12:32 PM: Elapsed time: 0 minutes 30.0 seconds, 5571 documents processed
+Processing rate: 185.63 items per second (0.0054 seconds per item)
+At 9:12:47 PM: Elapsed time: 0 minutes 45.0 seconds, 9776 documents processed
+Processing rate: 217.14 items per second (0.0046 seconds per item)
+At 9:13:02 PM: Elapsed time: 1 minute 0.0 seconds, 13215 documents processed
+Processing rate: 220.23 items per second (0.0045 seconds per item)
+At 9:13:17 PM: Elapsed time: 1 minute 15.0 seconds, 16833 documents processed
+Processing rate: 224.44 items per second (0.0045 seconds per item)
+At 9:13:32 PM: Elapsed time: 1 minute 30.0 seconds, 20877 documents processed
+Processing rate: 231.95 items per second (0.0043 seconds per item)
+At 9:13:47 PM: Elapsed time: 1 minute 45.0 seconds, 25972 documents processed
+Processing rate: 247.35 items per second (0.0040 seconds per item)
+Warning: Line 31005: Bad value #mylifeblowstoo:1 #lame:2 #hornsdown:1 #gopokes:3 #fuckyeah:1 #excited:1 #mcalester:1 “:2 yes:1 yahoo:2 world:1 where:2 when:1 what:1 we:1 too:1 to:13 this:2 they:1 them:3 the:11 that:3 texas:1 starts:1 she:1 same:1 rt:1 roads:1 record:1 played:1 person:1 oklahoma:1 ofa:1 napoli:1 myself:1 monster:1 mizzu:1 mine:1 mileage:1 loyal:1 loses:1 lol:2 laid:1 just:2 isu:1 in:2 heading:1 he:2 gonna:1 go:1 gets:1 freaking:1 filming:1 eat:1 easily:1 drum:1 didnt:1 dear:1 dammit:1 chuck:1 camera:1 bwbeard:1 but:1 blood:1 better:1 back:2 awesome:1 another:1 ????:1 ?!:1 ?:5 's:3 #texas:1 #ou:1 #noshave:1 #lost:1 #imgreek:1 #gooners:1 #dumbasses:1 #big12:1 ":5 !!:1 says:1 right:1 powerhouse:1 okie:1 often:1 no:1 need:1 n't:1 my:3 much:1 marry:1 looking:1 lmao:1 lite:1 like:4 let:1 know:1 inviting:1 instant:1 im:3 ill:2 if:1 home:1 him:1 her:1 heard:1 having:1 hard:1 ha:1 good:3 getting:1 get:2 friend:1 forget:1 for:5 football:1 followers:1 folks:1 figure:1 family:1 except:1 ex-bf:1 event:1 donating:1 cuz:1 cuddles:1 celebrate:1 car:1 ”:1 wow:1 won:1 with:7 who:2 was:2 upset:1 truck:2 those:1 thats:2 teams:1 team:1 such:1 stolen:1 still:1 signed:1 signatures:1 series:3 see:2 because:1 be:2 bday:1 at:4 are:1 and:2 always:2 a:11 ??:1 ...:6 .:7 (”:1 #trucks:1 #orangepower:1 #okstate:1 #oklahomalol:1 #mccoy2shipley:1 said:1 solo:1 some:1 someone:1 sounds:1 through:1 time:2 used:1 want:1 watched:1 willing:1 win:1 !:11 !!!:1 !!!!:1 'd:1 #backroads:1 #beardswag:1 #epicwin:1 #hawkeye:1 #ineedabeer:1 woot:1 words:1 would:1 wtfff:1 ya:1 yeah:1 you:3 young:1 your:1 sign:1 #stillwater:1 from:2 friends:1 follow:1 figured:1 fan:1 ever:1 escape'(my:1 dont:1 do:1 di for field 'counts': opennlp.textgrounder.util.ioutil.package$FileFormatException: For unigram counts, items must be of the form WORD:COUNT, but di seen
+Warning: Line 31005: Bad record; skipping line=feelgoodreason	36.138057,-97.047887	#mylifeblowstoo:1 #lame:2 #hornsdown:1 #gopokes:3 #fuckyeah:1 #excited:1 #mcalester:1 “:2 yes:1 yahoo:2 world:1 where:2 when:1 what:1 we:1 too:1 to:13 this:2 they:1 them:3 the:11 that:3 texas:1 starts:1 she:1 same:1 rt:1 roads:1 record:1 played:1 person:1 oklahoma:1 ofa:1 napoli:1 myself:1 monster:1 mizzu:1 mine:1 mileage:1 loyal:1 loses:1 lol:2 laid:1 just:2 isu:1 in:2 heading:1 he:2 gonna:1 go:1 gets:1 freaking:1 filming:1 eat:1 easily:1 drum:1 didnt:1 dear:1 dammit:1 chuck:1 camera:1 bwbeard:1 but:1 blood:1 better:1 back:2 awesome:1 another:1 ????:1 ?!:1 ?:5 's:3 #texas:1 #ou:1 #noshave:1 #lost:1 #imgreek:1 #gooners:1 #dumbasses:1 #big12:1 ":5 !!:1 says:1 right:1 powerhouse:1 okie:1 often:1 no:1 need:1 n't:1 my:3 much:1 marry:1 looking:1 lmao:1 lite:1 like:4 let:1 know:1 inviting:1 instant:1 im:3 ill:2 if:1 home:1 him:1 her:1 heard:1 having:1 hard:1 ha:1 good:3 getting:1 get:2 friend:1 forget:1 for:5 football:1 followers:1 folks:1 figure:1 family:1 except:1 ex-bf:1 event:1 donating:1 cuz:1 cuddles:1 celebrate:1 car:1 ”:1 wow:1 won:1 with:7 who:2 was:2 upset:1 truck:2 those:1 thats:2 teams:1 team:1 such:1 stolen:1 still:1 signed:1 signatures:1 series:3 see:2 because:1 be:2 bday:1 at:4 are:1 and:2 always:2 a:11 ??:1 ...:6 .:7 (”:1 #trucks:1 #orangepower:1 #okstate:1 #oklahomalol:1 #mccoy2shipley:1 said:1 solo:1 some:1 someone:1 sounds:1 through:1 time:2 used:1 want:1 watched:1 willing:1 win:1 !:11 !!!:1 !!!!:1 'd:1 #backroads:1 #beardswag:1 #epicwin:1 #hawkeye:1 #ineedabeer:1 woot:1 words:1 would:1 wtfff:1 ya:1 yeah:1 you:3 young:1 your:1 sign:1 #stillwater:1 from:2 friends:1 follow:1 figured:1 fan:1 ever:1 escape'(my:1 dont:1 do:1 di
+
+Finished reading pass 1 documents at Mon Jul 30 21:14:02 EST 2012.
+Elapsed time: 1 minute 59.7 seconds, 31005 documents processed
+Processing rate: 258.99 items per second (0.0039 seconds per item)
+--------------------------------------------------------
+Total elapsed time since program start: 2 minutes 3.4 seconds
+java.io.IOException: Invalid argument
+Memory usage, virtual memory size (ps): 43,489,755,136 bytes
+java.io.IOException: Invalid argument
+Memory usage, actual (i.e. resident set) (ps): 11,271,979,008 bytes
+Memory usage, Java heap: 615,318,736 bytes
+Number of documents processed for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 31004
+Number of documents skipped for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 0
+Number of bad documents for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 1
+Number of total documents for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 31005
+--------------------------------------------------------
+Beginning generating K-d tree structures at Mon Jul 30 21:14:07 EST 2012.
+
+
+Finished generating K-d tree structures at Mon Jul 30 21:14:08 EST 2012.
+Elapsed time: 0 minutes 0.8 seconds, 63 K-d tree structures processed
+Processing rate: 77.87 items per second (0.013 seconds per item)
+--------------------------------------------------------
+Processing directory ./data/gutonly-big...
+Processing file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt...
+--------------------------------------------------------
+Beginning reading pass 2 documents at Mon Jul 30 21:14:08 EST 2012.
+
+At 9:14:23 PM: Elapsed time: 0 minutes 15.0 seconds, 2742 documents processed
+Processing rate: 182.80 items per second (0.0055 seconds per item)
+At 9:14:38 PM: Elapsed time: 0 minutes 30.0 seconds, 5344 documents processed
+Processing rate: 178.13 items per second (0.0056 seconds per item)
+At 9:14:53 PM: Elapsed time: 0 minutes 45.0 seconds, 8147 documents processed
+Processing rate: 181.04 items per second (0.0055 seconds per item)
+At 9:15:08 PM: Elapsed time: 1 minute 0.0 seconds, 13181 documents processed
+Processing rate: 219.67 items per second (0.0046 seconds per item)
+At 9:15:23 PM: Elapsed time: 1 minute 15.0 seconds, 17333 documents processed
+Processing rate: 231.11 items per second (0.0043 seconds per item)
+At 9:17:07 PM: Elapsed time: 2 minutes 59.0 seconds, 20951 documents processed
+Processing rate: 117.06 items per second (0.0085 seconds per item)
+At 9:17:08 PM: Elapsed time: 3 minutes 0.0 seconds, 21419 documents processed
+Processing rate: 118.99 items per second (0.0084 seconds per item)
+At 9:17:23 PM: Elapsed time: 3 minutes 15.0 seconds, 27041 documents processed
+Processing rate: 138.67 items per second (0.0072 seconds per item)
+Warning: Line 31005: Bad value #mylifeblowstoo:1 #lame:2 #hornsdown:1 #gopokes:3 #fuckyeah:1 #excited:1 #mcalester:1 “:2 yes:1 yahoo:2 world:1 where:2 when:1 what:1 we:1 too:1 to:13 this:2 they:1 them:3 the:11 that:3 texas:1 starts:1 she:1 same:1 rt:1 roads:1 record:1 played:1 person:1 oklahoma:1 ofa:1 napoli:1 myself:1 monster:1 mizzu:1 mine:1 mileage:1 loyal:1 loses:1 lol:2 laid:1 just:2 isu:1 in:2 heading:1 he:2 gonna:1 go:1 gets:1 freaking:1 filming:1 eat:1 easily:1 drum:1 didnt:1 dear:1 dammit:1 chuck:1 camera:1 bwbeard:1 but:1 blood:1 better:1 back:2 awesome:1 another:1 ????:1 ?!:1 ?:5 's:3 #texas:1 #ou:1 #noshave:1 #lost:1 #imgreek:1 #gooners:1 #dumbasses:1 #big12:1 ":5 !!:1 says:1 right:1 powerhouse:1 okie:1 often:1 no:1 need:1 n't:1 my:3 much:1 marry:1 looking:1 lmao:1 lite:1 like:4 let:1 know:1 inviting:1 instant:1 im:3 ill:2 if:1 home:1 him:1 her:1 heard:1 having:1 hard:1 ha:1 good:3 getting:1 get:2 friend:1 forget:1 for:5 football:1 followers:1 folks:1 figure:1 family:1 except:1 ex-bf:1 event:1 donating:1 cuz:1 cuddles:1 celebrate:1 car:1 ”:1 wow:1 won:1 with:7 who:2 was:2 upset:1 truck:2 those:1 thats:2 teams:1 team:1 such:1 stolen:1 still:1 signed:1 signatures:1 series:3 see:2 because:1 be:2 bday:1 at:4 are:1 and:2 always:2 a:11 ??:1 ...:6 .:7 (”:1 #trucks:1 #orangepower:1 #okstate:1 #oklahomalol:1 #mccoy2shipley:1 said:1 solo:1 some:1 someone:1 sounds:1 through:1 time:2 used:1 want:1 watched:1 willing:1 win:1 !:11 !!!:1 !!!!:1 'd:1 #backroads:1 #beardswag:1 #epicwin:1 #hawkeye:1 #ineedabeer:1 woot:1 words:1 would:1 wtfff:1 ya:1 yeah:1 you:3 young:1 your:1 sign:1 #stillwater:1 from:2 friends:1 follow:1 figured:1 fan:1 ever:1 escape'(my:1 dont:1 do:1 di for field 'counts': opennlp.textgrounder.util.ioutil.package$FileFormatException: For unigram counts, items must be of the form WORD:COUNT, but di seen
+Warning: Line 31005: Bad record; skipping line=feelgoodreason	36.138057,-97.047887	#mylifeblowstoo:1 #lame:2 #hornsdown:1 #gopokes:3 #fuckyeah:1 #excited:1 #mcalester:1 “:2 yes:1 yahoo:2 world:1 where:2 when:1 what:1 we:1 too:1 to:13 this:2 they:1 them:3 the:11 that:3 texas:1 starts:1 she:1 same:1 rt:1 roads:1 record:1 played:1 person:1 oklahoma:1 ofa:1 napoli:1 myself:1 monster:1 mizzu:1 mine:1 mileage:1 loyal:1 loses:1 lol:2 laid:1 just:2 isu:1 in:2 heading:1 he:2 gonna:1 go:1 gets:1 freaking:1 filming:1 eat:1 easily:1 drum:1 didnt:1 dear:1 dammit:1 chuck:1 camera:1 bwbeard:1 but:1 blood:1 better:1 back:2 awesome:1 another:1 ????:1 ?!:1 ?:5 's:3 #texas:1 #ou:1 #noshave:1 #lost:1 #imgreek:1 #gooners:1 #dumbasses:1 #big12:1 ":5 !!:1 says:1 right:1 powerhouse:1 okie:1 often:1 no:1 need:1 n't:1 my:3 much:1 marry:1 looking:1 lmao:1 lite:1 like:4 let:1 know:1 inviting:1 instant:1 im:3 ill:2 if:1 home:1 him:1 her:1 heard:1 having:1 hard:1 ha:1 good:3 getting:1 get:2 friend:1 forget:1 for:5 football:1 followers:1 folks:1 figure:1 family:1 except:1 ex-bf:1 event:1 donating:1 cuz:1 cuddles:1 celebrate:1 car:1 ”:1 wow:1 won:1 with:7 who:2 was:2 upset:1 truck:2 those:1 thats:2 teams:1 team:1 such:1 stolen:1 still:1 signed:1 signatures:1 series:3 see:2 because:1 be:2 bday:1 at:4 are:1 and:2 always:2 a:11 ??:1 ...:6 .:7 (”:1 #trucks:1 #orangepower:1 #okstate:1 #oklahomalol:1 #mccoy2shipley:1 said:1 solo:1 some:1 someone:1 sounds:1 through:1 time:2 used:1 want:1 watched:1 willing:1 win:1 !:11 !!!:1 !!!!:1 'd:1 #backroads:1 #beardswag:1 #epicwin:1 #hawkeye:1 #ineedabeer:1 woot:1 words:1 would:1 wtfff:1 ya:1 yeah:1 you:3 young:1 your:1 sign:1 #stillwater:1 from:2 friends:1 follow:1 figured:1 fan:1 ever:1 escape'(my:1 dont:1 do:1 di
+
+Finished reading pass 2 documents at Mon Jul 30 21:17:35 EST 2012.
+Elapsed time: 3 minutes 27.1 seconds, 31005 documents processed
+Processing rate: 149.70 items per second (0.0067 seconds per item)
+--------------------------------------------------------
+Total elapsed time since program start: 5 minutes 36.4 seconds
+java.io.IOException: Invalid argument
+Memory usage, virtual memory size (ps): 43,485,220,864 bytes
+java.io.IOException: Invalid argument
+Memory usage, actual (i.e. resident set) (ps): 14,975,795,200 bytes
+Memory usage, Java heap: 564,822,952 bytes
+Number of documents processed for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 62008
+Number of documents skipped for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 0
+Number of bad documents for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 2
+Number of total documents for file ./data/gutonly-big/gutonly-big-training-unigram-counts.txt: 62010
+Finishing global dist...
+Finishing document dists...
+
+-------------------------------------------------------------------------
+Document/record/word token statistics:
+For split 'training':
+  62010 records seen
+  2 records skipped due to error seen
+  0 records skipped due to other than error seen
+  62008 documents seen, 35703224 total tokens, 575.78 tokens/document
+  62008 documents recorded, 35703224 total tokens, 575.78 tokens/document
+  0 documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  0 would-be-recorded documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  62008 documents having coordinates seen, 35703224 total tokens, 575.78 tokens/document
+  62008 documents having coordinates recorded, 35703224 total tokens, 575.78 tokens/document
+Total: 62010 records, 2 skipped records (2 from error)
+Total: 62008 documents with 35703224 total word tokens
+Total: 0 documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 0 would-be-recorded documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 62008 recorded documents with 35703224 total word tokens
+Total: 62008 documents having coordinates with 35703224 total word tokens
+Total: 62008 recorded documents having coordinates with 35703224 total word tokens
+--------------------------------------------------------
+Beginning computing statistics of non-empty cells at Mon Jul 30 21:17:52 EST 2012.
+
+
+Finished computing statistics of non-empty cells at Mon Jul 30 21:17:52 EST 2012.
+Elapsed time: 0 minutes 0.0 seconds, 32 non-empty cells processed
+Processing rate: 1391.30 items per second (0.00072 seconds per item)
+--------------------------------------------------------
+Number of non-empty cells: 32
+Total number of cells: 32
+Percent non-empty cells: 1.00000
+Training documents per non-empty cell: 1937.75
+--------------------------------------------------------
+Beginning evaluating documents at Mon Jul 30 21:17:52 EST 2012.
+
+Processing directory ./data/gutonly-big...
+Processing file ./data/gutonly-big/gutonly-big-test-unigram-counts.txt...
+#1:Document gutonly-big/DRzHottie16 at (41.39,-73.44):
+#1:  77 types, 87.000000 tokens
+#1:  true cell at rank: 19
+#1:  true cell: GeoCell(List((46.73,-71.78), (40.69,-71.78), (40.69,-73.83), (46.73,-73.83), (46.73,-71.78)) (Center: (42.15,-73.14)), 969 documents(dist), 969 documents(links), 65970 types, 561804.0 tokens, 0 links)
+#1:  Predicted cell (at rank 1, kl-div 1.8086698023962133): GeoCell(List((40.69,-75.15), (39.35,-75.15), (39.35,-77.55), (40.69,-77.55), (40.69,-75.15)) (Center: (39.92,-75.71)), 969 documents(dist), 969 documents(links), 50409 types, 529402.0 tokens, 0 links)
+#1:  Predicted cell (at rank 2, kl-div 1.8221739106757262): GeoCell(List((35.93,-82.66), (32.94,-82.66), (32.94,-84.55), (35.93,-84.55), (35.93,-82.66)) (Center: (33.90,-84.17)), 969 documents(dist), 969 documents(links), 51945 types, 548845.0 tokens, 0 links)
+#1:  Predicted cell (at rank 3, kl-div 1.8231603886605063): GeoCell(List((39.35,-74.56), (38.89,-74.56), (38.89,-77.56), (39.35,-77.56), (39.35,-74.56)) (Center: (39.06,-76.81)), 969 documents(dist), 969 documents(links), 55162 types, 527074.0 tokens, 0 links)
+#1:  Predicted cell (at rank 4, kl-div 1.8257857343389179): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#1:  Predicted cell (at rank 5, kl-div 1.8406551409271743): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#1:  #1 close neighbor: (39.92,-75.71); error distance: 252.71 km (157.06 miles)
+#1:  #3 close neighbor: (39.06,-76.81); error distance: 386.62 km (240.29 miles)
+#1:  Distance 87.30 km (54.26 miles) to true cell center at (42.15,-73.14)
+#1:  Distance 252.71 km (157.06 miles) to predicted cell center at (39.92,-75.71)
+#1:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 319.67 km (198.67 miles)
+#2:Document gutonly-big/crunkdafunk at (41.72,-74.40):
+#2:  222 types, 366.000000 tokens
+#2:  true cell at rank: 19
+#2:  true cell: GeoCell(List((45.94,-73.83), (40.78,-73.83), (40.78,-77.57), (45.94,-77.57), (45.94,-73.83)) (Center: (41.83,-74.77)), 969 documents(dist), 969 documents(links), 63988 types, 596054.0 tokens, 0 links)
+#2:  Predicted cell (at rank 1, kl-div 0.9338681875193229): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#2:  Predicted cell (at rank 2, kl-div 0.9452471866086473): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#2:  Predicted cell (at rank 3, kl-div 0.9465827031098096): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#2:  Predicted cell (at rank 4, kl-div 0.9551554961885025): GeoCell(List((46.52,-81.62), (41.26,-81.62), (41.26,-84.55), (46.52,-84.55), (46.52,-81.62)) (Center: (42.29,-83.16)), 969 documents(dist), 969 documents(links), 51344 types, 570061.0 tokens, 0 links)
+#2:  Predicted cell (at rank 5, kl-div 0.9572960275744615): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#2:  #4 close neighbor: (42.29,-83.16); error distance: 727.39 km (452.08 miles)
+#2:  #1 close neighbor: (39.23,-83.16); error distance: 791.08 km (491.66 miles)
+#2:  Distance 33.41 km (20.76 miles) to true cell center at (41.83,-74.77)
+#2:  Distance 791.08 km (491.66 miles) to predicted cell center at (39.23,-83.16)
+#2:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 759.24 km (471.87 miles)
+#3:Document gutonly-big/HeDoesItAll at (33.57,-84.34):
+#3:  166 types, 244.000000 tokens
+#3:  true cell at rank: 9
+#3:  true cell: GeoCell(List((35.93,-82.66), (32.94,-82.66), (32.94,-84.55), (35.93,-84.55), (35.93,-82.66)) (Center: (33.90,-84.17)), 969 documents(dist), 969 documents(links), 51945 types, 548845.0 tokens, 0 links)
+#3:  Predicted cell (at rank 1, kl-div 0.9906600488874681): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#3:  Predicted cell (at rank 2, kl-div 0.9926145283103578): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#3:  Predicted cell (at rank 3, kl-div 0.9963453920364055): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#3:  Predicted cell (at rank 4, kl-div 1.0125656674568857): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#3:  Predicted cell (at rank 5, kl-div 1.0139193526129078): GeoCell(List((40.69,-75.15), (39.35,-75.15), (39.35,-77.55), (40.69,-77.55), (40.69,-75.15)) (Center: (39.92,-75.71)), 969 documents(dist), 969 documents(links), 50409 types, 529402.0 tokens, 0 links)
+#3:  #1 close neighbor: (35.22,-87.30); error distance: 327.48 km (203.53 miles)
+#3:  #2 close neighbor: (31.67,-88.09); error distance: 410.24 km (254.96 miles)
+#3:  Distance 39.39 km (24.48 miles) to true cell center at (33.90,-84.17)
+#3:  Distance 327.48 km (203.53 miles) to predicted cell center at (35.22,-87.30)
+#3:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 368.86 km (229.25 miles)
+#4:Document gutonly-big/thaiexcursion at (41.74,-71.43):
+#4:  76 types, 127.000000 tokens
+#4:  true cell at rank: 16
+#4:  true cell: GeoCell(List((48.95,-60.17), (41.17,-60.17), (41.17,-71.78), (48.95,-71.78), (48.95,-60.17)) (Center: (42.86,-70.42)), 968 documents(dist), 968 documents(links), 73353 types, 573639.0 tokens, 0 links)
+#4:  Predicted cell (at rank 1, kl-div 2.663680162886289): GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#4:  Predicted cell (at rank 2, kl-div 2.6885222216251483): GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#4:  Predicted cell (at rank 3, kl-div 2.701287082717559): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#4:  Predicted cell (at rank 4, kl-div 2.718761061356289): GeoCell(List((38.39,-118.39), (37.28,-118.39), (37.28,-122.86), (38.39,-122.86), (38.39,-118.39)) (Center: (37.73,-122.11)), 969 documents(dist), 969 documents(links), 57032 types, 519451.0 tokens, 0 links)
+#4:  Predicted cell (at rank 5, kl-div 2.7241593987934336): GeoCell(List((35.62,-117.49), (33.37,-117.49), (33.37,-118.29), (35.62,-118.29), (35.62,-117.49)) (Center: (33.95,-118.01)), 969 documents(dist), 969 documents(links), 59626 types, 543922.0 tokens, 0 links)
+#4:  #3 close neighbor: (43.15,-79.75); error distance: 700.14 km (435.14 miles)
+#4:  #2 close neighbor: (44.54,-122.13); error distance: 4062.25 km (2524.71 miles)
+#4:  Distance 150.36 km (93.45 miles) to true cell center at (42.86,-70.42)
+#4:  Distance 4175.72 km (2595.23 miles) to predicted cell center at (34.66,-118.95)
+#4:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 2381.20 km (1479.92 miles)
+#5:Document gutonly-big/tdubb292 at (45.43,-122.82):
+#5:  168 types, 278.000000 tokens
+#5:  true cell at rank: 19
+#5:  true cell: GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#5:  Predicted cell (at rank 1, kl-div 1.0808188101312846): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#5:  Predicted cell (at rank 2, kl-div 1.0895714735257482): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#5:  Predicted cell (at rank 3, kl-div 1.1040100059606084): GeoCell(List((38.89,-64.78), (25.01,-64.78), (25.01,-77.57), (38.89,-77.57), (38.89,-64.78)) (Center: (37.75,-76.79)), 969 documents(dist), 969 documents(links), 53495 types, 537619.0 tokens, 0 links)
+#5:  Predicted cell (at rank 4, kl-div 1.1061210882236199): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#5:  Predicted cell (at rank 5, kl-div 1.1066052015866816): GeoCell(List((46.52,-81.62), (41.26,-81.62), (41.26,-84.55), (46.52,-84.55), (46.52,-81.62)) (Center: (42.29,-83.16)), 969 documents(dist), 969 documents(links), 51344 types, 570061.0 tokens, 0 links)
+#5:  #2 close neighbor: (39.81,-86.27); error distance: 3030.20 km (1883.28 miles)
+#5:  #1 close neighbor: (39.23,-83.16); error distance: 3300.59 km (2051.33 miles)
+#5:  Distance 114.11 km (70.92 miles) to true cell center at (44.54,-122.13)
+#5:  Distance 3300.59 km (2051.33 miles) to predicted cell center at (39.23,-83.16)
+#5:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 3165.40 km (1967.31 miles)
+#6:Document gutonly-big/AllyKaZimm at (41.92,-122.57):
+#6:  181 types, 286.000000 tokens
+#6:  true cell at rank: 28
+#6:  true cell: GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#6:  Predicted cell (at rank 1, kl-div 1.2116885048563648): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#6:  Predicted cell (at rank 2, kl-div 1.2209449143488735): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#6:  Predicted cell (at rank 3, kl-div 1.2468914490104381): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#6:  Predicted cell (at rank 4, kl-div 1.2472035752927402): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#6:  Predicted cell (at rank 5, kl-div 1.2575369982116256): GeoCell(List((41.59,-87.96), (37.27,-87.96), (37.27,-96.71), (41.59,-96.71), (41.59,-87.96)) (Center: (39.34,-92.23)), 969 documents(dist), 969 documents(links), 54268 types, 586905.0 tokens, 0 links)
+#6:  #2 close neighbor: (33.58,-93.79); error distance: 2681.60 km (1666.63 miles)
+#6:  #3 close neighbor: (39.81,-86.27); error distance: 3040.61 km (1889.75 miles)
+#6:  Distance 293.20 km (182.22 miles) to true cell center at (44.54,-122.13)
+#6:  Distance 3251.59 km (2020.88 miles) to predicted cell center at (31.67,-88.09)
+#6:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 2861.10 km (1778.19 miles)
+#7:Document gutonly-big/teampoop at (35.32,-106.55):
+#7:  302 types, 559.000000 tokens
+#7:  true cell at rank: 1
+#7:  true cell: GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#7:  Predicted cell (at rank 1, kl-div 1.245727127613153): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#7:  Predicted cell (at rank 2, kl-div 1.2680729170914011): GeoCell(List((28.12,-78.66), (25.11,-78.66), (25.11,-82.83), (28.12,-82.83), (28.12,-78.66)) (Center: (26.48,-80.78)), 969 documents(dist), 969 documents(links), 62023 types, 541420.0 tokens, 0 links)
+#7:  Predicted cell (at rank 3, kl-div 1.2885757856037314): GeoCell(List((48.22,-111.87), (33.22,-111.87), (33.22,-117.49), (48.22,-117.49), (48.22,-111.87)) (Center: (36.09,-114.64)), 969 documents(dist), 969 documents(links), 55737 types, 558602.0 tokens, 0 links)
+#7:  Predicted cell (at rank 4, kl-div 1.3023292450063022): GeoCell(List((38.39,-118.39), (37.28,-118.39), (37.28,-122.86), (38.39,-122.86), (38.39,-118.39)) (Center: (37.73,-122.11)), 969 documents(dist), 969 documents(links), 57032 types, 519451.0 tokens, 0 links)
+#7:  Predicted cell (at rank 5, kl-div 1.3060309539636814): GeoCell(List((32.93,-79.76), (28.13,-79.76), (28.13,-84.37), (32.93,-84.37), (32.93,-79.76)) (Center: (29.98,-81.90)), 969 documents(dist), 969 documents(links), 56574 types, 559360.0 tokens, 0 links)
+#7:  #1 close neighbor: (38.32,-103.07); error distance: 455.62 km (283.17 miles)
+#7:  #3 close neighbor: (36.09,-114.64); error distance: 736.52 km (457.75 miles)
+#7:  Distance 455.62 km (283.17 miles) to true cell center at (38.32,-103.07)
+#7:  Distance 455.62 km (283.17 miles) to predicted cell center at (38.32,-103.07)
+#7:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 596.07 km (370.46 miles)
+#8:Document gutonly-big/lowenkopf at (34.43,-119.70):
+#8:  312 types, 513.000000 tokens
+#8:  true cell at rank: 5
+#8:  true cell: GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#8:  Predicted cell (at rank 1, kl-div 1.2793994715635455): GeoCell(List((38.39,-118.39), (37.28,-118.39), (37.28,-122.86), (38.39,-122.86), (38.39,-118.39)) (Center: (37.73,-122.11)), 969 documents(dist), 969 documents(links), 57032 types, 519451.0 tokens, 0 links)
+#8:  Predicted cell (at rank 2, kl-div 1.2848389033409422): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#8:  Predicted cell (at rank 3, kl-div 1.2958939399391187): GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#8:  Predicted cell (at rank 4, kl-div 1.2975204203681385): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#8:  Predicted cell (at rank 5, kl-div 1.3196325366223542): GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#8:  #1 close neighbor: (37.73,-122.11); error distance: 425.84 km (264.66 miles)
+#8:  #3 close neighbor: (44.54,-122.13); error distance: 1143.61 km (710.76 miles)
+#8:  Distance 73.73 km (45.82 miles) to true cell center at (34.66,-118.95)
+#8:  Distance 425.84 km (264.66 miles) to predicted cell center at (37.73,-122.11)
+#8:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 784.72 km (487.71 miles)
+#9:Document gutonly-big/Agreb at (39.77,-84.05):
+#9:  264 types, 598.000000 tokens
+#9:  true cell at rank: 2
+#9:  true cell: GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#9:  Predicted cell (at rank 1, kl-div 1.1934196829158272): GeoCell(List((48.40,-87.95), (41.59,-87.95), (41.59,-96.71), (48.40,-96.71), (48.40,-87.95)) (Center: (43.55,-91.03)), 969 documents(dist), 969 documents(links), 54957 types, 571512.0 tokens, 0 links)
+#9:  Predicted cell (at rank 2, kl-div 1.217908547045411): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#9:  Predicted cell (at rank 3, kl-div 1.223801229944305): GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#9:  Predicted cell (at rank 4, kl-div 1.2334776872812452): GeoCell(List((47.47,-84.55), (41.70,-84.55), (41.70,-87.95), (47.47,-87.95), (47.47,-84.55)) (Center: (42.30,-87.24)), 968 documents(dist), 968 documents(links), 59789 types, 585614.0 tokens, 0 links)
+#9:  Predicted cell (at rank 5, kl-div 1.242606502534326): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#9:  #2 close neighbor: (39.23,-83.16); error distance: 97.42 km (60.55 miles)
+#9:  #4 close neighbor: (42.30,-87.24); error distance: 388.45 km (241.43 miles)
+#9:  Distance 97.42 km (60.55 miles) to true cell center at (39.23,-83.16)
+#9:  Distance 715.94 km (444.96 miles) to predicted cell center at (43.55,-91.03)
+#9:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 242.94 km (150.99 miles)
+#10:Document gutonly-big/sarahollys at (45.25,-93.25):
+#10:  1474 types, 3229.000000 tokens
+#10:  true cell at rank: 11
+#10:  true cell: GeoCell(List((48.40,-87.95), (41.59,-87.95), (41.59,-96.71), (48.40,-96.71), (48.40,-87.95)) (Center: (43.55,-91.03)), 969 documents(dist), 969 documents(links), 54957 types, 571512.0 tokens, 0 links)
+#10:  Predicted cell (at rank 1, kl-div 0.7648437846479184): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#10:  Predicted cell (at rank 2, kl-div 0.7667750786977349): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#10:  Predicted cell (at rank 3, kl-div 0.7807254337187083): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#10:  Predicted cell (at rank 4, kl-div 0.7823128361834748): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#10:  Predicted cell (at rank 5, kl-div 0.7852802661984509): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#10:  #1 close neighbor: (39.81,-86.27); error distance: 831.51 km (516.79 miles)
+#10:  #2 close neighbor: (39.23,-83.16); error distance: 1065.96 km (662.50 miles)
+#10:  Distance 258.63 km (160.74 miles) to true cell center at (43.55,-91.03)
+#10:  Distance 831.51 km (516.79 miles) to predicted cell center at (39.81,-86.27)
+#10:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 948.73 km (589.64 miles)
+#11:Document gutonly-big/MsTrishaBaby at (38.92,-77.03):
+#11:  85 types, 104.000000 tokens
+#11:  true cell at rank: 1
+#11:  true cell: GeoCell(List((39.35,-74.56), (38.89,-74.56), (38.89,-77.56), (39.35,-77.56), (39.35,-74.56)) (Center: (39.06,-76.81)), 969 documents(dist), 969 documents(links), 55162 types, 527074.0 tokens, 0 links)
+#11:  Predicted cell (at rank 1, kl-div 1.4843358772222515): GeoCell(List((39.35,-74.56), (38.89,-74.56), (38.89,-77.56), (39.35,-77.56), (39.35,-74.56)) (Center: (39.06,-76.81)), 969 documents(dist), 969 documents(links), 55162 types, 527074.0 tokens, 0 links)
+#11:  Predicted cell (at rank 2, kl-div 1.529223771308618): GeoCell(List((45.94,-73.83), (40.78,-73.83), (40.78,-77.57), (45.94,-77.57), (45.94,-73.83)) (Center: (41.83,-74.77)), 969 documents(dist), 969 documents(links), 63988 types, 596054.0 tokens, 0 links)
+#11:  Predicted cell (at rank 3, kl-div 1.5311379007789148): GeoCell(List((48.22,-111.87), (33.22,-111.87), (33.22,-117.49), (48.22,-117.49), (48.22,-111.87)) (Center: (36.09,-114.64)), 969 documents(dist), 969 documents(links), 55737 types, 558602.0 tokens, 0 links)
+#11:  Predicted cell (at rank 4, kl-div 1.5315860179169618): GeoCell(List((47.47,-84.55), (41.70,-84.55), (41.70,-87.95), (47.47,-87.95), (47.47,-84.55)) (Center: (42.30,-87.24)), 968 documents(dist), 968 documents(links), 59789 types, 585614.0 tokens, 0 links)
+#11:  Predicted cell (at rank 5, kl-div 1.5342593188297784): GeoCell(List((40.69,-73.14), (39.35,-73.14), (39.35,-75.15), (40.69,-75.15), (40.69,-73.14)) (Center: (40.28,-74.48)), 969 documents(dist), 969 documents(links), 57966 types, 563553.0 tokens, 0 links)
+#11:  #1 close neighbor: (39.06,-76.81); error distance: 25.00 km (15.54 miles)
+#11:  #2 close neighbor: (41.83,-74.77); error distance: 376.57 km (234.04 miles)
+#11:  Distance 25.00 km (15.54 miles) to true cell center at (39.06,-76.81)
+#11:  Distance 25.00 km (15.54 miles) to predicted cell center at (39.06,-76.81)
+#11:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 200.78 km (124.79 miles)
+#12:Document gutonly-big/prncessbubblgum at (40.91,-74.03):
+#12:  114 types, 143.000000 tokens
+#12:  true cell at rank: 4
+#12:  true cell: GeoCell(List((45.94,-73.83), (40.78,-73.83), (40.78,-77.57), (45.94,-77.57), (45.94,-73.83)) (Center: (41.83,-74.77)), 969 documents(dist), 969 documents(links), 63988 types, 596054.0 tokens, 0 links)
+#12:  Predicted cell (at rank 1, kl-div 1.3407765073136269): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#12:  Predicted cell (at rank 2, kl-div 1.3501090453094866): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#12:  Predicted cell (at rank 3, kl-div 1.3719158427793625): GeoCell(List((35.62,-117.49), (33.37,-117.49), (33.37,-118.29), (35.62,-118.29), (35.62,-117.49)) (Center: (33.95,-118.01)), 969 documents(dist), 969 documents(links), 59626 types, 543922.0 tokens, 0 links)
+#12:  Predicted cell (at rank 4, kl-div 1.3757294846852925): GeoCell(List((45.94,-73.83), (40.78,-73.83), (40.78,-77.57), (45.94,-77.57), (45.94,-73.83)) (Center: (41.83,-74.77)), 969 documents(dist), 969 documents(links), 63988 types, 596054.0 tokens, 0 links)
+#12:  Predicted cell (at rank 5, kl-div 1.3778080133990473): GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#12:  #4 close neighbor: (41.83,-74.77); error distance: 119.99 km (74.58 miles)
+#12:  #1 close neighbor: (39.23,-83.16); error distance: 798.92 km (496.53 miles)
+#12:  Distance 119.99 km (74.58 miles) to true cell center at (41.83,-74.77)
+#12:  Distance 798.92 km (496.53 miles) to predicted cell center at (39.23,-83.16)
+#12:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 459.46 km (285.56 miles)
+#13:Document gutonly-big/dannyboyLaugh at (30.30,-97.74):
+#13:  157 types, 219.000000 tokens
+#13:  true cell at rank: 2
+#13:  true cell: GeoCell(List((33.21,-96.72), (25.86,-96.72), (25.86,-98.44), (33.21,-98.44), (33.21,-96.72)) (Center: (31.32,-97.36)), 969 documents(dist), 969 documents(links), 57172 types, 564035.0 tokens, 0 links)
+#13:  Predicted cell (at rank 1, kl-div 1.2893793117628285): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#13:  Predicted cell (at rank 2, kl-div 1.2989036763294468): GeoCell(List((33.21,-96.72), (25.86,-96.72), (25.86,-98.44), (33.21,-98.44), (33.21,-96.72)) (Center: (31.32,-97.36)), 969 documents(dist), 969 documents(links), 57172 types, 564035.0 tokens, 0 links)
+#13:  Predicted cell (at rank 3, kl-div 1.299116400593992): GeoCell(List((48.22,-111.87), (33.22,-111.87), (33.22,-117.49), (48.22,-117.49), (48.22,-111.87)) (Center: (36.09,-114.64)), 969 documents(dist), 969 documents(links), 55737 types, 558602.0 tokens, 0 links)
+#13:  Predicted cell (at rank 4, kl-div 1.309655812595817): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#13:  Predicted cell (at rank 5, kl-div 1.3097026522790844): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#13:  #2 close neighbor: (31.32,-97.36); error distance: 119.55 km (74.30 miles)
+#13:  #1 close neighbor: (38.32,-103.07); error distance: 1018.02 km (632.70 miles)
+#13:  Distance 119.55 km (74.30 miles) to true cell center at (31.32,-97.36)
+#13:  Distance 1018.02 km (632.70 miles) to predicted cell center at (38.32,-103.07)
+#13:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 568.78 km (353.50 miles)
+#14:Document gutonly-big/indy96 at (35.10,-80.13):
+#14:  39 types, 49.000000 tokens
+#14:  true cell at rank: 13
+#14:  true cell: GeoCell(List((35.93,-77.59), (32.95,-77.59), (32.95,-82.66), (35.93,-82.66), (35.93,-77.59)) (Center: (34.88,-80.23)), 969 documents(dist), 969 documents(links), 51114 types, 556951.0 tokens, 0 links)
+#14:  Predicted cell (at rank 1, kl-div 1.596525792835128): GeoCell(List((35.93,-82.66), (32.94,-82.66), (32.94,-84.55), (35.93,-84.55), (35.93,-82.66)) (Center: (33.90,-84.17)), 969 documents(dist), 969 documents(links), 51945 types, 548845.0 tokens, 0 links)
+#14:  Predicted cell (at rank 2, kl-div 1.6140986533399548): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#14:  Predicted cell (at rank 3, kl-div 1.6182372760891357): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#14:  Predicted cell (at rank 4, kl-div 1.6231248100309832): GeoCell(List((40.69,-75.15), (39.35,-75.15), (39.35,-77.55), (40.69,-77.55), (40.69,-75.15)) (Center: (39.92,-75.71)), 969 documents(dist), 969 documents(links), 50409 types, 529402.0 tokens, 0 links)
+#14:  Predicted cell (at rank 5, kl-div 1.6441324755076319): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#14:  #1 close neighbor: (33.90,-84.17); error distance: 394.32 km (245.07 miles)
+#14:  #2 close neighbor: (35.22,-87.30); error distance: 652.61 km (405.60 miles)
+#14:  Distance 26.23 km (16.30 miles) to true cell center at (34.88,-80.23)
+#14:  Distance 394.32 km (245.07 miles) to predicted cell center at (33.90,-84.17)
+#14:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 523.46 km (325.34 miles)
+#15:Document gutonly-big/erockcroal at (40.50,-74.45):
+#15:  84 types, 141.000000 tokens
+#15:  true cell at rank: 18
+#15:  true cell: GeoCell(List((40.69,-73.14), (39.35,-73.14), (39.35,-75.15), (40.69,-75.15), (40.69,-73.14)) (Center: (40.28,-74.48)), 969 documents(dist), 969 documents(links), 57966 types, 563553.0 tokens, 0 links)
+#15:  Predicted cell (at rank 1, kl-div 1.6705271716173542): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#15:  Predicted cell (at rank 2, kl-div 1.6903574839461288): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#15:  Predicted cell (at rank 3, kl-div 1.6932317384326665): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#15:  Predicted cell (at rank 4, kl-div 1.6964386400658196): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#15:  Predicted cell (at rank 5, kl-div 1.7107788066587644): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#15:  #2 close neighbor: (39.23,-83.16); error distance: 756.97 km (470.46 miles)
+#15:  #3 close neighbor: (39.81,-86.27); error distance: 1008.30 km (626.66 miles)
+#15:  Distance 24.55 km (15.26 miles) to true cell center at (40.28,-74.48)
+#15:  Distance 1568.92 km (975.09 miles) to predicted cell center at (31.67,-88.09)
+#15:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 882.64 km (548.56 miles)
+#16:Document gutonly-big/Pompous_LaDon at (43.51,-83.96):
+#16:  150 types, 195.000000 tokens
+#16:  true cell at rank: 1
+#16:  true cell: GeoCell(List((46.52,-81.62), (41.26,-81.62), (41.26,-84.55), (46.52,-84.55), (46.52,-81.62)) (Center: (42.29,-83.16)), 969 documents(dist), 969 documents(links), 51344 types, 570061.0 tokens, 0 links)
+#16:  Predicted cell (at rank 1, kl-div 1.3269932289561857): GeoCell(List((46.52,-81.62), (41.26,-81.62), (41.26,-84.55), (46.52,-84.55), (46.52,-81.62)) (Center: (42.29,-83.16)), 969 documents(dist), 969 documents(links), 51344 types, 570061.0 tokens, 0 links)
+#16:  Predicted cell (at rank 2, kl-div 1.3395934575461466): GeoCell(List((30.50,-90.25), (28.96,-90.25), (28.96,-96.58), (30.50,-96.58), (30.50,-90.25)) (Center: (29.91,-94.21)), 969 documents(dist), 969 documents(links), 50496 types, 519106.0 tokens, 0 links)
+#16:  Predicted cell (at rank 3, kl-div 1.3496045309912603): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#16:  Predicted cell (at rank 4, kl-div 1.3497258353767785): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#16:  Predicted cell (at rank 5, kl-div 1.3524677678460142): GeoCell(List((38.89,-64.78), (25.01,-64.78), (25.01,-77.57), (38.89,-77.57), (38.89,-64.78)) (Center: (37.75,-76.79)), 969 documents(dist), 969 documents(links), 53495 types, 537619.0 tokens, 0 links)
+#16:  #1 close neighbor: (42.29,-83.16); error distance: 150.46 km (93.51 miles)
+#16:  #3 close neighbor: (31.67,-88.09); error distance: 1366.93 km (849.55 miles)
+#16:  Distance 150.46 km (93.51 miles) to true cell center at (42.29,-83.16)
+#16:  Distance 150.46 km (93.51 miles) to predicted cell center at (42.29,-83.16)
+#16:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 758.69 km (471.53 miles)
+#17:Document gutonly-big/mackenziedevore at (40.88,-81.37):
+#17:  729 types, 1659.000000 tokens
+#17:  true cell at rank: 3
+#17:  true cell: GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#17:  Predicted cell (at rank 1, kl-div 0.9213197212499984): GeoCell(List((37.25,-84.56), (33.63,-84.56), (33.63,-90.21), (37.25,-90.21), (37.25,-84.56)) (Center: (35.22,-87.30)), 969 documents(dist), 969 documents(links), 53635 types, 558105.0 tokens, 0 links)
+#17:  Predicted cell (at rank 2, kl-div 0.928659532262872): GeoCell(List((46.52,-81.62), (41.26,-81.62), (41.26,-84.55), (46.52,-84.55), (46.52,-81.62)) (Center: (42.29,-83.16)), 969 documents(dist), 969 documents(links), 51344 types, 570061.0 tokens, 0 links)
+#17:  Predicted cell (at rank 3, kl-div 0.9325439216999867): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#17:  Predicted cell (at rank 4, kl-div 0.9326063525747527): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#17:  Predicted cell (at rank 5, kl-div 0.935275484066336): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#17:  #2 close neighbor: (42.29,-83.16); error distance: 216.90 km (134.81 miles)
+#17:  #3 close neighbor: (39.23,-83.16); error distance: 237.75 km (147.76 miles)
+#17:  Distance 237.75 km (147.76 miles) to true cell center at (39.23,-83.16)
+#17:  Distance 816.17 km (507.26 miles) to predicted cell center at (35.22,-87.30)
+#17:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 227.33 km (141.28 miles)
+#18:Document gutonly-big/homiehelen8 at (37.98,-121.31):
+#18:  463 types, 819.000000 tokens
+#18:  true cell at rank: 8
+#18:  true cell: GeoCell(List((38.39,-118.39), (37.28,-118.39), (37.28,-122.86), (38.39,-122.86), (38.39,-118.39)) (Center: (37.73,-122.11)), 969 documents(dist), 969 documents(links), 57032 types, 519451.0 tokens, 0 links)
+#18:  Predicted cell (at rank 1, kl-div 1.1022895194384497): GeoCell(List((41.26,-81.25), (35.93,-81.25), (35.93,-84.55), (41.26,-84.55), (41.26,-81.25)) (Center: (39.23,-83.16)), 969 documents(dist), 969 documents(links), 55791 types, 570056.0 tokens, 0 links)
+#18:  Predicted cell (at rank 2, kl-div 1.1057399813030004): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#18:  Predicted cell (at rank 3, kl-div 1.118558540357654): GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#18:  Predicted cell (at rank 4, kl-div 1.1214676652844784): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#18:  Predicted cell (at rank 5, kl-div 1.1225868347164336): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#18:  #2 close neighbor: (38.32,-103.07); error distance: 1594.58 km (991.03 miles)
+#18:  #4 close neighbor: (39.81,-86.27); error distance: 3022.52 km (1878.51 miles)
+#18:  Distance 75.44 km (46.89 miles) to true cell center at (37.73,-122.11)
+#18:  Distance 3296.93 km (2049.05 miles) to predicted cell center at (39.23,-83.16)
+#18:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 2308.55 km (1434.77 miles)
+#19:Document gutonly-big/hugotheone83 at (36.31,-119.31):
+#19:  98 types, 201.000000 tokens
+#19:  true cell at rank: 1
+#19:  true cell: GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#19:  Predicted cell (at rank 1, kl-div 2.7082358433534965): GeoCell(List((37.28,-118.29), (33.34,-118.29), (33.34,-122.07), (37.28,-122.07), (37.28,-118.29)) (Center: (34.66,-118.95)), 969 documents(dist), 969 documents(links), 57280 types, 530808.0 tokens, 0 links)
+#19:  Predicted cell (at rank 2, kl-div 2.8879595796511057): GeoCell(List((48.22,-111.87), (33.22,-111.87), (33.22,-117.49), (48.22,-117.49), (48.22,-111.87)) (Center: (36.09,-114.64)), 969 documents(dist), 969 documents(links), 55737 types, 558602.0 tokens, 0 links)
+#19:  Predicted cell (at rank 3, kl-div 2.912412244997316): GeoCell(List((33.21,-98.45), (25.19,-98.45), (25.19,-117.35), (33.21,-117.35), (33.21,-98.45)) (Center: (30.21,-107.55)), 969 documents(dist), 969 documents(links), 68532 types, 600216.0 tokens, 0 links)
+#19:  Predicted cell (at rank 4, kl-div 2.940196028397884): GeoCell(List((32.93,-79.76), (28.13,-79.76), (28.13,-84.37), (32.93,-84.37), (32.93,-79.76)) (Center: (29.98,-81.90)), 969 documents(dist), 969 documents(links), 56574 types, 559360.0 tokens, 0 links)
+#19:  Predicted cell (at rank 5, kl-div 2.9504746408774): GeoCell(List((48.98,-118.08), (38.40,-118.08), (38.40,-124.26), (48.98,-124.26), (48.98,-118.08)) (Center: (44.54,-122.13)), 969 documents(dist), 969 documents(links), 53523 types, 493115.0 tokens, 0 links)
+#19:  #1 close neighbor: (34.66,-118.95); error distance: 186.54 km (115.94 miles)
+#19:  #2 close neighbor: (36.09,-114.64); error distance: 420.01 km (261.04 miles)
+#19:  Distance 186.54 km (115.94 miles) to true cell center at (34.66,-118.95)
+#19:  Distance 186.54 km (115.94 miles) to predicted cell center at (34.66,-118.95)
+#19:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 303.28 km (188.49 miles)
+#20:Document gutonly-big/LindonThomas at (41.78,-72.56):
+#20:  35 types, 63.000000 tokens
+#20:  true cell at rank: 1
+#20:  true cell: GeoCell(List((46.73,-71.78), (40.69,-71.78), (40.69,-73.83), (46.73,-73.83), (46.73,-71.78)) (Center: (42.15,-73.14)), 969 documents(dist), 969 documents(links), 65970 types, 561804.0 tokens, 0 links)
+#20:  Predicted cell (at rank 1, kl-div 2.1930959413509665): GeoCell(List((46.73,-71.78), (40.69,-71.78), (40.69,-73.83), (46.73,-73.83), (46.73,-71.78)) (Center: (42.15,-73.14)), 969 documents(dist), 969 documents(links), 65970 types, 561804.0 tokens, 0 links)
+#20:  Predicted cell (at rank 2, kl-div 2.1952433029129095): GeoCell(List((45.94,-73.83), (40.78,-73.83), (40.78,-77.57), (45.94,-77.57), (45.94,-73.83)) (Center: (41.83,-74.77)), 969 documents(dist), 969 documents(links), 63988 types, 596054.0 tokens, 0 links)
+#20:  Predicted cell (at rank 3, kl-div 2.223080356338509): GeoCell(List((48.40,-87.95), (41.59,-87.95), (41.59,-96.71), (48.40,-96.71), (48.40,-87.95)) (Center: (43.55,-91.03)), 969 documents(dist), 969 documents(links), 54957 types, 571512.0 tokens, 0 links)
+#20:  Predicted cell (at rank 4, kl-div 2.2241748127458854): GeoCell(List((48.22,-111.87), (33.22,-111.87), (33.22,-117.49), (48.22,-117.49), (48.22,-111.87)) (Center: (36.09,-114.64)), 969 documents(dist), 969 documents(links), 55737 types, 558602.0 tokens, 0 links)
+#20:  Predicted cell (at rank 5, kl-div 2.2248228140833284): GeoCell(List((40.78,-73.83), (40.69,-73.83), (40.69,-76.17), (40.78,-76.17), (40.78,-73.83)) (Center: (40.74,-74.03)), 969 documents(dist), 969 documents(links), 82324 types, 626775.0 tokens, 0 links)
+#20:  #1 close neighbor: (42.15,-73.14); error distance: 63.12 km (39.23 miles)
+#20:  #2 close neighbor: (41.83,-74.77); error distance: 183.19 km (113.85 miles)
+#20:  Distance 63.12 km (39.23 miles) to true cell center at (42.15,-73.14)
+#20:  Distance 63.12 km (39.23 miles) to predicted cell center at (42.15,-73.14)
+#20:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 123.15 km (76.54 miles)
+#21:Document gutonly-big/jameskelly09 at (27.52,-99.52):
+#21:  172 types, 242.000000 tokens
+#21:  true cell at rank: 32
+#21:  true cell: GeoCell(List((33.21,-98.45), (25.19,-98.45), (25.19,-117.35), (33.21,-117.35), (33.21,-98.45)) (Center: (30.21,-107.55)), 969 documents(dist), 969 documents(links), 68532 types, 600216.0 tokens, 0 links)
+#21:  Predicted cell (at rank 1, kl-div 1.16706027188935): GeoCell(List((37.25,-90.24), (30.50,-90.24), (30.50,-96.72), (37.25,-96.72), (37.25,-90.24)) (Center: (33.58,-93.79)), 969 documents(dist), 969 documents(links), 51373 types, 541548.0 tokens, 0 links)
+#21:  Predicted cell (at rank 2, kl-div 1.199392331789237): GeoCell(List((38.89,-64.78), (25.01,-64.78), (25.01,-77.57), (38.89,-77.57), (38.89,-64.78)) (Center: (37.75,-76.79)), 969 documents(dist), 969 documents(links), 53495 types, 537619.0 tokens, 0 links)
+#21:  Predicted cell (at rank 3, kl-div 1.2019231169988616): GeoCell(List((33.63,-84.55), (29.73,-84.55), (29.73,-90.24), (33.63,-90.24), (33.63,-84.55)) (Center: (31.67,-88.09)), 969 documents(dist), 969 documents(links), 53725 types, 573751.0 tokens, 0 links)
+#21:  Predicted cell (at rank 4, kl-div 1.2046941712075694): GeoCell(List((39.35,-74.56), (38.89,-74.56), (38.89,-77.56), (39.35,-77.56), (39.35,-74.56)) (Center: (39.06,-76.81)), 969 documents(dist), 969 documents(links), 55162 types, 527074.0 tokens, 0 links)
+#21:  Predicted cell (at rank 5, kl-div 1.207905629532152): GeoCell(List((30.50,-90.25), (28.96,-90.25), (28.96,-96.58), (30.50,-96.58), (30.50,-90.25)) (Center: (29.91,-94.21)), 969 documents(dist), 969 documents(links), 50496 types, 519106.0 tokens, 0 links)
+#21:  #1 close neighbor: (33.58,-93.79); error distance: 869.34 km (540.30 miles)
+#21:  #3 close neighbor: (31.67,-88.09); error distance: 1197.67 km (744.36 miles)
+#21:  Distance 838.52 km (521.14 miles) to true cell center at (30.21,-107.55)
+#21:  Distance 869.34 km (540.30 miles) to predicted cell center at (33.58,-93.79)
+#21:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 1033.51 km (642.33 miles)
+#22:Document gutonly-big/harveymonster at (28.62,-81.31):
+#22:  1029 types, 3787.000000 tokens
+#22:  true cell at rank: 1
+#22:  true cell: GeoCell(List((32.93,-79.76), (28.13,-79.76), (28.13,-84.37), (32.93,-84.37), (32.93,-79.76)) (Center: (29.98,-81.90)), 969 documents(dist), 969 documents(links), 56574 types, 559360.0 tokens, 0 links)
+#22:  Predicted cell (at rank 1, kl-div 1.2374774756341833): GeoCell(List((32.93,-79.76), (28.13,-79.76), (28.13,-84.37), (32.93,-84.37), (32.93,-79.76)) (Center: (29.98,-81.90)), 969 documents(dist), 969 documents(links), 56574 types, 559360.0 tokens, 0 links)
+#22:  Predicted cell (at rank 2, kl-div 1.2468312311019518): GeoCell(List((48.97,-96.73), (33.21,-96.73), (33.21,-111.87), (48.97,-111.87), (48.97,-96.73)) (Center: (38.32,-103.07)), 968 documents(dist), 968 documents(links), 52709 types, 529233.0 tokens, 0 links)
+#22:  Predicted cell (at rank 3, kl-div 1.2551568818793957): GeoCell(List((48.40,-87.95), (41.59,-87.95), (41.59,-96.71), (48.40,-96.71), (48.40,-87.95)) (Center: (43.55,-91.03)), 969 documents(dist), 969 documents(links), 54957 types, 571512.0 tokens, 0 links)
+#22:  Predicted cell (at rank 4, kl-div 1.2586352916769141): GeoCell(List((48.17,-77.57), (41.27,-77.57), (41.27,-81.62), (48.17,-81.62), (48.17,-77.57)) (Center: (43.15,-79.75)), 968 documents(dist), 968 documents(links), 57151 types, 530617.0 tokens, 0 links)
+#22:  Predicted cell (at rank 5, kl-div 1.2599845941749757): GeoCell(List((41.70,-84.55), (37.26,-84.55), (37.26,-87.90), (41.70,-87.90), (41.70,-84.55)) (Center: (39.81,-86.27)), 969 documents(dist), 969 documents(links), 54864 types, 551238.0 tokens, 0 links)
+#22:  #1 close neighbor: (29.98,-81.90); error distance: 160.71 km (99.88 miles)
+#22:  #4 close neighbor: (43.15,-79.75); error distance: 1622.28 km (1008.26 miles)
+#22:  Distance 160.71 km (99.88 miles) to true cell center at (29.98,-81.90)
+#22:  Distance 160.71 km (99.88 miles) to predicted cell center at (29.98,-81.90)
+#22:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 891.49 km (554.07 miles)
+#23:Document gutonly-big/Flatty_TheBOSS at (35.95,-79.96):
+#23:  42 types, 45.000000 tokens
+#23:  true cell at rank: 16
+#23:  true cell: GeoCell(List((41.26,-77.57), (35.93,-77.57), (35.93,-81.24), (41.26,-81.24), (41.26,-77.57)) (Center: (38.86,-79.64)), 969 documents(dist), 969 documents(links), 60560 types, 631221.0 tokens, 0 links)
+#23:  Predicted cell (at rank 1, kl-div 1.8802639622646429): GeoCell(List((39.35,-74.56), (38.89,-74.56), (38.89,-77.56), (39.35,-77.56), (39.35,-74.56)) (Center: (39.06,-76.81)), 969 documents(dist), 969 documents(links), 55162 types, 527074.0 tokens, 0 links)
+#23:  Predicted cell (at rank 2, kl-div 1.8871678611293947): GeoCell(List((38.89,-64.78), (25.01,-64.78), (25.01,-77.57), (38.89,-77.57), (38.89,-64.78)) (Center: (37.75,-76.79)), 969 documents(dist), 969 documents(links), 53495 types, 537619.0 tokens, 0 links)

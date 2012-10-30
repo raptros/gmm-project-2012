@@ -26,3 +26,7 @@
 *.mtc
 *.mtc0
 *.pdf
+
+*.swp
+*.class
+*/target/*
