@@ -30,3 +30,4 @@
 *.swp
 *.class
 */target/*
+*/project/target/*
