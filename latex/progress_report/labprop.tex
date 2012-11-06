@@ -1,3 +1,12 @@
 \subsection{Label propagation}
-What we've managed to do in terms of running label propagation.
+In order to run label propagation, we first need a graph structure over wikipedia articles. In our project, this graph structure is derived from the links between articles. Specifically, the graph is represented using the adjacency list notation (v -> link1 link2 ) where each vertex is a wikipedia article and is associated with a list of vertices that the article links to.
 
+However, to the best of our knowledge, such a graph representation cannot be directly obtained from the current implementation of the textgrounder framework, and requires some additions to the preprocessing code.
+
+There are a few other open source projects that attempt to create this graph by parsing xml wikipedia dumps. For example, see \cite{} \cite{} \cite{}. However, each of these projects uses a different scheme for generating unique article IDs than the one used in textgrounder. For reasons we don't quite understand, perhaps for ease of implementation, these tools utilize the fact that all article titles on wikipedia are unique to extract the title for each article. They do this by sorting the article titles lexicographically (or in order of input), and using the index of the article title in this sorted list as the article ID. Reconciling the article IDs between the output of these tools and textgrounder is a nontrivial problem. Furthermore, due to different preprocessing strategis, each of these tools generates a slightly different set of articles.
+
+Following a conversation with Mike Speriosu and Ben Wing we've decided to invest some time upfront in updating the textgrounder preprocessing script to generate this graph for us.
+
+This is going to be an unexpected source of delay in actually using the Junto toolkit for label propagation, since a link graph is a prerequisite for further processing.
+
+An alternative is to use a fully connected graph with an edge between all articles as the input for label propagation, as used in the original algorithm. In this scenario, the performance of label propagation would depend on the edge weights. However, it is not clear to us what the edge weights for our geolocation task should be. We believe that the usual document similarity metrics based on word distributions aren't appropriate as edge weights, since they don't clearly reflect the notion of geographical similarity. For example, we're not convinced that document similarity metrics alone would be able to capture the fact that Austin and Houston are more geographically similar than Austin and San Francisco. We are interested in some feedback on whether this would be a good hypothesis to test.

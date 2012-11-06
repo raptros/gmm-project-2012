@@ -4,23 +4,20 @@ the uniform grid remains our primary first step.
 In order to do this, we will need to recreate the uniform case of
 \cite{rolleretal:12}, which means successfully getting Textgrounder up and
 running on TACC.
-Once we have a log file, we'll also be able to extract the cell information we
-need to create labels for the label propagation system; with that, we can use
-the same training set to provide seed labels.
-After that, we can extract the predicted locations and (hopefully) supply them
-to an existing evaluation mechanism.
-Figuring out how to perform these steps on the simple case will allow us to
+Once we have a log file from the textgrounder run, we'll also be able to extract the cell information we
+need to create labels for the label propagation system. We will also need to modify the existing wikipedia preprocessing scripts to have them output the link structure information. Once we have this information, we can set up label propagation so that both junto and textgrounder use the same training set of articles; textgrounder for building the language models, and junto for obtaining initial seed labels.
+After that, we can run both the systems to get the predicted locations and supply these results to an evaluation mechanism.
+Figuring out how to perform these steps on the simple case of uniform grid will allow us to
 explore more sophisticated models, both for creating geographic cells (i.e.
-using kd-trees), and for constructing the document connection graph.
+using kd-trees), and for tuning the articles graph.
 \par
-The primary motivation for this project is still to attempt to extend
+Once we can resolve our current technical difficulties and reach this point, we
+will be able to explore questions such as how similar are the locational
+predictions produced by the IR model vs. the graph-based label-propagation
+model, and how useful is the additional information obtained by running label propogation over non-geotagged articles.
+
+The ultimate aim of this project is still to attempt to extend
 geographic labelling to the rest of wikipedia. 
 Once we figure out which, if any, label propagation models will work well
 enough for this purpose, we can explore the possibilities made available in the
 new information from the extended set.
-If we can surmount our current technical difficulties and reach this point, we
-will be able to explore questions such as how similar are the locational
-predictions produced by the IR model vs. the graph-based label-propagation
-model, and how good is the information contained in the label-extended portion for
-predicting locations in the geotagged portions.
-
