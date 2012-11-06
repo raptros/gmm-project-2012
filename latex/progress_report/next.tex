@@ -1,6 +1,26 @@
-\section{Further work}
--Run Textgrounder to recreate the uniform case of \cite{rolleretal:12}\\
--extract cell information from the log file, allowing us to construct an initial labelling of a training set of wiki docs.\\
--run label propagation and evaluate.\\
--Explore more advanced cell models and propagation models.\\
--Attempt to extend labelling to the rest of wikipedia.
+\section{Next steps}
+Getting a comparison of label propagation and Textgrounder for geolocation on
+the uniform grid remains our primary first step.
+In order to do this, we will need to recreate the uniform case of
+\cite{rolleretal:12}, which means successfully getting Textgrounder up and
+running on TACC.
+Once we have a log file, we'll also be able to extract the cell information we
+need to create labels for the label propagation system; with that, we can use
+the same training set to provide seed labels.
+After that, we can extract the predicted locations and (hopefully) supply them
+to an existing evaluation mechanism.
+Figuring out how to perform these steps on the simple case will allow us to
+explore more sophisticated models, both for creating geographic cells (i.e.
+using kd-trees), and for constructing the document connection graph.
+\par
+The primary motivation for this project is still to attempt to extend
+geographic labelling to the rest of wikipedia. 
+Once we figure out which, if any, label propagation models will work well
+enough for this purpose, we can explore the possibilities made available in the
+new information from the extended set.
+If we can surmount our current technical difficulties and reach this point, we
+will be able to explore questions such as how similar are the locational
+predictions produced by the IR model vs. the graph-based label-propagation
+model, and how good is the information contained in the label-extended portion for
+predicting locations in the geotagged portions.
+
