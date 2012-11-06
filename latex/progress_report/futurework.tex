@@ -15,7 +15,10 @@ One approach would be to take the similarity between the language models for the
 This could be the cosine similarity, tf-idf weighted cosine similarity, or the KL divergence score for the pair.
 An straightforward alternative to begin with would be to use the same edge weight for all edges regardless of document similarity.
  
-Furthermore, since each document can potentially be related to more than one location, we will examine the performance of holding seed document label distributions fixed vs. allowing them to vary (and acquire non-zero weights for other locations).
+Furthermore, since each document can potentially be related to more than one
+location, we will examine the performance of holding seed document label
+distributions fixed versus allowing them to vary (and acquire non-zero weights
+for other locations).
 The latter approach would allow a document label to be influenced by related geographic locations; 
 for example, the distribution for the article for Lake Austin would end up having a nonzero weight for the location for Travis County.
 As suggested earlier, this might be useful in geolocating concepts that span multiple locations.

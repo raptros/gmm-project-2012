@@ -29,7 +29,7 @@ system to be less tightly coupled to the loading system.
 Such a re-design would make it much easier to build upon the parts of the
 Textgrounder codebase that we need. However, our time constraints mean that we cannot wait for the new architecture to be implemented, nor will we have
 time to aid the process by volunteering.
-Instead, we will use a workaround suggested by Stephen Roller; we've built a
+Instead, we will use a workaround suggested by Stephen Roller; we have built a
 simple tool that parses Textgrounder logfiles, which contain listings of grid
 cells with their geographic boundaries.
 Admittedly, this is a fragile and inelegant solution, but it will allow us to
@@ -51,8 +51,11 @@ steps after false starts), only for us to decide it was not worth the trouble.
 \par
 At this point, we decided to try to run Textgrounder on the Linguistics
 department machines, where we eventually discovered that (contrary to the notes
-in Textgrounder's README) the wikipedia corpus is not correctly set up
+in Textgrounder's README) the Wikipedia corpus is not correctly set up
 there for running an evaluation.
 Since we do not know what exactly is wrong with the setup on department machines, even if we had write
 access to the relevant directories, we would not be able to fix the problem
-ourselves. On the other hand, we've been told that at least one other person has been able to succesfully run Textgrounder on the TACC cluster, so our plan now is to and perform the setup,  preprocessing and evaluations there.
+ourselves.
+As it turns out, we have been told that at least one other person
+has been able to successfully run Textgrounder on the TACC cluster, so our plan
+now is to do the same and perform the setup, preprocessing and evaluations there.
