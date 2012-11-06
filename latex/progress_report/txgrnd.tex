@@ -1,0 +1,23 @@
+\subsection{Textgrounder: a study in failure}
+So far, we have not been successful in using the Textgrounder system of
+\cite{wing-baldridge:11} and \cite{rolleretal:12} to accomplish our goals. 
+Several issues stand in our way, including structural problems in the Textgrounder codebase, mistakes and poor decision making in attempting to get the system up and running, and various problems involving dataset and resource availability.
+\par
+Textgrounder is, unfortunately, a research project, and therefore has a messy
+codebase.  
+While we regret having to say negative things about the products of what
+amounts to volunteer efforts, the design of the system presents serious
+obstacles to anyone wishing to do further research based on it.
+Our objective has been to extract cell assignments for documents in the
+Wikipedia corpus, so we could use those as labels for label propagation.
+Unfortunately, the way the code is structured, the ability to construct a grid
+is directly dependant on the abiliy to load up a corpus - and how a corpus is
+loaded is not at all clear.
+Part of the difficulty in figuring out how to work with Textgrounder comes from
+the (unexpectedly high) reliance on an imperative coding paradigm for a variety of
+tasks, including, apparently, loading text into the document storage and
+constructing the cell grid.
+It is likely that this structuring is a root cause of the difficulty of
+separating out the components we would have wanted to use to determine cell
+locations.
+
