@@ -1,7 +1,10 @@
 \subsection{Textgrounder: a study in failure}
 So far, we have not been successful in using the Textgrounder system of
 \cite{wing-baldridge:11} and \cite{rolleretal:12} to accomplish our goals. 
-Several issues stand in our way, including structural problems in the Textgrounder codebase, mistakes and poor decision making in attempting to get the system up and running, and various problems involving dataset and resource availability.
+Several issues stand in our way, including structural problems in the
+Textgrounder codebase, mistakes and poor decision making in attempting to get
+the system up and running, and various problems involving dataset and resource
+availability.
 \par
 Textgrounder is, unfortunately, a research project, and therefore has a messy
 codebase.  
@@ -20,4 +23,37 @@ constructing the cell grid.
 It is likely that this structuring is a root cause of the difficulty of
 separating out the components we would have wanted to use to determine cell
 locations.
+Unfortunately, aiding a refactoring of the Textgrounder codebase is outside the
+scope of our project, so we will have to make do.
+Based on advice from Stephen Roller, we've put together a fairly simple tool
+that parses Textgrounder logfiles to extract cell boundary listings, and use
+them to determine cell assignment for every geolocated document.
+While this should work, it is (as Benjamin Wing pointed out) a fragile and
+inelegant workaround.
+Lacking a clear alternative, we will have to go forward with it as soon as we
+manage to actually run Textgrounder.
+\par
+We have to admit that most of our lack of progress is the result of our own
+poor decision-making, inability to understand the systems we work with, and
+sheer bungling, especially on Aidan's part, who admits that he should have done
+better.
+The key mistake we made was not focusing on getting Textgrounder up and running
+on TACC as soon as possible; failing to do that lead inevitably to us
+attempting to try to run it on a home computer.
+It turns out that running the preprocessing scripts to set up Wikipedia are
+impractically slow on any home machine; while it may be possible to actually
+perform an evaluation (such as replicating the results of \cite{rolleretal:12})
+on such a machine, we recommend against even trying.
+In the end, hours of work were wasted on figuring out how to set up
+Textgrounder's environment correctly (and often having to repeat time consuming
+steps after messing up badly), only for us to decide it was not worth the trouble.
+\par
+At this point, we decided to try to run Textgrounder on the Linguistics
+department machines, where we eventually discovered that (contrary to the notes
+in Textgrounder's README) the wikipedia corpus is not at all correctly set up
+there for running an evaluation.
+Since we do not know what exactly is wrong with the setup, even if we had write
+access to the relevant directories, we would not be able to fix the problem
+ourselves; at this point, we have finally realized that the sensible decision
+is to get onto TACC and perform the evaluations there.
 
