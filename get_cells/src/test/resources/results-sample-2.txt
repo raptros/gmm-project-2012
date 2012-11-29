@@ -1,0 +1,500 @@
+Nohup wrapper running on c202-121.longhorn at time Wed Nov 14 17:04:21 CST 2012
+Output file: /home/01937/prateekm/tg-geolocate.out.2012-11-14.1704pm
+Nohup script invoked as: /home/01937/prateekm/textgrounder/bin/run-nohup tg-geolocate enwiki-20120307
+Invoking: tg-geolocate enwiki-20120307
+(all above info also sent to output file)
+Running the following to get the corpus dir: tg-get-corpus-args 
+Output is: --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307
+Executing: /home/01937/prateekm/textgrounder/bin/textgrounder geolocate-document --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307
+Beginning operation at Wed Nov 14 17:04:21 CST 2012
+Arguments: --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307
+
+Non-default parameter values:
+                      language: eng
+                  input-corpus: List(/scratch/01683/benwing/corpora/wikipedia/enwiki-20120307)
+
+Parameter values:
+                      language: eng
+                stopwords-file: null
+                whitelist-file: null
+                  input-corpus: List(/scratch/01683/benwing/corpora/wikipedia/enwiki-20120307)
+                     eval-file: List()
+         num-nearest-neighbors: 4
+       num-top-cells-to-output: 5
+    output-training-cell-dists: false
+                      eval-set: dev
+             num-training-docs: 0
+                 num-test-docs: 0
+        skip-initial-test-docs: 0
+            every-nth-test-doc: 1
+                        rerank: none
+                  rerank-top-n: 50
+             rerank-classifier: perceptron
+                    pa-variant: 0
+    perceptron-error-threshold: 1.0E-10
+     perceptron-aggressiveness: 1.0
+             perceptron-rounds: 10000
+                     word-dist: pseudo-good-turing
+                   interpolate: default
+                jelinek-factor: 0.3
+              dirichlet-factor: 500.0
+           preserve-case-words: false
+include-stopwords-in-document-dists: false
+            minimum-word-count: 1
+              max-ngram-length: 3
+                        tf-idf: false
+         naive-bayes-weighting: equal
+   naive-bayes-baseline-weight: 0.5
+                lru-cache-size: 400
+                   no-parallel: false
+                       test-kl: false
+            max-time-per-stage: 0.0
+         no-individual-results: false
+              results-by-range: false
+                oracle-results: false
+                         debug: null
+              degrees-per-cell: 1.0
+                miles-per-cell: 0.0
+                   km-per-cell: 0.0
+           width-of-multi-cell: 1
+                       kd-tree: false
+                kd-bucket-size: 200
+                 center-method: centroid
+               kd-split-method: halfway
+                    kd-backoff: false
+         kd-interpolate-weight: 0.0
+              combined-kd-grid: false
+                   eval-format: internal
+                      strategy: List(partial-kl-divergence)
+                coord-strategy: top-ranked
+                        k-best: 10
+             mean-shift-window: 1.0
+         mean-shift-max-stddev: 1.0E-10
+     mean-shift-max-iterations: 100
+             baseline-strategy: List(internal-link)
+
+Reading stopwords from /home/01937/prateekm/textgrounder/src/main/resources/data/eng/stopwords.txt...
+--------------------------------------------------------
+Beginning reading pass 1 documents at Wed Nov 14 17:04:22 CST 2012.
+
+Processing directory /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307...
+Processing file /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307/enwiki-20120307-permuted-training-unigram-counts.txt...
+At 5:04:37 PM: Elapsed time: 0 minutes 15.0 seconds, 17931 documents processed
+Processing rate: 1195.40 items per second (0.00084 seconds per item)
+At 5:04:52 PM: Elapsed time: 0 minutes 30.0 seconds, 40085 documents processed
+Processing rate: 1336.12 items per second (0.00075 seconds per item)
+At 5:05:07 PM: Elapsed time: 0 minutes 45.0 seconds, 63586 documents processed
+Processing rate: 1413.02 items per second (0.00071 seconds per item)
+At 5:05:22 PM: Elapsed time: 1 minute 0.0 seconds, 84177 documents processed
+Processing rate: 1402.95 items per second (0.00071 seconds per item)
+At 5:05:37 PM: Elapsed time: 1 minute 15.0 seconds, 106068 documents processed
+Processing rate: 1414.24 items per second (0.00071 seconds per item)
+At 5:05:52 PM: Elapsed time: 1 minute 30.0 seconds, 127859 documents processed
+Processing rate: 1420.66 items per second (0.00070 seconds per item)
+At 5:06:07 PM: Elapsed time: 1 minute 45.0 seconds, 149976 documents processed
+Processing rate: 1428.34 items per second (0.00070 seconds per item)
+At 5:06:22 PM: Elapsed time: 2 minutes 0.0 seconds, 170853 documents processed
+Processing rate: 1423.78 items per second (0.00070 seconds per item)
+At 5:06:37 PM: Elapsed time: 2 minutes 15.0 seconds, 191943 documents processed
+Processing rate: 1421.80 items per second (0.00070 seconds per item)
+At 5:06:53 PM: Elapsed time: 2 minutes 30.6 seconds, 211793 documents processed
+Processing rate: 1406.45 items per second (0.00071 seconds per item)
+At 5:07:07 PM: Elapsed time: 2 minutes 45.0 seconds, 231081 documents processed
+Processing rate: 1400.49 items per second (0.00071 seconds per item)
+At 5:07:22 PM: Elapsed time: 3 minutes 0.0 seconds, 252076 documents processed
+Processing rate: 1400.42 items per second (0.00071 seconds per item)
+At 5:07:37 PM: Elapsed time: 3 minutes 15.0 seconds, 273709 documents processed
+Processing rate: 1403.64 items per second (0.00071 seconds per item)
+Warning: Line 282356: Bad value -18.5,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+At 5:07:52 PM: Elapsed time: 3 minutes 30.0 seconds, 295433 documents processed
+Processing rate: 1406.82 items per second (0.00071 seconds per item)
+At 5:08:07 PM: Elapsed time: 3 minutes 45.0 seconds, 317249 documents processed
+Processing rate: 1410.00 items per second (0.00071 seconds per item)
+At 5:08:22 PM: Elapsed time: 4 minutes 0.0 seconds, 339187 documents processed
+Processing rate: 1413.28 items per second (0.00071 seconds per item)
+At 5:08:37 PM: Elapsed time: 4 minutes 15.0 seconds, 358511 documents processed
+Processing rate: 1405.92 items per second (0.00071 seconds per item)
+At 5:08:52 PM: Elapsed time: 4 minutes 30.0 seconds, 381615 documents processed
+Processing rate: 1413.39 items per second (0.00071 seconds per item)
+At 5:09:07 PM: Elapsed time: 4 minutes 45.0 seconds, 404642 documents processed
+Processing rate: 1419.66 items per second (0.00070 seconds per item)
+At 5:09:22 PM: Elapsed time: 5 minutes 0.0 seconds, 427422 documents processed
+Processing rate: 1424.74 items per second (0.00070 seconds per item)
+At 5:09:37 PM: Elapsed time: 5 minutes 15.0 seconds, 450631 documents processed
+Processing rate: 1430.57 items per second (0.00070 seconds per item)
+At 5:09:52 PM: Elapsed time: 5 minutes 30.0 seconds, 473286 documents processed
+Processing rate: 1434.20 items per second (0.00070 seconds per item)
+At 5:10:07 PM: Elapsed time: 5 minutes 45.0 seconds, 496149 documents processed
+Processing rate: 1438.11 items per second (0.00070 seconds per item)
+At 5:10:22 PM: Elapsed time: 6 minutes 0.0 seconds, 516183 documents processed
+Processing rate: 1433.84 items per second (0.00070 seconds per item)
+At 5:10:37 PM: Elapsed time: 6 minutes 15.0 seconds, 536957 documents processed
+Processing rate: 1431.88 items per second (0.00070 seconds per item)
+Warning: Line 544471: Bad value 90.0,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+At 5:10:52 PM: Elapsed time: 6 minutes 30.0 seconds, 556322 documents processed
+Processing rate: 1426.47 items per second (0.00070 seconds per item)
+Warning: Line 568708: Bad value -77.75,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+At 5:11:07 PM: Elapsed time: 6 minutes 45.0 seconds, 579227 documents processed
+Processing rate: 1430.19 items per second (0.00070 seconds per item)
+
+Finished reading pass 1 documents at Wed Nov 14 17:11:10 CST 2012.
+Elapsed time: 6 minutes 47.5 seconds, 583045 documents processed
+Processing rate: 1430.84 items per second (0.00070 seconds per item)
+--------------------------------------------------------
+Total elapsed time since program start: 6 minutes 48.4 seconds
+Memory usage, virtual memory size (proc): 13,190,987,776 bytes
+Memory usage, actual (i.e. resident set) (proc): 8,652,587,008 bytes
+Memory usage, Java heap: 4,064,959,928 bytes
+Finishing global dist...
+
+-------------------------------------------------------------------------
+Document/record/word token statistics:
+For split 'training':
+  583048 records seen
+  3 records skipped due to error seen
+  0 records skipped due to other than error seen
+  583045 documents seen, 139284131 total tokens, 238.89 tokens/document
+  583045 documents recorded, 139284131 total tokens, 238.89 tokens/document
+  0 documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  0 would-be-recorded documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  583045 documents having coordinates seen, 139284131 total tokens, 238.89 tokens/document
+  583045 documents having coordinates recorded, 139284131 total tokens, 238.89 tokens/document
+Total: 583048 records, 3 skipped records (3 from error)
+Total: 583045 documents with 139284131 total word tokens
+Total: 0 documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 0 would-be-recorded documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 583045 recorded documents with 139284131 total word tokens
+Total: 583045 documents having coordinates with 139284131 total word tokens
+Total: 583045 recorded documents having coordinates with 139284131 total word tokens
+--------------------------------------------------------
+Beginning generating non-empty Earth-tiling cells at Wed Nov 14 17:11:15 CST 2012.
+
+
+Finished generating non-empty Earth-tiling cells at Wed Nov 14 17:11:25 CST 2012.
+Elapsed time: 0 minutes 10.0 seconds, 64800 Earth-tiling cells processed
+Processing rate: 6492.99 items per second (0.00015 seconds per item)
+--------------------------------------------------------
+--------------------------------------------------------
+Beginning computing statistics of non-empty cells at Wed Nov 14 17:11:25 CST 2012.
+
+
+Finished computing statistics of non-empty cells at Wed Nov 14 17:11:25 CST 2012.
+Elapsed time: 0 minutes 0.1 seconds, 15982 non-empty cells processed
+Processing rate: 295963.51 items per second (0.0000034 seconds per item)
+--------------------------------------------------------
+Number of non-empty cells: 15982
+Total number of cells: 64800
+Percent non-empty cells: 0.246636
+Training documents per non-empty cell: 36.4814
+--------------------------------------------------------
+Beginning evaluating documents at Wed Nov 14 17:11:25 CST 2012.
+
+Processing directory /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307...
+Processing file /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307/enwiki-20120307-permuted-dev-unigram-counts.txt...
+#1:Document Philips Memorial Building at (39.95,-75.60):
+#1:  93 types, 133.000000 tokens
+#1:  true cell at rank: 1
+#1:  true cell: GCell((39.00,-76.00)-(40.00,-75.00), 1912 documents(dist), 1912 documents(links), 56957 types, 723713.0 tokens, 0 links)
+#1:  Predicted cell (at rank 1, kl-div 1.9770378756004192): GCell((39.00,-76.00)-(40.00,-75.00), 1912 documents(dist), 1912 documents(links), 56957 types, 723713.0 tokens, 0 links)
+#1:  Predicted cell (at rank 2, kl-div 2.016433436857604): GCell((40.00,-76.00)-(41.00,-75.00), 1348 documents(dist), 1348 documents(links), 46702 types, 529282.0 tokens, 0 links)
+#1:  Predicted cell (at rank 3, kl-div 2.0832683101424316): GCell((41.00,-73.00)-(42.00,-72.00), 1239 documents(dist), 1239 documents(links), 41592 types, 429219.0 tokens, 0 links)
+#1:  Predicted cell (at rank 4, kl-div 2.1661881977257376): GCell((42.00,-72.00)-(43.00,-71.00), 3667 documents(dist), 3667 documents(links), 75290 types, 1060424.0 tokens, 0 links)
+#1:  Predicted cell (at rank 5, kl-div 2.167104285440597): GCell((40.00,-74.00)-(41.00,-73.00), 3294 documents(dist), 3294 documents(links), 100359 types, 1675703.0 tokens, 0 links)
+#1:  #1 close neighbor: (39.79,-75.36); error distance: 27.34 km (16.99 miles)
+#1:  #2 close neighbor: (40.34,-75.39); error distance: 46.53 km (28.92 miles)
+#1:  Distance 27.34 km (16.99 miles) to true cell center at (39.79,-75.36)
+#1:  Distance 27.34 km (16.99 miles) to predicted cell center at (39.79,-75.36)
+#1:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 36.93 km (22.95 miles)
+#2:Document Kitoman at (9.77,0.70):
+#2:  21 types, 25.000000 tokens
+#2:  true cell at rank: 1
+#2:  true cell: GCell((9.00,0.00)-(10.00,1.00), 333 documents(dist), 333 documents(links), 525 types, 8247.0 tokens, 0 links)
+#2:  Predicted cell (at rank 1, kl-div -0.2852098320608842): GCell((9.00,0.00)-(10.00,1.00), 333 documents(dist), 333 documents(links), 525 types, 8247.0 tokens, 0 links)
+#2:  Predicted cell (at rank 2, kl-div 0.38637550442047947): GCell((9.00,1.00)-(10.00,2.00), 169 documents(dist), 169 documents(links), 1152 types, 5290.0 tokens, 0 links)
+#2:  Predicted cell (at rank 3, kl-div 1.0103126475484259): GCell((8.00,0.00)-(9.00,1.00), 11 documents(dist), 11 documents(links), 353 types, 648.0 tokens, 0 links)
+#2:  Predicted cell (at rank 4, kl-div 1.1333927786470104): GCell((10.00,1.00)-(11.00,2.00), 26 documents(dist), 26 documents(links), 268 types, 963.0 tokens, 0 links)
+#2:  Predicted cell (at rank 5, kl-div 1.3829452869506569): GCell((25.00,98.00)-(26.00,99.00), 84 documents(dist), 84 documents(links), 942 types, 3569.0 tokens, 0 links)
+#2:  #1 close neighbor: (9.57,0.65); error distance: 22.41 km (13.92 miles)
+#2:  #2 close neighbor: (9.49,1.34); error distance: 76.15 km (47.33 miles)
+#2:  Distance 22.41 km (13.92 miles) to true cell center at (9.57,0.65)
+#2:  Distance 22.41 km (13.92 miles) to predicted cell center at (9.57,0.65)
+#2:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 49.28 km (30.62 miles)
+#3:Document Barnetby at (53.58,-0.41):
+#3:  296 types, 451.000000 tokens
+#3:  true cell at rank: 1
+#3:  true cell: GCell((53.00,-1.00)-(54.00,0.00), 1458 documents(dist), 1458 documents(links), 38233 types, 411305.0 tokens, 0 links)
+#3:  Predicted cell (at rank 1, kl-div 1.0500836608701143): GCell((53.00,-1.00)-(54.00,0.00), 1458 documents(dist), 1458 documents(links), 38233 types, 411305.0 tokens, 0 links)
+#3:  Predicted cell (at rank 2, kl-div 1.1801910977699097): GCell((52.00,-1.00)-(53.00,0.00), 1897 documents(dist), 1897 documents(links), 49548 types, 600462.0 tokens, 0 links)
+#3:  Predicted cell (at rank 3, kl-div 1.216595837269624): GCell((53.00,-2.00)-(54.00,-1.00), 3167 documents(dist), 3167 documents(links), 70726 types, 1080549.0 tokens, 0 links)
+#3:  Predicted cell (at rank 4, kl-div 1.313934536303555): GCell((53.00,0.00)-(54.00,1.00), 218 documents(dist), 218 documents(links), 9503 types, 51640.0 tokens, 0 links)
+#3:  Predicted cell (at rank 5, kl-div 1.3521806505231477): GCell((52.00,-2.00)-(53.00,-1.00), 3137 documents(dist), 3137 documents(links), 72196 types, 1133552.0 tokens, 0 links)
+#3:  #1 close neighbor: (53.50,-0.51); error distance: 11.24 km (6.99 miles)
+#3:  #4 close neighbor: (53.30,0.15); error distance: 48.24 km (29.98 miles)
+#3:  Distance 11.24 km (6.99 miles) to true cell center at (53.50,-0.51)
+#3:  Distance 11.24 km (6.99 miles) to predicted cell center at (53.50,-0.51)
+#3:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 29.74 km (18.49 miles)
+#4:Document Hosaena at (7.55,37.85):
+#4:  185 types, 246.000000 tokens
+#4:  true cell at rank: 2
+#4:  true cell: GCell((7.00,37.00)-(8.00,38.00), 29 documents(dist), 29 documents(links), 2238 types, 8466.0 tokens, 0 links)
+#4:  Predicted cell (at rank 1, kl-div 1.189862535455768): GCell((8.00,37.00)-(9.00,38.00), 17 documents(dist), 17 documents(links), 1598 types, 4633.0 tokens, 0 links)
+#4:  Predicted cell (at rank 2, kl-div 1.2320636897435548): GCell((7.00,37.00)-(8.00,38.00), 29 documents(dist), 29 documents(links), 2238 types, 8466.0 tokens, 0 links)
+#4:  Predicted cell (at rank 3, kl-div 1.2611107670154582): GCell((7.00,38.00)-(8.00,39.00), 23 documents(dist), 23 documents(links), 2031 types, 6073.0 tokens, 0 links)
+#4:  Predicted cell (at rank 4, kl-div 1.4496399184603672): GCell((8.00,38.00)-(9.00,39.00), 30 documents(dist), 30 documents(links), 2785 types, 9039.0 tokens, 0 links)
+#4:  Predicted cell (at rank 5, kl-div 1.483779452387238): GCell((6.00,37.00)-(7.00,38.00), 18 documents(dist), 18 documents(links), 2276 types, 7099.0 tokens, 0 links)
+#4:  #2 close neighbor: (7.37,37.49); error distance: 44.23 km (27.49 miles)
+#4:  #3 close neighbor: (7.37,38.54); error distance: 79.11 km (49.17 miles)
+#4:  Distance 44.23 km (27.49 miles) to true cell center at (7.37,37.49)
+#4:  Distance 99.25 km (61.69 miles) to predicted cell center at (8.40,37.58)
+#4:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 61.67 km (38.33 miles)
+#5:Document Portobello (E&DR) railway station at (55.95,-3.12):
+#5:  45 types, 71.000000 tokens
+#5:  true cell at rank: 1
+#5:  true cell: GCell((55.00,-4.00)-(56.00,-3.00), 1112 documents(dist), 1112 documents(links), 36913 types, 373595.0 tokens, 0 links)
+#5:  Predicted cell (at rank 1, kl-div 1.7171322470071515): GCell((55.00,-4.00)-(56.00,-3.00), 1112 documents(dist), 1112 documents(links), 36913 types, 373595.0 tokens, 0 links)
+#5:  Predicted cell (at rank 2, kl-div 2.179492057881873): GCell((56.00,-3.00)-(57.00,-2.00), 401 documents(dist), 401 documents(links), 19968 types, 132418.0 tokens, 0 links)
+#5:  Predicted cell (at rank 3, kl-div 2.2277918635406335): GCell((56.00,-4.00)-(57.00,-3.00), 672 documents(dist), 672 documents(links), 25983 types, 198145.0 tokens, 0 links)
+#5:  Predicted cell (at rank 4, kl-div 2.299892554988593): GCell((51.00,-1.00)-(52.00,0.00), 7798 documents(dist), 7798 documents(links), 162667 types, 3573620.0 tokens, 0 links)
+#5:  Predicted cell (at rank 5, kl-div 2.3111903337377595): GCell((55.00,-5.00)-(56.00,-4.00), 1447 documents(dist), 1447 documents(links), 46902 types, 572667.0 tokens, 0 links)
+#5:  #1 close neighbor: (55.78,-3.42); error distance: 26.80 km (16.66 miles)
+#5:  #3 close neighbor: (56.32,-3.49); error distance: 47.28 km (29.38 miles)
+#5:  Distance 26.80 km (16.66 miles) to true cell center at (55.78,-3.42)
+#5:  Distance 26.80 km (16.66 miles) to predicted cell center at (55.78,-3.42)
+#5:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 37.04 km (23.02 miles)
+#6:Document Vinzelles, Puy-de-Dôme at (45.93,3.40):
+#6:  13 types, 21.000000 tokens
+#6:  true cell at rank: 1
+#6:  true cell: GCell((45.00,3.00)-(46.00,4.00), 487 documents(dist), 487 documents(links), 5932 types, 23746.0 tokens, 0 links)
+#6:  Predicted cell (at rank 1, kl-div 0.6179736443081736): GCell((45.00,3.00)-(46.00,4.00), 487 documents(dist), 487 documents(links), 5932 types, 23746.0 tokens, 0 links)
+#6:  Predicted cell (at rank 2, kl-div 0.7315431996505958): GCell((45.00,2.00)-(46.00,3.00), 335 documents(dist), 335 documents(links), 3666 types, 15957.0 tokens, 0 links)
+#6:  Predicted cell (at rank 3, kl-div 1.0227540730084195): GCell((46.00,3.00)-(47.00,4.00), 347 documents(dist), 347 documents(links), 4338 types, 21506.0 tokens, 0 links)
+#6:  Predicted cell (at rank 4, kl-div 1.1249759828166275): GCell((46.00,2.00)-(47.00,3.00), 329 documents(dist), 329 documents(links), 4706 types, 26179.0 tokens, 0 links)
+#6:  Predicted cell (at rank 5, kl-div 1.413208817614298): GCell((44.00,3.00)-(45.00,4.00), 295 documents(dist), 295 documents(links), 4415 types, 15871.0 tokens, 0 links)
+#6:  #1 close neighbor: (45.52,3.44); error distance: 45.20 km (28.09 miles)
+#6:  #3 close neighbor: (46.44,3.44); error distance: 57.55 km (35.76 miles)
+#6:  Distance 45.20 km (28.09 miles) to true cell center at (45.52,3.44)
+#6:  Distance 45.20 km (28.09 miles) to predicted cell center at (45.52,3.44)
+#6:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 51.37 km (31.93 miles)
+#7:Document KUOP at (37.48,-121.35):
+#7:  48 types, 66.000000 tokens
+#7:  true cell at rank: 10
+#7:  true cell: GCell((37.00,-122.00)-(38.00,-121.00), 592 documents(dist), 592 documents(links), 31562 types, 270991.0 tokens, 0 links)
+#7:  Predicted cell (at rank 1, kl-div 2.286553183890317): GCell((38.00,-122.00)-(39.00,-121.00), 506 documents(dist), 506 documents(links), 24301 types, 177545.0 tokens, 0 links)
+#7:  Predicted cell (at rank 2, kl-div 2.3018733668163596): GCell((37.00,-123.00)-(38.00,-122.00), 1862 documents(dist), 1862 documents(links), 70278 types, 931302.0 tokens, 0 links)
+#7:  Predicted cell (at rank 3, kl-div 2.3667797880145933): GCell((44.00,116.00)-(45.00,117.00), 1 documents(dist), 1 documents(links), 64 types, 90.0 tokens, 0 links)
+#7:  Predicted cell (at rank 4, kl-div 2.392882754225677): GCell((40.00,-124.00)-(41.00,-123.00), 80 documents(dist), 80 documents(links), 4856 types, 20910.0 tokens, 0 links)
+#7:  Predicted cell (at rank 5, kl-div 2.398201456558371): GCell((39.00,99.00)-(40.00,100.00), 2 documents(dist), 2 documents(links), 47 types, 64.0 tokens, 0 links)
+#7:  #2 close neighbor: (37.71,-122.32); error distance: 89.28 km (55.49 miles)
+#7:  #1 close neighbor: (38.53,-121.48); error distance: 117.47 km (73.01 miles)
+#7:  Distance 36.85 km (22.90 miles) to true cell center at (37.49,-121.77)
+#7:  Distance 117.47 km (73.01 miles) to predicted cell center at (38.53,-121.48)
+#7:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 103.38 km (64.25 miles)
+#8:Document Whitelee Wind Farm at (55.69,-4.23):
+#8:  204 types, 369.000000 tokens
+#8:  true cell at rank: 6
+#8:  true cell: GCell((55.00,-5.00)-(56.00,-4.00), 1447 documents(dist), 1447 documents(links), 46902 types, 572667.0 tokens, 0 links)
+#8:  Predicted cell (at rank 1, kl-div 1.7984899437219288): GCell((49.00,-65.00)-(50.00,-64.00), 4 documents(dist), 4 documents(links), 1820 types, 5299.0 tokens, 0 links)
+#8:  Predicted cell (at rank 2, kl-div 2.295192446233808): GCell((40.00,96.00)-(41.00,97.00), 1 documents(dist), 1 documents(links), 98 types, 159.0 tokens, 0 links)
+#8:  Predicted cell (at rank 3, kl-div 2.300062946824002): GCell((55.00,7.00)-(56.00,8.00), 3 documents(dist), 3 documents(links), 316 types, 557.0 tokens, 0 links)
+#8:  Predicted cell (at rank 4, kl-div 2.309876570253991): GCell((46.00,67.00)-(47.00,68.00), 2 documents(dist), 2 documents(links), 721 types, 1632.0 tokens, 0 links)
+#8:  Predicted cell (at rank 5, kl-div 2.356075458384502): GCell((35.00,-119.00)-(36.00,-118.00), 181 documents(dist), 181 documents(links), 9751 types, 47500.0 tokens, 0 links)
+#8:  #3 close neighbor: (55.22,7.42); error distance: 736.35 km (457.65 miles)
+#8:  #1 close neighbor: (49.28,-64.57); error distance: 4018.07 km (2497.25 miles)
+#8:  Distance 13.29 km (8.26 miles) to true cell center at (55.76,-4.40)
+#8:  Distance 4018.07 km (2497.25 miles) to predicted cell center at (49.28,-64.57)
+#8:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 2377.21 km (1477.45 miles)
+#9:Document Undera, Victoria at (-36.28,145.22):
+#9:  101 types, 133.000000 tokens
+#9:  true cell at rank: 1
+#9:  true cell: GCell((-37.00,145.00)-(-36.00,146.00), 107 documents(dist), 107 documents(links), 5396 types, 21890.0 tokens, 0 links)
+#9:  Predicted cell (at rank 1, kl-div 1.2108218148051253): GCell((-37.00,145.00)-(-36.00,146.00), 107 documents(dist), 107 documents(links), 5396 types, 21890.0 tokens, 0 links)
+#9:  Predicted cell (at rank 2, kl-div 1.5911759516499762): GCell((-37.00,144.00)-(-36.00,145.00), 82 documents(dist), 82 documents(links), 5041 types, 19871.0 tokens, 0 links)
+#9:  Predicted cell (at rank 3, kl-div 1.6059447914598295): GCell((-37.00,146.00)-(-36.00,147.00), 134 documents(dist), 134 documents(links), 6040 types, 27272.0 tokens, 0 links)
+#9:  Predicted cell (at rank 4, kl-div 1.614080566282601): GCell((-36.00,145.00)-(-35.00,146.00), 36 documents(dist), 36 documents(links), 2223 types, 7117.0 tokens, 0 links)
+#9:  Predicted cell (at rank 5, kl-div 1.6571864621410732): GCell((-38.00,143.00)-(-37.00,144.00), 138 documents(dist), 138 documents(links), 8337 types, 40191.0 tokens, 0 links)
+#9:  #1 close neighbor: (-36.44,145.50); error distance: 30.76 km (19.12 miles)
+#9:  #4 close neighbor: (-35.73,145.45); error distance: 64.47 km (40.07 miles)
+#9:  Distance 30.76 km (19.12 miles) to true cell center at (-36.44,145.50)
+#9:  Distance 30.76 km (19.12 miles) to predicted cell center at (-36.44,145.50)
+#9:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 47.61 km (29.59 miles)
+#10:Document Steveville, Alberta at (50.84,-111.60):
+#10:  57 types, 76.000000 tokens
+#10:  true cell at rank: 1
+#10:  true cell: GCell((50.00,-112.00)-(51.00,-111.00), 24 documents(dist), 24 documents(links), 2125 types, 6350.0 tokens, 0 links)
+#10:  Predicted cell (at rank 1, kl-div 1.450078087483978): GCell((50.00,-112.00)-(51.00,-111.00), 24 documents(dist), 24 documents(links), 2125 types, 6350.0 tokens, 0 links)
+#10:  Predicted cell (at rank 2, kl-div 1.6021707121909547): GCell((51.00,-113.00)-(52.00,-112.00), 39 documents(dist), 39 documents(links), 2496 types, 7562.0 tokens, 0 links)
+#10:  Predicted cell (at rank 3, kl-div 1.6768195652809115): GCell((49.00,-113.00)-(50.00,-112.00), 80 documents(dist), 80 documents(links), 4855 types, 20874.0 tokens, 0 links)
+#10:  Predicted cell (at rank 4, kl-div 1.7369932584726175): GCell((51.00,-115.00)-(52.00,-114.00), 305 documents(dist), 305 documents(links), 17180 types, 110409.0 tokens, 0 links)
+#10:  Predicted cell (at rank 5, kl-div 1.8632749240833133): GCell((50.00,-113.00)-(51.00,-112.00), 20 documents(dist), 20 documents(links), 1535 types, 3545.0 tokens, 0 links)
+#10:  #1 close neighbor: (50.48,-111.57); error distance: 39.59 km (24.60 miles)
+#10:  #2 close neighbor: (51.50,-112.66); error distance: 104.70 km (65.07 miles)
+#10:  Distance 39.59 km (24.60 miles) to true cell center at (50.48,-111.57)
+#10:  Distance 39.59 km (24.60 miles) to predicted cell center at (50.48,-111.57)
+#10:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 72.14 km (44.84 miles)
+#11:Document Veruela Abbey at (41.81,-1.70):
+#11:  243 types, 348.000000 tokens
+#11:  true cell at rank: 7
+#11:  true cell: GCell((41.00,-2.00)-(42.00,-1.00), 197 documents(dist), 197 documents(links), 3901 types, 13691.0 tokens, 0 links)
+#11:  Predicted cell (at rank 1, kl-div 2.0173810942735115): GCell((41.00,1.00)-(42.00,2.00), 321 documents(dist), 321 documents(links), 10302 types, 46198.0 tokens, 0 links)
+#11:  Predicted cell (at rank 2, kl-div 2.054078139363709): GCell((40.00,-4.00)-(41.00,-3.00), 471 documents(dist), 471 documents(links), 20859 types, 118786.0 tokens, 0 links)
+#11:  Predicted cell (at rank 3, kl-div 2.0624948775401646): GCell((41.00,-1.00)-(42.00,0.00), 115 documents(dist), 115 documents(links), 7259 types, 23607.0 tokens, 0 links)
+#11:  Predicted cell (at rank 4, kl-div 2.0807249122292464): GCell((41.00,-5.00)-(42.00,-4.00), 238 documents(dist), 238 documents(links), 7412 types, 28161.0 tokens, 0 links)
+#11:  Predicted cell (at rank 5, kl-div 2.0856631318449375): GCell((37.00,-6.00)-(38.00,-5.00), 96 documents(dist), 96 documents(links), 10052 types, 38641.0 tokens, 0 links)
+#11:  #3 close neighbor: (41.52,-0.57); error distance: 99.73 km (61.98 miles)
+#11:  #2 close neighbor: (40.48,-3.59); error distance: 217.37 km (135.09 miles)
+#11:  Distance 42.84 km (26.63 miles) to true cell center at (41.46,-1.49)
+#11:  Distance 268.09 km (166.62 miles) to predicted cell center at (41.46,1.49)
+#11:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 158.55 km (98.54 miles)
+#12:Document Rocher, Ardèche at (44.58,4.29):
+#12:  11 types, 17.000000 tokens
+#12:  true cell at rank: 1
+#12:  true cell: GCell((44.00,4.00)-(45.00,5.00), 456 documents(dist), 456 documents(links), 7473 types, 28522.0 tokens, 0 links)
+#12:  Predicted cell (at rank 1, kl-div 1.5664376385513041): GCell((44.00,4.00)-(45.00,5.00), 456 documents(dist), 456 documents(links), 7473 types, 28522.0 tokens, 0 links)
+#12:  Predicted cell (at rank 2, kl-div 1.6029847025829027): GCell((45.00,2.00)-(46.00,3.00), 335 documents(dist), 335 documents(links), 3666 types, 15957.0 tokens, 0 links)
+#12:  Predicted cell (at rank 3, kl-div 1.6835220790738323): GCell((44.00,2.00)-(45.00,3.00), 333 documents(dist), 333 documents(links), 2888 types, 12941.0 tokens, 0 links)
+#12:  Predicted cell (at rank 4, kl-div 1.727588590888888): GCell((44.00,3.00)-(45.00,4.00), 295 documents(dist), 295 documents(links), 4415 types, 15871.0 tokens, 0 links)
+#12:  Predicted cell (at rank 5, kl-div 1.7281438824651203): GCell((44.00,5.00)-(45.00,6.00), 371 documents(dist), 371 documents(links), 5326 types, 20563.0 tokens, 0 links)
+#12:  #1 close neighbor: (44.48,4.50); error distance: 20.13 km (12.51 miles)
+#12:  #4 close neighbor: (44.54,3.51); error distance: 61.39 km (38.15 miles)
+#12:  Distance 20.13 km (12.51 miles) to true cell center at (44.48,4.50)
+#12:  Distance 20.13 km (12.51 miles) to predicted cell center at (44.48,4.50)
+#12:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 40.76 km (25.33 miles)
+#13:Document Lecce Airfield at (40.36,18.23):
+#13:  139 types, 193.000000 tokens
+#13:  true cell at rank: 230
+#13:  true cell: GCell((40.00,18.00)-(41.00,19.00), 74 documents(dist), 74 documents(links), 2428 types, 6727.0 tokens, 0 links)
+#13:  Predicted cell (at rank 1, kl-div 1.3920185359060093): GCell((40.00,17.00)-(41.00,18.00), 67 documents(dist), 67 documents(links), 6312 types, 19309.0 tokens, 0 links)
+#13:  Predicted cell (at rank 2, kl-div 1.4080069031127762): GCell((36.00,9.00)-(37.00,10.00), 26 documents(dist), 26 documents(links), 789 types, 1825.0 tokens, 0 links)
+#13:  Predicted cell (at rank 3, kl-div 1.4275090328710478): GCell((32.00,-9.00)-(33.00,-8.00), 8 documents(dist), 8 documents(links), 124 types, 235.0 tokens, 0 links)
+#13:  Predicted cell (at rank 4, kl-div 1.4322260529355144): GCell((30.00,12.00)-(31.00,13.00), 1 documents(dist), 1 documents(links), 76 types, 123.0 tokens, 0 links)
+#13:  Predicted cell (at rank 5, kl-div 1.4762241824539666): GCell((31.00,24.00)-(32.00,25.00), 4 documents(dist), 4 documents(links), 214 types, 402.0 tokens, 0 links)
+#13:  #1 close neighbor: (40.56,17.50); error distance: 65.94 km (40.98 miles)
+#13:  #2 close neighbor: (36.48,9.49); error distance: 875.67 km (544.23 miles)
+#13:  Distance 17.33 km (10.77 miles) to true cell center at (40.20,18.23)
+#13:  Distance 65.94 km (40.98 miles) to predicted cell center at (40.56,17.50)
+#13:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 470.80 km (292.61 miles)
+#14:Document Antsiranana Province at (-13.58,49.50):
+#14:  52 types, 93.000000 tokens
+#14:  true cell at rank: 6
+#14:  true cell: GCell((-14.00,49.00)-(-13.00,50.00), 20 documents(dist), 20 documents(links), 229 types, 1166.0 tokens, 0 links)
+#14:  Predicted cell (at rank 1, kl-div 1.7404471070811394): GCell((-14.00,48.00)-(-13.00,49.00), 26 documents(dist), 26 documents(links), 913 types, 2637.0 tokens, 0 links)
+#14:  Predicted cell (at rank 2, kl-div 2.4594877216203983): GCell((-15.00,50.00)-(-14.00,51.00), 14 documents(dist), 14 documents(links), 242 types, 891.0 tokens, 0 links)
+#14:  Predicted cell (at rank 3, kl-div 2.5453371191717373): GCell((-13.00,49.00)-(-12.00,50.00), 21 documents(dist), 21 documents(links), 1411 types, 3534.0 tokens, 0 links)
+#14:  Predicted cell (at rank 4, kl-div 2.8079799114190434): GCell((-17.00,46.00)-(-16.00,47.00), 34 documents(dist), 34 documents(links), 429 types, 2258.0 tokens, 0 links)
+#14:  Predicted cell (at rank 5, kl-div 2.850002554250362): GCell((-19.00,46.00)-(-18.00,47.00), 24 documents(dist), 24 documents(links), 341 types, 1350.0 tokens, 0 links)
+#14:  #1 close neighbor: (-13.52,48.59); error distance: 98.77 km (61.39 miles)
+#14:  #2 close neighbor: (-14.46,50.12); error distance: 118.41 km (73.59 miles)
+#14:  Distance 17.43 km (10.83 miles) to true cell center at (-13.56,49.66)
+#14:  Distance 98.77 km (61.39 miles) to predicted cell center at (-13.52,48.59)
+#14:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 108.59 km (67.49 miles)
+#15:Document Pont du Fahs Airfield at (36.35,9.85):
+#15:  102 types, 134.000000 tokens
+#15:  true cell at rank: 2
+#15:  true cell: GCell((36.00,9.00)-(37.00,10.00), 26 documents(dist), 26 documents(links), 789 types, 1825.0 tokens, 0 links)
+#15:  Predicted cell (at rank 1, kl-div 1.289621292492968): GCell((32.00,-9.00)-(33.00,-8.00), 8 documents(dist), 8 documents(links), 124 types, 235.0 tokens, 0 links)
+#15:  Predicted cell (at rank 2, kl-div 1.2953081307928545): GCell((36.00,9.00)-(37.00,10.00), 26 documents(dist), 26 documents(links), 789 types, 1825.0 tokens, 0 links)
+#15:  Predicted cell (at rank 3, kl-div 1.3231410600567202): GCell((36.00,6.00)-(37.00,7.00), 51 documents(dist), 51 documents(links), 1827 types, 4595.0 tokens, 0 links)
+#15:  Predicted cell (at rank 4, kl-div 1.356589199300798): GCell((31.00,24.00)-(32.00,25.00), 4 documents(dist), 4 documents(links), 214 types, 402.0 tokens, 0 links)
+#15:  Predicted cell (at rank 5, kl-div 1.3710506217910725): GCell((35.00,8.00)-(36.00,9.00), 27 documents(dist), 27 documents(links), 1168 types, 2461.0 tokens, 0 links)
+#15:  #2 close neighbor: (36.48,9.49); error distance: 35.23 km (21.89 miles)
+#15:  #3 close neighbor: (36.54,6.47); error distance: 302.48 km (187.99 miles)
+#15:  Distance 35.23 km (21.89 miles) to true cell center at (36.48,9.49)
+#15:  Distance 1740.82 km (1081.93 miles) to predicted cell center at (32.39,-8.52)
+#15:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 168.85 km (104.94 miles)
+#16:Document Hong Kong Central Hospital at (22.28,114.16):
+#16:  42 types, 70.000000 tokens
+#16:  true cell at rank: 1
+#16:  true cell: GCell((22.00,114.00)-(23.00,115.00), 848 documents(dist), 848 documents(links), 29680 types, 299830.0 tokens, 0 links)
+#16:  Predicted cell (at rank 1, kl-div 1.5880416663016852): GCell((22.00,114.00)-(23.00,115.00), 848 documents(dist), 848 documents(links), 29680 types, 299830.0 tokens, 0 links)
+#16:  Predicted cell (at rank 2, kl-div 2.040441518875799): GCell((22.00,113.00)-(23.00,114.00), 197 documents(dist), 197 documents(links), 10114 types, 50954.0 tokens, 0 links)
+#16:  Predicted cell (at rank 3, kl-div 2.2120974826686477): GCell((24.00,55.00)-(25.00,56.00), 17 documents(dist), 17 documents(links), 2480 types, 6666.0 tokens, 0 links)
+#16:  Predicted cell (at rank 4, kl-div 2.2236629347826153): GCell((23.00,116.00)-(24.00,117.00), 27 documents(dist), 27 documents(links), 3069 types, 7657.0 tokens, 0 links)
+#16:  Predicted cell (at rank 5, kl-div 2.262600895453295): GCell((0.00,76.00)-(1.00,77.00), 1 documents(dist), 1 documents(links), 53 types, 72.0 tokens, 0 links)
+#16:  #1 close neighbor: (22.34,114.17); error distance: 7.02 km (4.36 miles)
+#16:  #2 close neighbor: (22.38,113.73); error distance: 45.17 km (28.07 miles)
+#16:  Distance 7.02 km (4.36 miles) to true cell center at (22.34,114.17)
+#16:  Distance 7.02 km (4.36 miles) to predicted cell center at (22.34,114.17)
+#16:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 26.10 km (16.22 miles)
+#17:Document Bhojpur Airport at (27.15,87.05):
+#17:  32 types, 54.000000 tokens
+#17:  true cell at rank: 1
+#17:  true cell: GCell((27.00,87.00)-(28.00,88.00), 155 documents(dist), 155 documents(links), 2112 types, 9895.0 tokens, 0 links)
+#17:  Predicted cell (at rank 1, kl-div 2.066687678690379): GCell((27.00,87.00)-(28.00,88.00), 155 documents(dist), 155 documents(links), 2112 types, 9895.0 tokens, 0 links)
+#17:  Predicted cell (at rank 2, kl-div 2.0966796089613378): GCell((28.00,83.00)-(29.00,84.00), 227 documents(dist), 227 documents(links), 4834 types, 18542.0 tokens, 0 links)
+#17:  Predicted cell (at rank 3, kl-div 2.282513855864777): GCell((27.00,86.00)-(28.00,87.00), 257 documents(dist), 257 documents(links), 6791 types, 27029.0 tokens, 0 links)
+#17:  Predicted cell (at rank 4, kl-div 2.49854664471399): GCell((26.00,86.00)-(27.00,87.00), 240 documents(dist), 240 documents(links), 5592 types, 23671.0 tokens, 0 links)
+#17:  Predicted cell (at rank 5, kl-div 2.5969312974762726): GCell((26.00,87.00)-(27.00,88.00), 170 documents(dist), 170 documents(links), 4253 types, 16627.0 tokens, 0 links)
+#17:  #1 close neighbor: (27.27,87.48); error distance: 44.48 km (27.64 miles)
+#17:  #3 close neighbor: (27.46,86.48); error distance: 66.61 km (41.40 miles)
+#17:  Distance 44.48 km (27.64 miles) to true cell center at (27.27,87.48)
+#17:  Distance 44.48 km (27.64 miles) to predicted cell center at (27.27,87.48)
+#17:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 55.55 km (34.52 miles)
+#18:Document Hastings Mine at (38.12,-122.17):
+#18:  121 types, 203.000000 tokens
+#18:  true cell at rank: 1
+#18:  true cell: GCell((38.00,-123.00)-(39.00,-122.00), 526 documents(dist), 526 documents(links), 25538 types, 198041.0 tokens, 0 links)
+#18:  Predicted cell (at rank 1, kl-div 2.438465698286903): GCell((38.00,-123.00)-(39.00,-122.00), 526 documents(dist), 526 documents(links), 25538 types, 198041.0 tokens, 0 links)
+#18:  Predicted cell (at rank 2, kl-div 2.869715299751324): GCell((37.00,-122.00)-(38.00,-121.00), 592 documents(dist), 592 documents(links), 31562 types, 270991.0 tokens, 0 links)
+#18:  Predicted cell (at rank 3, kl-div 2.9030694804586803): GCell((37.00,-123.00)-(38.00,-122.00), 1862 documents(dist), 1862 documents(links), 70278 types, 931302.0 tokens, 0 links)
+#18:  Predicted cell (at rank 4, kl-div 2.9107439396842456): GCell((63.00,-114.00)-(64.00,-113.00), 1 documents(dist), 1 documents(links), 162 types, 212.0 tokens, 0 links)
+#18:  Predicted cell (at rank 5, kl-div 2.911907444492552): GCell((40.00,-123.00)-(41.00,-122.00), 79 documents(dist), 79 documents(links), 7733 types, 35260.0 tokens, 0 links)
+#18:  #1 close neighbor: (38.35,-122.53); error distance: 40.14 km (24.95 miles)
+#18:  #3 close neighbor: (37.71,-122.32); error distance: 47.71 km (29.65 miles)
+#18:  Distance 40.14 km (24.95 miles) to true cell center at (38.35,-122.53)
+#18:  Distance 40.14 km (24.95 miles) to predicted cell center at (38.35,-122.53)
+#18:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 43.93 km (27.30 miles)
+#19:Document List of schools in Essex at (51.62,0.42):
+#19:  221 types, 1814.000000 tokens
+#19:  true cell at rank: 1
+#19:  true cell: GCell((51.00,0.00)-(52.00,1.00), 2724 documents(dist), 2724 documents(links), 68910 types, 997837.0 tokens, 0 links)
+#19:  Predicted cell (at rank 1, kl-div 3.8219861226361687): GCell((51.00,0.00)-(52.00,1.00), 2724 documents(dist), 2724 documents(links), 68910 types, 997837.0 tokens, 0 links)
+#19:  Predicted cell (at rank 2, kl-div 4.261640390470659): GCell((52.00,0.00)-(53.00,1.00), 1451 documents(dist), 1451 documents(links), 46405 types, 507241.0 tokens, 0 links)
+#19:  Predicted cell (at rank 3, kl-div 4.261700249941908): GCell((6.00,46.00)-(7.00,47.00), 5 documents(dist), 5 documents(links), 226 types, 326.0 tokens, 0 links)
+#19:  Predicted cell (at rank 4, kl-div 4.313105396939083): GCell((51.00,-1.00)-(52.00,0.00), 7798 documents(dist), 7798 documents(links), 162667 types, 3573620.0 tokens, 0 links)
+#19:  Predicted cell (at rank 5, kl-div 4.364863275066589): GCell((22.00,50.00)-(23.00,51.00), 1 documents(dist), 1 documents(links), 251 types, 364.0 tokens, 0 links)
+#19:  #1 close neighbor: (51.49,0.39); error distance: 13.74 km (8.54 miles)
+#19:  #4 close neighbor: (51.51,-0.31); error distance: 51.85 km (32.22 miles)
+#19:  Distance 13.74 km (8.54 miles) to true cell center at (51.49,0.39)
+#19:  Distance 13.74 km (8.54 miles) to predicted cell center at (51.49,0.39)
+#19:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 32.79 km (20.38 miles)
+#20:Document Icaraí de Minas at (-16.22,-44.90):
+#20:  78 types, 107.000000 tokens
+#20:  true cell at rank: 4
+#20:  true cell: GCell((-17.00,-45.00)-(-16.00,-44.00), 10 documents(dist), 10 documents(links), 395 types, 2048.0 tokens, 0 links)
+#20:  Predicted cell (at rank 1, kl-div 0.6285942316028568): GCell((-16.00,-45.00)-(-15.00,-44.00), 9 documents(dist), 9 documents(links), 694 types, 1786.0 tokens, 0 links)
+#20:  Predicted cell (at rank 2, kl-div 0.7861584481364937): GCell((-17.00,-46.00)-(-16.00,-45.00), 4 documents(dist), 4 documents(links), 275 types, 553.0 tokens, 0 links)
+#20:  Predicted cell (at rank 3, kl-div 0.811886179924759): GCell((-15.00,-45.00)-(-14.00,-44.00), 6 documents(dist), 6 documents(links), 368 types, 764.0 tokens, 0 links)
+#20:  Predicted cell (at rank 4, kl-div 0.86110820081189): GCell((-17.00,-45.00)-(-16.00,-44.00), 10 documents(dist), 10 documents(links), 395 types, 2048.0 tokens, 0 links)
+#20:  Predicted cell (at rank 5, kl-div 0.8655477008356439): GCell((-16.00,-43.00)-(-15.00,-42.00), 12 documents(dist), 12 documents(links), 621 types, 2391.0 tokens, 0 links)
+#20:  #4 close neighbor: (-16.43,-44.51); error distance: 48.19 km (29.95 miles)
+#20:  #2 close neighbor: (-16.36,-45.57); error distance: 73.11 km (45.44 miles)
+#20:  Distance 48.19 km (29.95 miles) to true cell center at (-16.43,-44.51)
+#20:  Distance 96.07 km (59.71 miles) to predicted cell center at (-15.52,-44.37)
+#20:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 60.65 km (37.69 miles)
+#21:Document Birkenberg (Frankenhöhe) at (49.21,10.16):
+#21:  6 types, 6.000000 tokens
+#21:  true cell at rank: 4
+#21:  true cell: GCell((49.00,10.00)-(50.00,11.00), 297 documents(dist), 297 documents(links), 10287 types, 41049.0 tokens, 0 links)
+#21:  Predicted cell (at rank 1, kl-div 3.6241406809326966): GCell((49.00,11.00)-(50.00,12.00), 311 documents(dist), 311 documents(links), 13282 types, 52239.0 tokens, 0 links)
+#21:  Predicted cell (at rank 2, kl-div 3.8826216863968135): GCell((47.00,10.00)-(48.00,11.00), 379 documents(dist), 379 documents(links), 9942 types, 38402.0 tokens, 0 links)
+#21:  Predicted cell (at rank 3, kl-div 3.919570319852517): GCell((48.00,13.00)-(49.00,14.00), 335 documents(dist), 335 documents(links), 5355 types, 17746.0 tokens, 0 links)
+#21:  Predicted cell (at rank 4, kl-div 3.97747264465818): GCell((49.00,10.00)-(50.00,11.00), 297 documents(dist), 297 documents(links), 10287 types, 41049.0 tokens, 0 links)
+#21:  Predicted cell (at rank 5, kl-div 4.079267748931608): GCell((47.00,12.00)-(48.00,13.00), 347 documents(dist), 347 documents(links), 11425 types, 49853.0 tokens, 0 links)
+#21:  #4 close neighbor: (49.54,10.50); error distance: 43.78 km (27.21 miles)
+#21:  #1 close neighbor: (49.52,11.35); error distance: 92.85 km (57.71 miles)
+#21:  Distance 43.78 km (27.21 miles) to true cell center at (49.54,10.50)
+#21:  Distance 92.85 km (57.71 miles) to predicted cell center at (49.52,11.35)
+#21:  Average distance from true cell center to 2 closest cells' centers from 4 best matches: 68.32 km (42.46 miles)
+#22:Document Schopsdorf at (52.23,12.22):
+#22:  15 types, 15.000000 tokens
+#22:  true cell at rank: 2
+#22:  true cell: GCell((52.00,12.00)-(53.00,13.00), 176 documents(dist), 176 documents(links), 5350 types, 17816.0 tokens, 0 links)
+#22:  Predicted cell (at rank 1, kl-div 1.0926742831601457): GCell((52.00,11.00)-(53.00,12.00), 397 documents(dist), 397 documents(links), 6423 types, 24400.0 tokens, 0 links)
+#22:  Predicted cell (at rank 2, kl-div 1.654050645704401): GCell((52.00,12.00)-(53.00,13.00), 176 documents(dist), 176 documents(links), 5350 types, 17816.0 tokens, 0 links)
+#22:  Predicted cell (at rank 3, kl-div 2.1422904616462577): GCell((51.00,11.00)-(52.00,12.00), 558 documents(dist), 558 documents(links), 12663 types, 51643.0 tokens, 0 links)
+#22:  Predicted cell (at rank 4, kl-div 2.168916742780712): GCell((51.00,12.00)-(52.00,13.00), 379 documents(dist), 379 documents(links), 15307 types, 64661.0 tokens, 0 links)

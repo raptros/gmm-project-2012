@@ -3,7 +3,7 @@ import scala.collection.immutable.{Stream, PagedSeq}
 import scala.util.parsing.combinator._
 import scala.util.parsing.input.PagedSeqReader
 
-import java.io.{Reader, File, FileReader}
+import java.io.{Reader, File, FileReader, FileWriter, PrintWriter}
 
 /** finds cells for documents*/
 class Locator(val cells:Set[SquareCell]) {
@@ -18,18 +18,25 @@ class Locator(val cells:Set[SquareCell]) {
 object GetCells extends App {
   val logFile = args(0)
   val docsFile = args(1)
-  println("logFile: #logFile; docsFile: #docsFile")
+  val cellsFile = args(2)
+  val tagsFile = args(3)
+  val cellOut = new PrintWriter(new FileWriter(new File(cellsFile)))
+  val tagOut = new PrintWriter(new FileWriter(new File(tagsFile)))
+  println("reading cells from #logFile; docs from #docsFile")
   val cells = LogParser.loadLogCells(logFile)
+  println("writing cell bounds to #cellsFile")
   cells.zipWithIndex foreach { pair =>
     val (cell, id) = pair
-    println("cell #id: #cell")
+    cellOut.println("G#id, #cell")
   }
-  println()
+  cellOut.close()
+  println("writing doc locations to #tagsFile")
   val locator = new Locator(cells)
   val docs = CoordsParser.loadDocs(docsFile)
   docs foreach { doc =>
     val cell = locator.findCell(doc)
-    println("doc id: #{doc.docId}, #cell?[cell id: #it|no cell found for #{doc.geoTag}]")
+    tagOut.println("#{doc.docId}, G#cell?[#it|NONE]")
   }
+  tagOut.close()
   println("done")
 }

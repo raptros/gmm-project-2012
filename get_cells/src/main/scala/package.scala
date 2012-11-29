@@ -1,5 +1,5 @@
 package object getcells {
-  type DocId = Int
+  type DocId = String
   type CellId = Int
   case class GeoLoc(lat:Double, lon:Double)
   type Bounds = List[GeoLoc]
@@ -10,7 +10,7 @@ package object getcells {
   /**a square cell. it has bounds. it determines if a doc is in those bounds.
   * Note: I have no idea if the math is correct.
   */
-  case class SquareCell(minLat:Double, maxLat:Double, minLon:Double, maxLon:Double, center:GeoLoc) {
+  case class SquareCell(minLat:Double, maxLat:Double, minLon:Double, maxLon:Double, center:Option[GeoLoc]) {
     def contains(loc:GeoLoc):Boolean = {
       minLat < loc.lat && loc.lat < maxLat && minLon < loc.lon && loc.lon < maxLon
     }
@@ -18,7 +18,7 @@ package object getcells {
 
   /**allows constructing a square cell from a geocell.*/
   case object SquareCell {
-    def apply(bounds:Bounds, center:GeoLoc):SquareCell = {
+    def apply(bounds:Bounds, center:Option[GeoLoc]):SquareCell = {
       val (lats, lons) = {
         val (latBound, lonBound) = bounds.map {p => (p.lat, p.lon)}.unzip
         (latBound.toSet.toList.sorted, lonBound.toSet.toList.sorted)
@@ -29,7 +29,7 @@ package object getcells {
 
   sealed abstract class LogInfo
 
-  case class GeoCell(bounds:Bounds, center:GeoLoc) extends LogInfo
+  case class GeoCell(bounds:Bounds, center:Option[GeoLoc]) extends LogInfo
   case class CellCount(count:Int) extends LogInfo
   case object Junk extends LogInfo
 
