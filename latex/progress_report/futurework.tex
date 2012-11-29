@@ -1,5 +1,7 @@
 \subsection{Issues to Explore}
-There are some other considerations in determining the structure of the graph.
+Once we set up both Junto and Textgrounder, there are a number of hypotheses that we would like to test.
+
+There are a few things to consider for determining the structure of the graph.
 The first question is whether the graph should be directed, with edges pointing from referring document to the referred document, or undirected. 
 
 The second set of questions pertain to the method to be used for inducing the edges between documents;
@@ -13,7 +15,10 @@ One approach would be to take the similarity between the language models for the
 This could be the cosine similarity, tf-idf weighted cosine similarity, or the KL divergence score for the pair.
 An straightforward alternative to begin with would be to use the same edge weight for all edges regardless of document similarity.
  
-Furthermore, since each document can potentially be related to more than one location, we will examine the performance of holding seed document label distributions fixed vs. allowing them to vary (and acquire non-zero weights for other locations).
+Furthermore, since each document can potentially be related to more than one
+location, we will examine the performance of holding seed document label
+distributions fixed versus allowing them to vary (and acquire non-zero weights
+for other locations).
 The latter approach would allow a document label to be influenced by related geographic locations; 
 for example, the distribution for the article for Lake Austin would end up having a nonzero weight for the location for Travis County.
 As suggested earlier, this might be useful in geolocating concepts that span multiple locations.
