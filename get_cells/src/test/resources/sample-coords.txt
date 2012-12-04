@@ -1,4 +1,4 @@
-Article title: Blalabama
+Article title: Alabama
 Article ID: 303
 Article coordinates: 33.0,-86.6666666667
 Article title: Algeria
@@ -13,3 +13,48 @@ Article coordinates: 64.0,-153.0
 Article title: Apollo 11
 Article ID: 662
 Article coordinates: 13.3166666667,-169.15
+Article title: Apollo 8
+Article ID: 663
+Article coordinates: 30.2,-74.1166666667
+Article title: Aruba
+Article ID: 690
+Article coordinates: 12.3166666667,-70.0166666667
+Article title: Atlantic Ocean
+Article ID: 698
+Article coordinates: -52.35,-68.35
+Article title: Angola
+Article ID: 701
+Article coordinates: -8.83333333333,13.3333333333
+Article title: Alberta
+Article ID: 717
+Article coordinates: 54.5,-115.0
+Article title: Afghanistan
+Article ID: 737
+Article coordinates: 34.5166666667,69.1333333333
+Article title: Albania
+Article ID: 738
+Article coordinates: 41.0,20.0
+Article title: Azerbaijan
+Article ID: 746
+Article coordinates: 40.3,47.7
+Article title: Ankara
+Article ID: 802
+Article coordinates: 39.875,32.8333
+Article title: Amsterdam
+Article ID: 844
+Article coordinates: 52.3730555556,4.89222222222
+Article title: Museum of Work
+Article ID: 846
+Article coordinates: 58.5891666667,16.1800555556
+Article title: Anatolia
+Article ID: 854
+Article coordinates: 39.0,32.0
+Article title: Antigua and Barbuda
+Article ID: 951
+Article coordinates: 17.1166666667,-61.85
+Article title: Azincourt
+Article ID: 953
+Article coordinates: 50.463,2.129
+Article title: Achill Island
+Article ID: 1016
+Article coordinates: 54.0,-10.0

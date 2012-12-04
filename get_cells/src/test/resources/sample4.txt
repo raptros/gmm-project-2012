@@ -1,0 +1,500 @@
+Running the following to get the corpus dir: tg-get-corpus-args 
+Output is: --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307
+Executing: /home/01937/prateekm/textgrounder/bin/textgrounder geolocate-document --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307 --num-top-cells -1 --ntest 1
+Beginning operation at Mon Dec 03 19:38:04 CST 2012
+Arguments: --language en --input-corpus /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307 --num-top-cells -1 --ntest 1
+
+Non-default parameter values:
+                      language: eng
+                  input-corpus: List(/scratch/01683/benwing/corpora/wikipedia/enwiki-20120307)
+       num-top-cells-to-output: -1
+                 num-test-docs: 1
+
+Parameter values:
+                      language: eng
+                stopwords-file: null
+                whitelist-file: null
+                  input-corpus: List(/scratch/01683/benwing/corpora/wikipedia/enwiki-20120307)
+                     eval-file: List()
+         num-nearest-neighbors: 4
+       num-top-cells-to-output: -1
+    output-training-cell-dists: false
+                      eval-set: dev
+             num-training-docs: 0
+                 num-test-docs: 1
+        skip-initial-test-docs: 0
+            every-nth-test-doc: 1
+                        rerank: none
+                  rerank-top-n: 50
+             rerank-classifier: perceptron
+                    pa-variant: 0
+    perceptron-error-threshold: 1.0E-10
+     perceptron-aggressiveness: 1.0
+             perceptron-rounds: 10000
+                     word-dist: pseudo-good-turing
+                   interpolate: default
+                jelinek-factor: 0.3
+              dirichlet-factor: 500.0
+           preserve-case-words: false
+include-stopwords-in-document-dists: false
+            minimum-word-count: 1
+              max-ngram-length: 3
+                        tf-idf: false
+         naive-bayes-weighting: equal
+   naive-bayes-baseline-weight: 0.5
+                lru-cache-size: 400
+                   no-parallel: false
+                       test-kl: false
+            max-time-per-stage: 0.0
+         no-individual-results: false
+              results-by-range: false
+                oracle-results: false
+                         debug: null
+              degrees-per-cell: 1.0
+                miles-per-cell: 0.0
+                   km-per-cell: 0.0
+           width-of-multi-cell: 1
+                       kd-tree: false
+                kd-bucket-size: 200
+                 center-method: centroid
+               kd-split-method: halfway
+                    kd-backoff: false
+         kd-interpolate-weight: 0.0
+              combined-kd-grid: false
+                   eval-format: internal
+                      strategy: List(partial-kl-divergence)
+                coord-strategy: top-ranked
+                        k-best: 10
+             mean-shift-window: 1.0
+         mean-shift-max-stddev: 1.0E-10
+     mean-shift-max-iterations: 100
+             baseline-strategy: List(internal-link)
+
+Reading stopwords from /home/01937/prateekm/textgrounder/src/main/resources/data/eng/stopwords.txt...
+--------------------------------------------------------
+Beginning reading pass 1 documents at Mon Dec 03 19:38:05 CST 2012.
+
+Processing directory /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307...
+Processing file /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307/enwiki-20120307-permuted-training-unigram-counts.txt...
+At 7:38:20 PM: Elapsed time: 0 minutes 15.0 seconds, 17191 documents processed
+Processing rate: 1146.07 items per second (0.00087 seconds per item)
+At 7:38:35 PM: Elapsed time: 0 minutes 30.0 seconds, 37969 documents processed
+Processing rate: 1265.63 items per second (0.00079 seconds per item)
+At 7:38:50 PM: Elapsed time: 0 minutes 45.0 seconds, 59364 documents processed
+Processing rate: 1319.20 items per second (0.00076 seconds per item)
+At 7:39:05 PM: Elapsed time: 1 minute 0.0 seconds, 80494 documents processed
+Processing rate: 1341.57 items per second (0.00075 seconds per item)
+At 7:39:20 PM: Elapsed time: 1 minute 15.0 seconds, 102538 documents processed
+Processing rate: 1367.17 items per second (0.00073 seconds per item)
+At 7:39:35 PM: Elapsed time: 1 minute 30.0 seconds, 124372 documents processed
+Processing rate: 1381.85 items per second (0.00072 seconds per item)
+At 7:39:50 PM: Elapsed time: 1 minute 45.0 seconds, 145552 documents processed
+Processing rate: 1386.21 items per second (0.00072 seconds per item)
+At 7:40:05 PM: Elapsed time: 2 minutes 0.0 seconds, 168141 documents processed
+Processing rate: 1401.14 items per second (0.00071 seconds per item)
+At 7:40:20 PM: Elapsed time: 2 minutes 15.3 seconds, 188752 documents processed
+Processing rate: 1395.38 items per second (0.00072 seconds per item)
+At 7:40:35 PM: Elapsed time: 2 minutes 30.0 seconds, 208266 documents processed
+Processing rate: 1388.44 items per second (0.00072 seconds per item)
+At 7:40:50 PM: Elapsed time: 2 minutes 45.0 seconds, 229967 documents processed
+Processing rate: 1393.74 items per second (0.00072 seconds per item)
+At 7:41:05 PM: Elapsed time: 3 minutes 0.0 seconds, 251494 documents processed
+Processing rate: 1397.18 items per second (0.00072 seconds per item)
+At 7:41:20 PM: Elapsed time: 3 minutes 15.0 seconds, 272962 documents processed
+Processing rate: 1399.81 items per second (0.00071 seconds per item)
+Warning: Line 282356: Bad value -18.5,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+At 7:41:35 PM: Elapsed time: 3 minutes 30.0 seconds, 294401 documents processed
+Processing rate: 1401.91 items per second (0.00071 seconds per item)
+At 7:41:50 PM: Elapsed time: 3 minutes 45.0 seconds, 315865 documents processed
+Processing rate: 1403.84 items per second (0.00071 seconds per item)
+At 7:42:05 PM: Elapsed time: 4 minutes 0.0 seconds, 335365 documents processed
+Processing rate: 1397.35 items per second (0.00072 seconds per item)
+At 7:42:20 PM: Elapsed time: 4 minutes 15.1 seconds, 357109 documents processed
+Processing rate: 1400.10 items per second (0.00071 seconds per item)
+At 7:42:35 PM: Elapsed time: 4 minutes 30.0 seconds, 378749 documents processed
+Processing rate: 1402.76 items per second (0.00071 seconds per item)
+At 7:42:50 PM: Elapsed time: 4 minutes 45.0 seconds, 400366 documents processed
+Processing rate: 1404.79 items per second (0.00071 seconds per item)
+At 7:43:05 PM: Elapsed time: 5 minutes 0.0 seconds, 421719 documents processed
+Processing rate: 1405.73 items per second (0.00071 seconds per item)
+At 7:43:20 PM: Elapsed time: 5 minutes 15.0 seconds, 443244 documents processed
+Processing rate: 1407.12 items per second (0.00071 seconds per item)
+At 7:43:35 PM: Elapsed time: 5 minutes 30.0 seconds, 464851 documents processed
+Processing rate: 1408.64 items per second (0.00071 seconds per item)
+At 7:43:50 PM: Elapsed time: 5 minutes 45.0 seconds, 483583 documents processed
+Processing rate: 1401.67 items per second (0.00071 seconds per item)
+At 7:44:05 PM: Elapsed time: 6 minutes 0.0 seconds, 505173 documents processed
+Processing rate: 1403.26 items per second (0.00071 seconds per item)
+At 7:44:20 PM: Elapsed time: 6 minutes 15.0 seconds, 525254 documents processed
+Processing rate: 1400.68 items per second (0.00071 seconds per item)
+At 7:44:35 PM: Elapsed time: 6 minutes 30.0 seconds, 543263 documents processed
+Processing rate: 1392.95 items per second (0.00072 seconds per item)
+Warning: Line 544471: Bad value 90.0,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+At 7:44:50 PM: Elapsed time: 6 minutes 45.0 seconds, 564812 documents processed
+Processing rate: 1394.60 items per second (0.00072 seconds per item)
+Warning: Line 568708: Bad value -77.75,180.0 for field 'coord': java.lang.IllegalArgumentException: requirement failed
+Unable to load document  because error validating document field
+
+Finished reading pass 1 documents at Mon Dec 03 19:45:03 CST 2012.
+Elapsed time: 6 minutes 57.7 seconds, 583045 documents processed
+Processing rate: 1395.73 items per second (0.00072 seconds per item)
+--------------------------------------------------------
+Total elapsed time since program start: 6 minutes 58.3 seconds
+Memory usage, virtual memory size (proc): 13,123,489,792 bytes
+Memory usage, actual (i.e. resident set) (proc): 8,524,767,232 bytes
+Memory usage, Java heap: 4,064,041,816 bytes
+Finishing global dist...
+
+-------------------------------------------------------------------------
+Document/record/word token statistics:
+For split 'training':
+  583048 records seen
+  3 records skipped due to error seen
+  0 records skipped due to other than error seen
+  583045 documents seen, 139284131 total tokens, 238.89 tokens/document
+  583045 documents recorded, 139284131 total tokens, 238.89 tokens/document
+  0 documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  0 would-be-recorded documents skipped because lacking coordinates, 0 total tokens, 0.00 tokens/document
+  583045 documents having coordinates seen, 139284131 total tokens, 238.89 tokens/document
+  583045 documents having coordinates recorded, 139284131 total tokens, 238.89 tokens/document
+Total: 583048 records, 3 skipped records (3 from error)
+Total: 583045 documents with 139284131 total word tokens
+Total: 0 documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 0 would-be-recorded documents skipped because lacking coordinates,
+       with 0 total word tokens
+Total: 583045 recorded documents with 139284131 total word tokens
+Total: 583045 documents having coordinates with 139284131 total word tokens
+Total: 583045 recorded documents having coordinates with 139284131 total word tokens
+--------------------------------------------------------
+Beginning generating non-empty Earth-tiling cells at Mon Dec 03 19:45:08 CST 2012.
+
+
+Finished generating non-empty Earth-tiling cells at Mon Dec 03 19:45:18 CST 2012.
+Elapsed time: 0 minutes 9.6 seconds, 64800 Earth-tiling cells processed
+Processing rate: 6724.08 items per second (0.00015 seconds per item)
+--------------------------------------------------------
+--------------------------------------------------------
+Beginning computing statistics of non-empty cells at Mon Dec 03 19:45:18 CST 2012.
+
+
+Finished computing statistics of non-empty cells at Mon Dec 03 19:45:18 CST 2012.
+Elapsed time: 0 minutes 0.1 seconds, 15982 non-empty cells processed
+Processing rate: 173717.38 items per second (0.0000058 seconds per item)
+--------------------------------------------------------
+Number of non-empty cells: 15982
+Total number of cells: 64800
+Percent non-empty cells: 0.246636
+Training documents per non-empty cell: 36.4814
+--------------------------------------------------------
+Beginning evaluating documents at Mon Dec 03 19:45:18 CST 2012.
+
+Processing directory /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307...
+Processing file /scratch/01683/benwing/corpora/wikipedia/enwiki-20120307/enwiki-20120307-permuted-dev-unigram-counts.txt...
+#1:Document Philips Memorial Building at (39.95,-75.60):
+#1:  93 types, 133.000000 tokens
+#1:  true cell at rank: 1
+#1:  true cell: GCell((39.00,-76.00)-(40.00,-75.00), (39.79,-75.36), 1912 documents(dist), 1912 documents(links), 56957 types, 723713.0 tokens, 0 links)
+#1:  Predicted cell (at rank 1, kl-div 1.9770378756004192): GCell((39.00,-76.00)-(40.00,-75.00), (39.79,-75.36), 1912 documents(dist), 1912 documents(links), 56957 types, 723713.0 tokens, 0 links)
+#1:  Predicted cell (at rank 2, kl-div 2.016433436857604): GCell((40.00,-76.00)-(41.00,-75.00), (40.34,-75.39), 1348 documents(dist), 1348 documents(links), 46702 types, 529282.0 tokens, 0 links)
+#1:  Predicted cell (at rank 3, kl-div 2.0832683101424316): GCell((41.00,-73.00)-(42.00,-72.00), (41.54,-72.58), 1239 documents(dist), 1239 documents(links), 41592 types, 429219.0 tokens, 0 links)
+#1:  Predicted cell (at rank 4, kl-div 2.1661881977257376): GCell((42.00,-72.00)-(43.00,-71.00), (42.40,-71.28), 3667 documents(dist), 3667 documents(links), 75290 types, 1060424.0 tokens, 0 links)
+#1:  Predicted cell (at rank 5, kl-div 2.167104285440597): GCell((40.00,-74.00)-(41.00,-73.00), (40.76,-73.83), 3294 documents(dist), 3294 documents(links), 100359 types, 1675703.0 tokens, 0 links)
+#1:  Predicted cell (at rank 6, kl-div 2.1727501700874985): GCell((41.00,-74.00)-(42.00,-73.00), (41.38,-73.59), 1590 documents(dist), 1590 documents(links), 50448 types, 643074.0 tokens, 0 links)
+#1:  Predicted cell (at rank 7, kl-div 2.1741349314554066): GCell((43.00,-78.00)-(44.00,-77.00), (43.17,-77.57), 330 documents(dist), 330 documents(links), 17636 types, 114603.0 tokens, 0 links)
+#1:  Predicted cell (at rank 8, kl-div 2.180422573924161): GCell((42.00,-74.00)-(43.00,-73.00), (42.53,-73.59), 978 documents(dist), 978 documents(links), 37169 types, 391058.0 tokens, 0 links)
+#1:  Predicted cell (at rank 9, kl-div 2.181715343636654): GCell((38.00,-78.00)-(39.00,-77.00), (38.79,-77.16), 2117 documents(dist), 2117 documents(links), 70410 types, 1039703.0 tokens, 0 links)
+#1:  Predicted cell (at rank 10, kl-div 2.1875598708619592): GCell((39.00,-77.00)-(40.00,-76.00), (39.43,-76.58), 1378 documents(dist), 1378 documents(links), 40613 types, 433820.0 tokens, 0 links)
+#1:  Predicted cell (at rank 11, kl-div 2.196915018477093): GCell((39.00,-85.00)-(40.00,-84.00), (39.36,-84.48), 1096 documents(dist), 1096 documents(links), 38636 types, 392165.0 tokens, 0 links)
+#1:  Predicted cell (at rank 12, kl-div 2.197322834577044): GCell((53.00,-3.00)-(54.00,-2.00), (53.43,-2.51), 4392 documents(dist), 4392 documents(links), 86421 types, 1704297.0 tokens, 0 links)
+#1:  Predicted cell (at rank 13, kl-div 2.206138311574484): GCell((40.00,-77.00)-(41.00,-76.00), (40.38,-76.52), 894 documents(dist), 894 documents(links), 28952 types, 287695.0 tokens, 0 links)
+#1:  Predicted cell (at rank 14, kl-div 2.2094312462760515): GCell((40.00,-79.00)-(41.00,-78.00), (40.45,-78.53), 416 documents(dist), 416 documents(links), 18219 types, 136009.0 tokens, 0 links)
+#1:  Predicted cell (at rank 15, kl-div 2.2182587935306044): GCell((40.00,-80.00)-(41.00,-79.00), (40.43,-79.75), 928 documents(dist), 928 documents(links), 35636 types, 356526.0 tokens, 0 links)
+#1:  Predicted cell (at rank 16, kl-div 2.2225898454421364): GCell((40.00,-81.00)-(41.00,-80.00), (40.42,-80.35), 956 documents(dist), 956 documents(links), 30774 types, 310763.0 tokens, 0 links)
+#1:  Predicted cell (at rank 17, kl-div 2.223731661372517): GCell((39.00,-78.00)-(40.00,-77.00), (39.44,-77.52), 1053 documents(dist), 1053 documents(links), 31668 types, 309542.0 tokens, 0 links)
+#1:  Predicted cell (at rank 18, kl-div 2.2260199094409234): GCell((41.00,-89.00)-(42.00,-88.00), (41.64,-88.37), 487 documents(dist), 487 documents(links), 24283 types, 191059.0 tokens, 0 links)
+#1:  Predicted cell (at rank 19, kl-div 2.226964749927617): GCell((41.00,-72.00)-(42.00,-71.00), (41.71,-71.42), 1271 documents(dist), 1271 documents(links), 34908 types, 337253.0 tokens, 0 links)
+#1:  Predicted cell (at rank 20, kl-div 2.2387525776797506): GCell((30.00,-89.00)-(31.00,-88.00), (30.61,-88.26), 272 documents(dist), 272 documents(links), 14628 types, 89427.0 tokens, 0 links)
+#1:  Predicted cell (at rank 21, kl-div 2.241868316558108): GCell((43.00,-74.00)-(44.00,-73.00), (43.42,-73.52), 336 documents(dist), 336 documents(links), 17721 types, 127175.0 tokens, 0 links)
+#1:  Predicted cell (at rank 22, kl-div 2.2439909476662065): GCell((40.00,-78.00)-(41.00,-77.00), (40.53,-77.53), 398 documents(dist), 398 documents(links), 17626 types, 136185.0 tokens, 0 links)
+#1:  Predicted cell (at rank 23, kl-div 2.2498115165764214): GCell((41.00,-88.00)-(42.00,-87.00), (41.77,-87.65), 1518 documents(dist), 1518 documents(links), 57900 types, 738578.0 tokens, 0 links)
+#1:  Predicted cell (at rank 24, kl-div 2.24992107812293): GCell((44.00,-124.00)-(45.00,-123.00), (44.50,-123.25), 418 documents(dist), 418 documents(links), 16585 types, 117910.0 tokens, 0 links)
+#1:  Predicted cell (at rank 25, kl-div 2.2516080768451516): GCell((32.00,-87.00)-(33.00,-86.00), (32.42,-86.40), 202 documents(dist), 202 documents(links), 12829 types, 75737.0 tokens, 0 links)
+#1:  Predicted cell (at rank 26, kl-div 2.2524312443991605): GCell((42.00,-73.00)-(43.00,-72.00), (42.37,-72.47), 874 documents(dist), 874 documents(links), 28583 types, 242079.0 tokens, 0 links)
+#1:  Predicted cell (at rank 27, kl-div 2.2559628528526416): GCell((42.00,-77.00)-(43.00,-76.00), (42.53,-76.54), 499 documents(dist), 499 documents(links), 21116 types, 161742.0 tokens, 0 links)
+#1:  Predicted cell (at rank 28, kl-div 2.256657216226341): GCell((39.00,-87.00)-(40.00,-86.00), (39.63,-86.32), 684 documents(dist), 684 documents(links), 28998 types, 257177.0 tokens, 0 links)
+#1:  Predicted cell (at rank 29, kl-div 2.2585410765276115): GCell((41.00,-75.00)-(42.00,-74.00), (41.41,-74.33), 834 documents(dist), 834 documents(links), 34222 types, 363448.0 tokens, 0 links)
+#1:  Predicted cell (at rank 30, kl-div 2.260870204135674): GCell((64.00,-148.00)-(65.00,-147.00), (64.83,-147.71), 57 documents(dist), 57 documents(links), 7767 types, 31913.0 tokens, 0 links)
+#1:  Predicted cell (at rank 31, kl-div 2.2622896657851888): GCell((41.00,78.00)-(42.00,79.00), (41.75,78.44), 3 documents(dist), 3 documents(links), 953 types, 1903.0 tokens, 0 links)
+#1:  Predicted cell (at rank 32, kl-div 2.264199361169849): GCell((41.00,-76.00)-(42.00,-75.00), (41.43,-75.58), 432 documents(dist), 432 documents(links), 20869 types, 157768.0 tokens, 0 links)
+#1:  Predicted cell (at rank 33, kl-div 2.264410883946689): GCell((34.00,-82.00)-(35.00,-81.00), (34.49,-81.41), 219 documents(dist), 219 documents(links), 12194 types, 67957.0 tokens, 0 links)
+#1:  Predicted cell (at rank 34, kl-div 2.2668315816602456): GCell((43.00,-80.00)-(44.00,-79.00), (43.60,-79.45), 1842 documents(dist), 1842 documents(links), 64873 types, 841231.0 tokens, 0 links)
+#1:  Predicted cell (at rank 35, kl-div 2.268366756066617): GCell((38.00,-93.00)-(39.00,-92.00), (38.67,-92.46), 216 documents(dist), 216 documents(links), 11245 types, 58329.0 tokens, 0 links)
+#1:  Predicted cell (at rank 36, kl-div 2.275410020357313): GCell((39.00,-81.00)-(40.00,-80.00), (39.48,-80.42), 366 documents(dist), 366 documents(links), 11989 types, 71824.0 tokens, 0 links)
+#1:  Predicted cell (at rank 37, kl-div 2.279293174156092): GCell((53.00,2.00)-(54.00,3.00), (53.39,2.19), 12 documents(dist), 12 documents(links), 3250 types, 8557.0 tokens, 0 links)
+#1:  Predicted cell (at rank 38, kl-div 2.279512757566734): GCell((33.00,-85.00)-(34.00,-84.00), (33.73,-84.40), 707 documents(dist), 707 documents(links), 36556 types, 360257.0 tokens, 0 links)
+#1:  Predicted cell (at rank 39, kl-div 2.2812942873786914): GCell((39.00,-80.00)-(40.00,-79.00), (39.57,-79.59), 388 documents(dist), 388 documents(links), 13567 types, 87686.0 tokens, 0 links)
+#1:  Predicted cell (at rank 40, kl-div 2.2816671448177956): GCell((51.00,-2.00)-(52.00,-1.00), (51.54,-1.43), 2382 documents(dist), 2382 documents(links), 61259 types, 805269.0 tokens, 0 links)
+#1:  Predicted cell (at rank 41, kl-div 2.282685177095437): GCell((53.00,-4.00)-(54.00,-3.00), (53.35,-3.27), 868 documents(dist), 868 documents(links), 29247 types, 278732.0 tokens, 0 links)
+#1:  Predicted cell (at rank 42, kl-div 2.283280719563653): GCell((21.00,-158.00)-(22.00,-157.00), (21.33,-157.81), 272 documents(dist), 272 documents(links), 23287 types, 151049.0 tokens, 0 links)
+#1:  Predicted cell (at rank 43, kl-div 2.283596502377568): GCell((38.00,-81.00)-(39.00,-80.00), (38.47,-80.53), 287 documents(dist), 287 documents(links), 9170 types, 45649.0 tokens, 0 links)
+#1:  Predicted cell (at rank 44, kl-div 2.2836834719478647): GCell((37.00,-81.00)-(38.00,-80.00), (37.54,-80.55), 422 documents(dist), 422 documents(links), 14050 types, 86412.0 tokens, 0 links)
+#1:  Predicted cell (at rank 45, kl-div 2.283783517614376): GCell((45.00,-123.00)-(46.00,-122.00), (45.49,-122.67), 1328 documents(dist), 1328 documents(links), 35576 types, 376441.0 tokens, 0 links)
+#1:  Predicted cell (at rank 46, kl-div 2.284229354397864): GCell((35.00,-84.00)-(36.00,-83.00), (35.63,-83.61), 289 documents(dist), 289 documents(links), 20083 types, 158528.0 tokens, 0 links)
+#1:  Predicted cell (at rank 47, kl-div 2.284714948038574): GCell((41.00,-82.00)-(42.00,-81.00), (41.40,-81.55), 709 documents(dist), 709 documents(links), 34508 types, 335035.0 tokens, 0 links)
+#1:  Predicted cell (at rank 48, kl-div 2.2856264239812645): GCell((41.00,79.00)-(42.00,80.00), (41.40,79.62), 3 documents(dist), 3 documents(links), 409 types, 636.0 tokens, 0 links)
+#1:  Predicted cell (at rank 49, kl-div 2.289916799027065): GCell((38.00,-79.00)-(39.00,-78.00), (38.36,-78.50), 537 documents(dist), 537 documents(links), 19355 types, 127096.0 tokens, 0 links)
+#1:  Predicted cell (at rank 50, kl-div 2.295486015511964): GCell((40.00,78.00)-(41.00,79.00), (40.49,78.28), 3 documents(dist), 3 documents(links), 1000 types, 1918.0 tokens, 0 links)
+#1:  Predicted cell (at rank 51, kl-div 2.2957013196521876): GCell((51.00,-3.00)-(52.00,-2.00), (51.48,-2.51), 2733 documents(dist), 2733 documents(links), 65497 types, 1003633.0 tokens, 0 links)
+#1:  Predicted cell (at rank 52, kl-div 2.2989377344125845): GCell((44.00,-74.00)-(45.00,-73.00), (44.46,-73.39), 359 documents(dist), 359 documents(links), 20613 types, 144706.0 tokens, 0 links)
+#1:  Predicted cell (at rank 53, kl-div 2.3096673512460213): GCell((42.00,37.00)-(43.00,38.00), (42.18,37.62), 1 documents(dist), 1 documents(links), 329 types, 509.0 tokens, 0 links)
+#1:  Predicted cell (at rank 54, kl-div 2.3100202219694514): GCell((41.00,-91.00)-(42.00,-90.00), (41.52,-90.53), 564 documents(dist), 564 documents(links), 16608 types, 128954.0 tokens, 0 links)
+#1:  Predicted cell (at rank 55, kl-div 2.3102406425578303): GCell((34.00,-93.00)-(35.00,-92.00), (34.63,-92.34), 214 documents(dist), 214 documents(links), 13978 types, 79055.0 tokens, 0 links)
+#1:  Predicted cell (at rank 56, kl-div 2.313746125827266): GCell((30.00,-82.00)-(31.00,-81.00), (30.37,-81.63), 301 documents(dist), 301 documents(links), 17487 types, 110468.0 tokens, 0 links)
+#1:  Predicted cell (at rank 57, kl-div 2.3148323222315286): GCell((39.00,-95.00)-(40.00,-94.00), (39.25,-94.58), 436 documents(dist), 436 documents(links), 21843 types, 155253.0 tokens, 0 links)
+#1:  Predicted cell (at rank 58, kl-div 2.314845118543876): GCell((40.00,-75.00)-(41.00,-74.00), (40.59,-74.32), 3391 documents(dist), 3391 documents(links), 98062 types, 1827978.0 tokens, 0 links)
+#1:  Predicted cell (at rank 59, kl-div 2.3158749654470996): GCell((42.00,-79.00)-(43.00,-78.00), (42.71,-78.65), 536 documents(dist), 536 documents(links), 23304 types, 191491.0 tokens, 0 links)
+#1:  Predicted cell (at rank 60, kl-div 2.316382220169364): GCell((40.00,79.00)-(41.00,80.00), (40.43,79.89), 20 documents(dist), 20 documents(links), 3016 types, 9431.0 tokens, 0 links)
+#1:  Predicted cell (at rank 61, kl-div 2.31738650563334): GCell((37.00,-85.00)-(38.00,-84.00), (37.60,-84.52), 182 documents(dist), 182 documents(links), 10959 types, 54302.0 tokens, 0 links)
+#1:  Predicted cell (at rank 62, kl-div 2.3191522645749054): GCell((40.00,-112.00)-(41.00,-111.00), (40.59,-111.77), 482 documents(dist), 482 documents(links), 25911 types, 202598.0 tokens, 0 links)
+#1:  Predicted cell (at rank 63, kl-div 2.3192047939330576): GCell((37.00,-123.00)-(38.00,-122.00), (37.71,-122.32), 1862 documents(dist), 1862 documents(links), 70278 types, 931302.0 tokens, 0 links)
+#1:  Predicted cell (at rank 64, kl-div 2.320997703443179): GCell((47.00,-89.00)-(48.00,-88.00), (47.22,-88.47), 112 documents(dist), 112 documents(links), 7700 types, 38675.0 tokens, 0 links)
+#1:  Predicted cell (at rank 65, kl-div 2.3211566427266606): GCell((34.00,-83.00)-(35.00,-82.00), (34.63,-82.48), 253 documents(dist), 253 documents(links), 14913 types, 90309.0 tokens, 0 links)
+#1:  Predicted cell (at rank 66, kl-div 2.3217280019081343): GCell((39.00,-105.00)-(40.00,-104.00), (39.66,-104.88), 279 documents(dist), 279 documents(links), 18436 types, 104036.0 tokens, 0 links)
+#1:  Predicted cell (at rank 67, kl-div 2.3225547003110893): GCell((41.00,-92.00)-(42.00,-91.00), (41.60,-91.51), 211 documents(dist), 211 documents(links), 14387 types, 75182.0 tokens, 0 links)
+#1:  Predicted cell (at rank 68, kl-div 2.3231158436400197): GCell((20.00,155.00)-(21.00,156.00), (20.14,155.00), 3 documents(dist), 3 documents(links), 940 types, 1743.0 tokens, 0 links)
+#1:  Predicted cell (at rank 69, kl-div 2.3234361002689106): GCell((42.00,-84.00)-(43.00,-83.00), (42.39,-83.28), 939 documents(dist), 939 documents(links), 42584 types, 477054.0 tokens, 0 links)
+#1:  Predicted cell (at rank 70, kl-div 2.3235833155678605): GCell((38.00,-82.00)-(39.00,-81.00), (38.42,-81.52), 379 documents(dist), 379 documents(links), 9470 types, 57186.0 tokens, 0 links)
+#1:  Predicted cell (at rank 71, kl-div 2.3237229049967882): GCell((39.00,-79.00)-(40.00,-78.00), (39.44,-78.51), 535 documents(dist), 535 documents(links), 15913 types, 116755.0 tokens, 0 links)
+#1:  Predicted cell (at rank 72, kl-div 2.325787563065315): GCell((37.00,-78.00)-(38.00,-77.00), (37.54,-77.44), 639 documents(dist), 639 documents(links), 25046 types, 221373.0 tokens, 0 links)
+#1:  Predicted cell (at rank 73, kl-div 2.327215616595874): GCell((32.00,-89.00)-(33.00,-88.00), (32.43,-88.53), 95 documents(dist), 95 documents(links), 8307 types, 40817.0 tokens, 0 links)
+#1:  Predicted cell (at rank 74, kl-div 2.3290132613958403): GCell((53.00,0.00)-(54.00,1.00), (53.30,0.15), 218 documents(dist), 218 documents(links), 9503 types, 51640.0 tokens, 0 links)
+#1:  Predicted cell (at rank 75, kl-div 2.3290965140993327): GCell((44.00,-94.00)-(45.00,-93.00), (44.80,-93.31), 747 documents(dist), 747 documents(links), 32221 types, 302020.0 tokens, 0 links)
+#1:  Predicted cell (at rank 76, kl-div 2.3316213870811966): GCell((37.00,-80.00)-(38.00,-79.00), (37.49,-79.56), 319 documents(dist), 319 documents(links), 14038 types, 82530.0 tokens, 0 links)
+#1:  Predicted cell (at rank 77, kl-div 2.3340685798511): GCell((38.00,-77.00)-(39.00,-76.00), (38.71,-76.69), 839 documents(dist), 839 documents(links), 29262 types, 272202.0 tokens, 0 links)
+#1:  Predicted cell (at rank 78, kl-div 2.337357079155067): GCell((52.00,-2.00)-(53.00,-1.00), (52.56,-1.54), 3137 documents(dist), 3137 documents(links), 72196 types, 1133552.0 tokens, 0 links)
+#1:  Predicted cell (at rank 79, kl-div 2.3373920139750735): GCell((29.00,-83.00)-(30.00,-82.00), (29.54,-82.38), 279 documents(dist), 279 documents(links), 11735 types, 68180.0 tokens, 0 links)
+#1:  Predicted cell (at rank 80, kl-div 2.3374319291846297): GCell((36.00,-123.00)-(37.00,-122.00), (36.98,-122.04), 28 documents(dist), 28 documents(links), 4666 types, 13659.0 tokens, 0 links)
+#1:  Predicted cell (at rank 81, kl-div 2.338675261238012): GCell((51.00,50.00)-(52.00,51.00), (51.12,50.32), 1 documents(dist), 1 documents(links), 151 types, 211.0 tokens, 0 links)
+#1:  Predicted cell (at rank 82, kl-div 2.3387815741011178): GCell((43.00,-76.00)-(44.00,-75.00), (43.35,-75.47), 297 documents(dist), 297 documents(links), 15184 types, 94693.0 tokens, 0 links)
+#1:  Predicted cell (at rank 83, kl-div 2.3389072219830664): GCell((43.00,-77.00)-(44.00,-76.00), (43.28,-76.30), 387 documents(dist), 387 documents(links), 18310 types, 129157.0 tokens, 0 links)
+#1:  Predicted cell (at rank 84, kl-div 2.339719322336589): GCell((41.00,-94.00)-(42.00,-93.00), (41.57,-93.60), 288 documents(dist), 288 documents(links), 14899 types, 95262.0 tokens, 0 links)
+#1:  Predicted cell (at rank 85, kl-div 2.3406299848176313): GCell((42.00,-71.00)-(43.00,-70.00), (42.47,-70.84), 728 documents(dist), 728 documents(links), 25536 types, 199982.0 tokens, 0 links)
+#1:  Predicted cell (at rank 86, kl-div 2.341560824422527): GCell((41.00,-109.00)-(42.00,-108.00), (41.42,-108.72), 3 documents(dist), 3 documents(links), 132 types, 255.0 tokens, 0 links)
+#1:  Predicted cell (at rank 87, kl-div 2.3419637356788594): GCell((53.00,29.00)-(54.00,30.00), (53.30,29.27), 5 documents(dist), 5 documents(links), 593 types, 913.0 tokens, 0 links)
+#1:  Predicted cell (at rank 88, kl-div 2.3420432445453185): GCell((38.00,-80.00)-(39.00,-79.00), (38.53,-79.55), 239 documents(dist), 239 documents(links), 8718 types, 42851.0 tokens, 0 links)
+#1:  Predicted cell (at rank 89, kl-div 2.3421467174753987): GCell((61.00,-147.00)-(62.00,-146.00), (61.32,-146.46), 9 documents(dist), 9 documents(links), 1184 types, 2328.0 tokens, 0 links)
+#1:  Predicted cell (at rank 90, kl-div 2.342385454006103): GCell((38.00,-91.00)-(39.00,-90.00), (38.62,-90.33), 696 documents(dist), 696 documents(links), 30781 types, 269917.0 tokens, 0 links)
+#1:  Predicted cell (at rank 91, kl-div 2.344438490304126): GCell((40.00,74.00)-(41.00,75.00), (40.59,74.08), 49 documents(dist), 49 documents(links), 5367 types, 17000.0 tokens, 0 links)
+#1:  Predicted cell (at rank 92, kl-div 2.3451495008350416): GCell((43.00,-88.00)-(44.00,-87.00), (43.25,-87.90), 240 documents(dist), 240 documents(links), 15755 types, 92017.0 tokens, 0 links)
+#1:  Predicted cell (at rank 93, kl-div 2.345571764574866): GCell((51.00,-1.00)-(52.00,0.00), (51.51,-0.31), 7798 documents(dist), 7798 documents(links), 162667 types, 3573620.0 tokens, 0 links)
+#1:  Predicted cell (at rank 94, kl-div 2.3465468037100763): GCell((42.00,-76.00)-(43.00,-75.00), (42.53,-75.58), 306 documents(dist), 306 documents(links), 13144 types, 85611.0 tokens, 0 links)
+#1:  Predicted cell (at rank 95, kl-div 2.3468847734946148): GCell((42.00,-88.00)-(43.00,-87.00), (42.26,-87.82), 332 documents(dist), 332 documents(links), 25022 types, 178805.0 tokens, 0 links)
+#1:  Predicted cell (at rank 96, kl-div 2.3470301539855583): GCell((33.00,-113.00)-(34.00,-112.00), (33.49,-112.19), 283 documents(dist), 283 documents(links), 19308 types, 123135.0 tokens, 0 links)
+#1:  Predicted cell (at rank 97, kl-div 2.34716508839605): GCell((-17.00,126.00)-(-16.00,127.00), (-16.45,126.29), 4 documents(dist), 4 documents(links), 457 types, 768.0 tokens, 0 links)
+#1:  Predicted cell (at rank 98, kl-div 2.347232228299808): GCell((42.00,-81.00)-(43.00,-80.00), (42.42,-80.27), 118 documents(dist), 118 documents(links), 10434 types, 50650.0 tokens, 0 links)
+#1:  Predicted cell (at rank 99, kl-div 2.34997968294031): GCell((-18.00,126.00)-(-17.00,127.00), (-17.53,126.12), 3 documents(dist), 3 documents(links), 326 types, 545.0 tokens, 0 links)
+#1:  Predicted cell (at rank 100, kl-div 2.351131829887617): GCell((-22.00,138.00)-(-21.00,139.00), (-21.61,138.31), 1 documents(dist), 1 documents(links), 68 types, 92.0 tokens, 0 links)
+#1:  Predicted cell (at rank 101, kl-div 2.3513210318189977): GCell((-46.00,170.00)-(-45.00,171.00), (-45.74,170.53), 200 documents(dist), 200 documents(links), 12567 types, 69788.0 tokens, 0 links)
+#1:  Predicted cell (at rank 102, kl-div 2.3524813667224502): GCell((41.00,121.00)-(42.00,122.00), (41.31,121.25), 10 documents(dist), 10 documents(links), 1061 types, 1932.0 tokens, 0 links)
+#1:  Predicted cell (at rank 103, kl-div 2.3535075767398164): GCell((33.00,-88.00)-(34.00,-87.00), (33.41,-87.45), 140 documents(dist), 140 documents(links), 10272 types, 49456.0 tokens, 0 links)
+#1:  Predicted cell (at rank 104, kl-div 2.3555047538512177): GCell((44.00,-77.00)-(45.00,-76.00), (44.32,-76.40), 229 documents(dist), 229 documents(links), 13541 types, 75717.0 tokens, 0 links)
+#1:  Predicted cell (at rank 105, kl-div 2.3555352887575784): GCell((-19.00,142.00)-(-18.00,143.00), (-18.20,142.25), 4 documents(dist), 4 documents(links), 320 types, 516.0 tokens, 0 links)
+#1:  Predicted cell (at rank 106, kl-div 2.355964961505166): GCell((39.00,-106.00)-(40.00,-105.00), (39.69,-105.31), 314 documents(dist), 314 documents(links), 18681 types, 123330.0 tokens, 0 links)
+#1:  Predicted cell (at rank 107, kl-div 2.35692600517047): GCell((70.00,-147.00)-(71.00,-146.00), (70.18,-146.45), 2 documents(dist), 2 documents(links), 250 types, 392.0 tokens, 0 links)
+#1:  Predicted cell (at rank 108, kl-div 2.3573107770201767): GCell((41.00,-112.00)-(42.00,-111.00), (41.42,-111.81), 128 documents(dist), 128 documents(links), 9944 types, 49439.0 tokens, 0 links)
+#1:  Predicted cell (at rank 109, kl-div 2.3592776846962504): GCell((38.00,-75.00)-(39.00,-74.00), (38.95,-74.86), 46 documents(dist), 46 documents(links), 5340 types, 22462.0 tokens, 0 links)
+#1:  Predicted cell (at rank 110, kl-div 2.359378350546525): GCell((34.00,-119.00)-(35.00,-118.00), (34.16,-118.36), 1337 documents(dist), 1337 documents(links), 70358 types, 897420.0 tokens, 0 links)
+#1:  Predicted cell (at rank 111, kl-div 2.359662245796499): GCell((26.00,69.00)-(27.00,70.00), (26.27,69.21), 3 documents(dist), 3 documents(links), 513 types, 917.0 tokens, 0 links)
+#1:  Predicted cell (at rank 112, kl-div 2.3608792825779252): GCell((35.00,-98.00)-(36.00,-97.00), (35.46,-97.50), 214 documents(dist), 214 documents(links), 18217 types, 121240.0 tokens, 0 links)
+#1:  Predicted cell (at rank 113, kl-div 2.3624748796337576): GCell((35.00,-106.00)-(36.00,-105.00), (35.66,-105.71), 97 documents(dist), 97 documents(links), 8085 types, 33174.0 tokens, 0 links)
+#1:  Predicted cell (at rank 114, kl-div 2.3630877770543655): GCell((32.00,-80.00)-(33.00,-79.00), (32.79,-79.91), 164 documents(dist), 164 documents(links), 14110 types, 80017.0 tokens, 0 links)
+#1:  Predicted cell (at rank 115, kl-div 2.3634406474733973): GCell((33.00,84.00)-(34.00,85.00), (33.64,84.31), 4 documents(dist), 4 documents(links), 728 types, 1185.0 tokens, 0 links)
+#1:  Predicted cell (at rank 116, kl-div 2.3638163325354062): GCell((47.00,-98.00)-(48.00,-97.00), (47.71,-97.26), 113 documents(dist), 113 documents(links), 7678 types, 37867.0 tokens, 0 links)
+#1:  Predicted cell (at rank 117, kl-div 2.3648428037571945): GCell((-33.00,17.00)-(-32.00,18.00), (-32.94,17.93), 5 documents(dist), 5 documents(links), 243 types, 378.0 tokens, 0 links)
+#1:  Predicted cell (at rank 118, kl-div 2.3651918070520876): GCell((40.00,-89.00)-(41.00,-88.00), (40.39,-88.53), 308 documents(dist), 308 documents(links), 14415 types, 90981.0 tokens, 0 links)
+#1:  Predicted cell (at rank 119, kl-div 2.3656546214872822): GCell((36.00,-98.00)-(37.00,-97.00), (36.45,-97.47), 83 documents(dist), 83 documents(links), 8034 types, 35157.0 tokens, 0 links)
+#1:  Predicted cell (at rank 120, kl-div 2.365723200433035): GCell((47.00,-123.00)-(48.00,-122.00), (47.52,-122.40), 846 documents(dist), 846 documents(links), 40086 types, 391391.0 tokens, 0 links)
+#1:  Predicted cell (at rank 121, kl-div 2.366221831769399): GCell((29.00,-96.00)-(30.00,-95.00), (29.66,-95.42), 506 documents(dist), 506 documents(links), 32081 types, 317993.0 tokens, 0 links)
+#1:  Predicted cell (at rank 122, kl-div 2.3673923456094883): GCell((38.00,-85.00)-(39.00,-84.00), (38.39,-84.53), 284 documents(dist), 284 documents(links), 13783 types, 79493.0 tokens, 0 links)
+#1:  Predicted cell (at rank 123, kl-div 2.36807823634649): GCell((36.00,83.00)-(37.00,84.00), (36.28,83.00), 2 documents(dist), 2 documents(links), 109 types, 154.0 tokens, 0 links)
+#1:  Predicted cell (at rank 124, kl-div 2.368337436953933): GCell((17.00,33.00)-(18.00,34.00), (17.46,33.88), 3 documents(dist), 3 documents(links), 373 types, 542.0 tokens, 0 links)
+#1:  Predicted cell (at rank 125, kl-div 2.368345005365539): GCell((39.00,74.00)-(40.00,75.00), (39.56,74.42), 2 documents(dist), 2 documents(links), 437 types, 717.0 tokens, 0 links)
+#1:  Predicted cell (at rank 126, kl-div 2.369335699247358): GCell((30.00,-94.00)-(31.00,-93.00), (30.33,-93.52), 81 documents(dist), 81 documents(links), 6518 types, 26802.0 tokens, 0 links)
+#1:  Predicted cell (at rank 127, kl-div 2.3693388454871473): GCell((53.00,-2.00)-(54.00,-1.00), (53.54,-1.50), 3167 documents(dist), 3167 documents(links), 70726 types, 1080549.0 tokens, 0 links)
+#1:  Predicted cell (at rank 128, kl-div 2.369339895072306): GCell((71.00,-158.00)-(72.00,-157.00), (71.16,-157.05), 1 documents(dist), 1 documents(links), 177 types, 252.0 tokens, 0 links)
+#1:  Predicted cell (at rank 129, kl-div 2.3699820056580383): GCell((-42.00,174.00)-(-41.00,175.00), (-41.27,174.75), 296 documents(dist), 296 documents(links), 15608 types, 97483.0 tokens, 0 links)
+#1:  Predicted cell (at rank 130, kl-div 2.3701158490948937): GCell((36.00,-87.00)-(37.00,-86.00), (36.33,-86.64), 280 documents(dist), 280 documents(links), 18125 types, 115170.0 tokens, 0 links)
+#1:  Predicted cell (at rank 131, kl-div 2.3707866757324267): GCell((17.00,-66.00)-(18.00,-65.00), (17.98,-65.92), 3 documents(dist), 3 documents(links), 180 types, 260.0 tokens, 0 links)
+#1:  Predicted cell (at rank 132, kl-div 2.371116752413278): GCell((43.00,-81.00)-(44.00,-80.00), (43.49,-80.44), 258 documents(dist), 258 documents(links), 15701 types, 92240.0 tokens, 0 links)
+#1:  Predicted cell (at rank 133, kl-div 2.371174922277884): GCell((-17.00,-37.00)-(-16.00,-36.00), (-16.73,-36.55), 1 documents(dist), 1 documents(links), 144 types, 206.0 tokens, 0 links)
+#1:  Predicted cell (at rank 134, kl-div 2.3714559856390567): GCell((44.00,93.00)-(45.00,94.00), (44.97,93.02), 25 documents(dist), 25 documents(links), 2013 types, 4804.0 tokens, 0 links)
+#1:  Predicted cell (at rank 135, kl-div 2.3723119924650042): GCell((29.00,27.00)-(30.00,28.00), (29.48,27.07), 3 documents(dist), 3 documents(links), 215 types, 300.0 tokens, 0 links)
+#1:  Predicted cell (at rank 136, kl-div 2.372507920499986): GCell((41.00,-81.00)-(42.00,-80.00), (41.43,-80.52), 362 documents(dist), 362 documents(links), 16493 types, 114533.0 tokens, 0 links)
+#1:  Predicted cell (at rank 137, kl-div 2.3735574854476287): GCell((44.00,-73.00)-(45.00,-72.00), (44.47,-72.50), 250 documents(dist), 250 documents(links), 16194 types, 101699.0 tokens, 0 links)
+#1:  Predicted cell (at rank 138, kl-div 2.3737910038765326): GCell((39.00,77.00)-(40.00,78.00), (39.79,77.23), 1 documents(dist), 1 documents(links), 177 types, 247.0 tokens, 0 links)
+#1:  Predicted cell (at rank 139, kl-div 2.37469784259172): GCell((60.00,-174.00)-(61.00,-173.00), (60.66,-173.10), 1 documents(dist), 1 documents(links), 109 types, 166.0 tokens, 0 links)
+#1:  Predicted cell (at rank 140, kl-div 2.3749517914752203): GCell((37.00,-86.00)-(38.00,-85.00), (37.51,-85.52), 165 documents(dist), 165 documents(links), 8845 types, 40777.0 tokens, 0 links)
+#1:  Predicted cell (at rank 141, kl-div 2.3749679327576394): GCell((-25.00,145.00)-(-24.00,146.00), (-24.50,145.57), 3 documents(dist), 3 documents(links), 402 types, 619.0 tokens, 0 links)
+#1:  Predicted cell (at rank 142, kl-div 2.3754575990779094): GCell((40.00,73.00)-(41.00,74.00), (40.67,73.21), 188 documents(dist), 188 documents(links), 9786 types, 39572.0 tokens, 0 links)
+#1:  Predicted cell (at rank 143, kl-div 2.3755793103722826): GCell((-87.00,-131.00)-(-86.00,-130.00), (-86.12,-130.83), 2 documents(dist), 2 documents(links), 66 types, 86.0 tokens, 0 links)
+#1:  Predicted cell (at rank 144, kl-div 2.3760527851956925): GCell((36.00,-80.00)-(37.00,-79.00), (36.42,-79.55), 323 documents(dist), 323 documents(links), 15125 types, 88843.0 tokens, 0 links)
+#1:  Predicted cell (at rank 145, kl-div 2.376168256119237): GCell((48.00,-124.00)-(49.00,-123.00), (48.49,-123.43), 288 documents(dist), 288 documents(links), 16193 types, 104062.0 tokens, 0 links)
+#1:  Predicted cell (at rank 146, kl-div 2.3761947564253676): GCell((37.00,-77.00)-(38.00,-76.00), (37.44,-76.56), 593 documents(dist), 593 documents(links), 20261 types, 162281.0 tokens, 0 links)
+#1:  Predicted cell (at rank 147, kl-div 2.37672976344714): GCell((44.00,-110.00)-(45.00,-109.00), (44.47,-109.42), 34 documents(dist), 34 documents(links), 2815 types, 8205.0 tokens, 0 links)
+#1:  Predicted cell (at rank 148, kl-div 2.3769890849386384): GCell((-28.00,145.00)-(-27.00,146.00), (-27.42,145.50), 3 documents(dist), 3 documents(links), 128 types, 192.0 tokens, 0 links)
+#1:  Predicted cell (at rank 149, kl-div 2.377444623263904): GCell((42.00,-94.00)-(43.00,-93.00), (42.39,-93.49), 140 documents(dist), 140 documents(links), 8783 types, 44309.0 tokens, 0 links)
+#1:  Predicted cell (at rank 150, kl-div 2.377680833344539): GCell((41.00,-96.00)-(42.00,-95.00), (41.35,-95.76), 243 documents(dist), 243 documents(links), 12904 types, 74304.0 tokens, 0 links)
+#1:  Predicted cell (at rank 151, kl-div 2.3777374332040586): GCell((43.00,-73.00)-(44.00,-72.00), (43.49,-72.45), 292 documents(dist), 292 documents(links), 14402 types, 87792.0 tokens, 0 links)
+#1:  Predicted cell (at rank 152, kl-div 2.378290111931193): GCell((8.00,146.00)-(9.00,147.00), (8.08,146.73), 1 documents(dist), 1 documents(links), 107 types, 154.0 tokens, 0 links)
+#1:  Predicted cell (at rank 153, kl-div 2.3786917653642137): GCell((20.00,156.00)-(21.00,157.00), (20.78,156.00), 2 documents(dist), 2 documents(links), 457 types, 694.0 tokens, 0 links)
+#1:  Predicted cell (at rank 154, kl-div 2.3791503948216897): GCell((14.00,-171.00)-(15.00,-170.00), (14.28,-170.68), 1 documents(dist), 1 documents(links), 190 types, 293.0 tokens, 0 links)
+#1:  Predicted cell (at rank 155, kl-div 2.3793042606671575): GCell((34.00,-90.00)-(35.00,-89.00), (34.53,-89.56), 88 documents(dist), 88 documents(links), 6529 types, 27151.0 tokens, 0 links)
+#1:  Predicted cell (at rank 156, kl-div 2.3797443555353612): GCell((38.00,-76.00)-(39.00,-75.00), (38.50,-75.54), 457 documents(dist), 457 documents(links), 15208 types, 103404.0 tokens, 0 links)
+#1:  Predicted cell (at rank 157, kl-div 2.3799858784468286): GCell((39.00,76.00)-(40.00,77.00), (39.46,76.42), 11 documents(dist), 11 documents(links), 2796 types, 6897.0 tokens, 0 links)
+#1:  Predicted cell (at rank 158, kl-div 2.381194143716583): GCell((0.00,109.00)-(1.00,110.00), (0.00,109.33), 1 documents(dist), 1 documents(links), 292 types, 441.0 tokens, 0 links)
+#1:  Predicted cell (at rank 159, kl-div 2.3812771717478776): GCell((33.00,92.00)-(34.00,93.00), (33.76,92.00), 1 documents(dist), 1 documents(links), 43 types, 60.0 tokens, 0 links)
+#1:  Predicted cell (at rank 160, kl-div 2.381581151117184): GCell((-5.00,38.00)-(-4.00,39.00), (-4.82,38.38), 6 documents(dist), 6 documents(links), 441 types, 691.0 tokens, 0 links)
+#1:  Predicted cell (at rank 161, kl-div 2.3817754663058257): GCell((-25.00,143.00)-(-24.00,144.00), (-24.42,143.37), 3 documents(dist), 3 documents(links), 127 types, 189.0 tokens, 0 links)
+#1:  Predicted cell (at rank 162, kl-div 2.3819005078897204): GCell((41.00,29.00)-(42.00,30.00), (41.08,29.07), 96 documents(dist), 96 documents(links), 10506 types, 39619.0 tokens, 0 links)
+#1:  Predicted cell (at rank 163, kl-div 2.3825198940159136): GCell((30.00,-98.00)-(31.00,-97.00), (30.35,-97.69), 346 documents(dist), 346 documents(links), 21031 types, 138269.0 tokens, 0 links)
+#1:  Predicted cell (at rank 164, kl-div 2.3826393592037927): GCell((40.00,121.00)-(41.00,122.00), (40.77,121.49), 2 documents(dist), 2 documents(links), 211 types, 300.0 tokens, 0 links)
+#1:  Predicted cell (at rank 165, kl-div 2.382644436526725): GCell((60.00,168.00)-(61.00,169.00), (60.23,168.00), 1 documents(dist), 1 documents(links), 105 types, 129.0 tokens, 0 links)
+#1:  Predicted cell (at rank 166, kl-div 2.3827104941561217): GCell((29.00,-99.00)-(30.00,-98.00), (29.49,-98.47), 281 documents(dist), 281 documents(links), 20139 types, 132349.0 tokens, 0 links)
+#1:  Predicted cell (at rank 167, kl-div 2.3832078941964725): GCell((27.00,26.00)-(28.00,27.00), (27.39,26.50), 4 documents(dist), 4 documents(links), 219 types, 330.0 tokens, 0 links)
+#1:  Predicted cell (at rank 168, kl-div 2.3832298784480703): GCell((30.00,-97.00)-(31.00,-96.00), (30.47,-96.48), 100 documents(dist), 100 documents(links), 8487 types, 37145.0 tokens, 0 links)
+#1:  Predicted cell (at rank 169, kl-div 2.383778455243362): GCell((8.00,17.00)-(9.00,18.00), (8.66,17.72), 2 documents(dist), 2 documents(links), 390 types, 580.0 tokens, 0 links)
+#1:  Predicted cell (at rank 170, kl-div 2.3840573728141363): GCell((41.00,81.00)-(42.00,82.00), (41.66,81.68), 2 documents(dist), 2 documents(links), 244 types, 378.0 tokens, 0 links)
+#1:  Predicted cell (at rank 171, kl-div 2.3840834445786627): GCell((55.00,-2.00)-(56.00,-1.00), (55.24,-1.68), 414 documents(dist), 414 documents(links), 18773 types, 131401.0 tokens, 0 links)
+#1:  Predicted cell (at rank 172, kl-div 2.3841679825420634): GCell((-32.00,29.00)-(-31.00,30.00), (-31.42,29.58), 4 documents(dist), 4 documents(links), 534 types, 842.0 tokens, 0 links)
+#1:  Predicted cell (at rank 173, kl-div 2.384552772054997): GCell((-24.00,142.00)-(-23.00,143.00), (-23.39,142.32), 2 documents(dist), 2 documents(links), 219 types, 325.0 tokens, 0 links)
+#1:  Predicted cell (at rank 174, kl-div 2.3846758886397734): GCell((38.00,65.00)-(39.00,66.00), (38.55,65.64), 5 documents(dist), 5 documents(links), 408 types, 570.0 tokens, 0 links)
+#1:  Predicted cell (at rank 175, kl-div 2.384877016165808): GCell((61.00,-50.00)-(62.00,-49.00), (61.99,-49.67), 1 documents(dist), 1 documents(links), 173 types, 239.0 tokens, 0 links)
+#1:  Predicted cell (at rank 176, kl-div 2.3850459975742226): GCell((55.00,63.00)-(56.00,64.00), (55.23,63.30), 1 documents(dist), 1 documents(links), 36 types, 49.0 tokens, 0 links)
+#1:  Predicted cell (at rank 177, kl-div 2.385078084143743): GCell((31.00,-113.00)-(32.00,-112.00), (31.83,-112.63), 6 documents(dist), 6 documents(links), 507 types, 921.0 tokens, 0 links)
+#1:  Predicted cell (at rank 178, kl-div 2.385474310413155): GCell((38.00,-84.00)-(39.00,-83.00), (38.58,-83.57), 171 documents(dist), 171 documents(links), 6769 types, 34012.0 tokens, 0 links)
+#1:  Predicted cell (at rank 179, kl-div 2.3854833279438035): GCell((54.00,-3.00)-(55.00,-2.00), (54.47,-2.58), 1146 documents(dist), 1146 documents(links), 28826 types, 257989.0 tokens, 0 links)
+#1:  Predicted cell (at rank 180, kl-div 2.385837588612544): GCell((-31.00,127.00)-(-30.00,128.00), (-30.84,127.36), 2 documents(dist), 2 documents(links), 110 types, 168.0 tokens, 0 links)
+#1:  Predicted cell (at rank 181, kl-div 2.3863822903717704): GCell((37.00,-79.00)-(38.00,-78.00), (37.59,-78.51), 312 documents(dist), 312 documents(links), 11875 types, 64127.0 tokens, 0 links)
+#1:  Predicted cell (at rank 182, kl-div 2.3863908729024654): GCell((44.00,50.00)-(45.00,51.00), (44.52,50.27), 1 documents(dist), 1 documents(links), 92 types, 117.0 tokens, 0 links)
+#1:  Predicted cell (at rank 183, kl-div 2.3864859884815766): GCell((52.00,175.00)-(53.00,176.00), (52.35,175.92), 2 documents(dist), 2 documents(links), 275 types, 398.0 tokens, 0 links)
+#1:  Predicted cell (at rank 184, kl-div 2.3865461468382225): GCell((63.00,-66.00)-(64.00,-65.00), (63.50,-66.00), 1 documents(dist), 1 documents(links), 33 types, 43.0 tokens, 0 links)
+#1:  Predicted cell (at rank 185, kl-div 2.3867601618505976): GCell((49.00,-83.00)-(50.00,-82.00), (49.41,-82.42), 7 documents(dist), 7 documents(links), 1519 types, 3056.0 tokens, 0 links)
+#1:  Predicted cell (at rank 186, kl-div 2.3876057970400173): GCell((-25.00,139.00)-(-24.00,140.00), (-24.46,139.49), 4 documents(dist), 4 documents(links), 266 types, 423.0 tokens, 0 links)
+#1:  Predicted cell (at rank 187, kl-div 2.3876518634055346): GCell((55.00,3.00)-(56.00,4.00), (55.64,3.26), 7 documents(dist), 7 documents(links), 681 types, 1144.0 tokens, 0 links)
+#1:  Predicted cell (at rank 188, kl-div 2.3887102850385324): GCell((35.00,-91.00)-(36.00,-90.00), (35.37,-90.28), 187 documents(dist), 187 documents(links), 12139 types, 61782.0 tokens, 0 links)
+#1:  Predicted cell (at rank 189, kl-div 2.3889230169926687): GCell((-17.00,-150.00)-(-16.00,-149.00), (-17.00,-149.55), 1 documents(dist), 1 documents(links), 417 types, 617.0 tokens, 0 links)
+#1:  Predicted cell (at rank 190, kl-div 2.3889458955581024): GCell((39.00,-84.00)-(40.00,-83.00), (39.64,-83.44), 351 documents(dist), 351 documents(links), 15299 types, 106347.0 tokens, 0 links)
+#1:  Predicted cell (at rank 191, kl-div 2.3891433011613907): GCell((44.00,-76.00)-(45.00,-75.00), (44.48,-75.59), 195 documents(dist), 195 documents(links), 10771 types, 54749.0 tokens, 0 links)
+#1:  Predicted cell (at rank 192, kl-div 2.3893154316986718): GCell((35.00,101.00)-(36.00,102.00), (35.45,101.36), 5 documents(dist), 5 documents(links), 248 types, 388.0 tokens, 0 links)
+#1:  Predicted cell (at rank 193, kl-div 2.3893560715452544): GCell((47.00,-9.00)-(48.00,-8.00), (47.40,-8.53), 2 documents(dist), 2 documents(links), 256 types, 378.0 tokens, 0 links)
+#1:  Predicted cell (at rank 194, kl-div 2.389963090046613): GCell((-24.00,145.00)-(-23.00,146.00), (-23.53,145.26), 5 documents(dist), 5 documents(links), 557 types, 938.0 tokens, 0 links)
+#1:  Predicted cell (at rank 195, kl-div 2.3900426689064824): GCell((-13.00,-77.00)-(-12.00,-76.00), (-12.28,-76.84), 17 documents(dist), 17 documents(links), 1484 types, 3271.0 tokens, 0 links)
+#1:  Predicted cell (at rank 196, kl-div 2.390284726796279): GCell((30.00,-99.00)-(31.00,-98.00), (30.50,-98.49), 92 documents(dist), 92 documents(links), 7221 types, 32074.0 tokens, 0 links)
+#1:  Predicted cell (at rank 197, kl-div 2.3910255471082293): GCell((19.00,-91.00)-(20.00,-90.00), (19.70,-90.43), 6 documents(dist), 6 documents(links), 541 types, 973.0 tokens, 0 links)
+#1:  Predicted cell (at rank 198, kl-div 2.3910829637282665): GCell((70.00,30.00)-(71.00,31.00), (70.36,30.42), 4 documents(dist), 4 documents(links), 438 types, 650.0 tokens, 0 links)
+#1:  Predicted cell (at rank 199, kl-div 2.391113903176705): GCell((30.00,-85.00)-(31.00,-84.00), (30.48,-84.35), 215 documents(dist), 215 documents(links), 11862 types, 63193.0 tokens, 0 links)
+#1:  Predicted cell (at rank 200, kl-div 2.3911456617812883): GCell((31.00,68.00)-(32.00,69.00), (31.21,68.42), 2 documents(dist), 2 documents(links), 189 types, 290.0 tokens, 0 links)
+#1:  Predicted cell (at rank 201, kl-div 2.3912823092498234): GCell((33.00,-112.00)-(34.00,-111.00), (33.44,-111.78), 217 documents(dist), 217 documents(links), 15193 types, 84188.0 tokens, 0 links)
+#1:  Predicted cell (at rank 202, kl-div 2.3917514206549155): GCell((34.00,-88.00)-(35.00,-87.00), (34.55,-87.53), 148 documents(dist), 148 documents(links), 9812 types, 50505.0 tokens, 0 links)
+#1:  Predicted cell (at rank 203, kl-div 2.391775001566647): GCell((64.00,-149.00)-(65.00,-148.00), (64.86,-148.04), 2 documents(dist), 2 documents(links), 334 types, 539.0 tokens, 0 links)
+#1:  Predicted cell (at rank 204, kl-div 2.3924220530505025): GCell((42.00,-97.00)-(43.00,-96.00), (42.50,-96.49), 138 documents(dist), 138 documents(links), 8656 types, 40088.0 tokens, 0 links)
+#1:  Predicted cell (at rank 205, kl-div 2.39269111683012): GCell((72.00,-39.00)-(73.00,-38.00), (72.58,-38.46), 1 documents(dist), 1 documents(links), 246 types, 378.0 tokens, 0 links)
+#1:  Predicted cell (at rank 206, kl-div 2.3927859301062124): GCell((41.00,-71.00)-(42.00,-70.00), (41.69,-70.57), 643 documents(dist), 643 documents(links), 20868 types, 154050.0 tokens, 0 links)
+#1:  Predicted cell (at rank 207, kl-div 2.3930680853260964): GCell((17.00,-8.00)-(18.00,-7.00), (17.30,-7.03), 1 documents(dist), 1 documents(links), 261 types, 350.0 tokens, 0 links)
+#1:  Predicted cell (at rank 208, kl-div 2.3930683087073965): GCell((-1.00,-63.00)-(0.00,-62.00), (-0.86,-62.93), 3 documents(dist), 3 documents(links), 114 types, 169.0 tokens, 0 links)
+#1:  Predicted cell (at rank 209, kl-div 2.3931211159203234): GCell((1.00,131.00)-(2.00,132.00), (1.07,131.25), 1 documents(dist), 1 documents(links), 34 types, 47.0 tokens, 0 links)
+#1:  Predicted cell (at rank 210, kl-div 2.3933661642405397): GCell((32.00,-111.00)-(33.00,-110.00), (32.31,-110.81), 146 documents(dist), 146 documents(links), 12842 types, 64448.0 tokens, 0 links)
+#1:  Predicted cell (at rank 211, kl-div 2.3933822833209204): GCell((23.00,-91.00)-(24.00,-90.00), (23.73,-90.39), 1 documents(dist), 1 documents(links), 67 types, 86.0 tokens, 0 links)
+#1:  Predicted cell (at rank 212, kl-div 2.393446600921741): GCell((10.00,66.00)-(11.00,67.00), (10.50,66.90), 1 documents(dist), 1 documents(links), 262 types, 436.0 tokens, 0 links)
+#1:  Predicted cell (at rank 213, kl-div 2.3934984533423647): GCell((40.00,3.00)-(41.00,4.00), (40.11,3.64), 4 documents(dist), 4 documents(links), 568 types, 852.0 tokens, 0 links)
+#1:  Predicted cell (at rank 214, kl-div 2.3935894244966285): GCell((43.00,-72.00)-(44.00,-71.00), (43.45,-71.47), 392 documents(dist), 392 documents(links), 16464 types, 111274.0 tokens, 0 links)
+#1:  Predicted cell (at rank 215, kl-div 2.3937350049798365): GCell((32.00,-118.00)-(33.00,-117.00), (32.76,-117.15), 439 documents(dist), 439 documents(links), 28642 types, 224085.0 tokens, 0 links)
+#1:  Predicted cell (at rank 216, kl-div 2.3937558455883874): GCell((34.00,-113.00)-(35.00,-112.00), (34.53,-112.38), 79 documents(dist), 79 documents(links), 5529 types, 21041.0 tokens, 0 links)
+#1:  Predicted cell (at rank 217, kl-div 2.394246023836276): GCell((31.00,-92.00)-(32.00,-91.00), (31.56,-91.42), 106 documents(dist), 106 documents(links), 8879 types, 39467.0 tokens, 0 links)
+#1:  Predicted cell (at rank 218, kl-div 2.3943187047625347): GCell((52.00,29.00)-(53.00,30.00), (52.24,29.44), 3 documents(dist), 3 documents(links), 599 types, 910.0 tokens, 0 links)
+#1:  Predicted cell (at rank 219, kl-div 2.394333168020681): GCell((32.00,93.00)-(33.00,94.00), (32.32,93.44), 8 documents(dist), 8 documents(links), 422 types, 687.0 tokens, 0 links)
+#1:  Predicted cell (at rank 220, kl-div 2.3944807961332533): GCell((37.00,-90.00)-(38.00,-89.00), (37.51,-89.45), 252 documents(dist), 252 documents(links), 11814 types, 68056.0 tokens, 0 links)
+#1:  Predicted cell (at rank 221, kl-div 2.3944818479475236): GCell((41.00,-78.00)-(42.00,-77.00), (41.41,-77.42), 184 documents(dist), 184 documents(links), 11949 types, 98858.0 tokens, 0 links)
+#1:  Predicted cell (at rank 222, kl-div 2.3947713083796724): GCell((52.00,0.00)-(53.00,1.00), (52.39,0.47), 1451 documents(dist), 1451 documents(links), 46405 types, 507241.0 tokens, 0 links)
+#1:  Predicted cell (at rank 223, kl-div 2.3948142891857658): GCell((35.00,-81.00)-(36.00,-80.00), (35.41,-80.66), 428 documents(dist), 428 documents(links), 20324 types, 142989.0 tokens, 0 links)
+#1:  Predicted cell (at rank 224, kl-div 2.395056076375004): GCell((-16.00,-176.00)-(-15.00,-175.00), (-15.59,-175.63), 2 documents(dist), 2 documents(links), 343 types, 479.0 tokens, 0 links)
+#1:  Predicted cell (at rank 225, kl-div 2.395109111235433): GCell((37.00,-88.00)-(38.00,-87.00), (37.71,-87.50), 179 documents(dist), 179 documents(links), 10907 types, 54068.0 tokens, 0 links)
+#1:  Predicted cell (at rank 226, kl-div 2.395127036375871): GCell((77.00,-78.00)-(78.00,-77.00), (77.22,-77.42), 1 documents(dist), 1 documents(links), 181 types, 232.0 tokens, 0 links)
+#1:  Predicted cell (at rank 227, kl-div 2.3952858318125463): GCell((28.00,-82.00)-(29.00,-81.00), (28.50,-81.49), 598 documents(dist), 598 documents(links), 30373 types, 256440.0 tokens, 0 links)
+#1:  Predicted cell (at rank 228, kl-div 2.3953883167408687): GCell((63.00,67.00)-(64.00,68.00), (63.20,67.00), 1 documents(dist), 1 documents(links), 31 types, 46.0 tokens, 0 links)
+#1:  Predicted cell (at rank 229, kl-div 2.3954001943544743): GCell((43.00,70.00)-(44.00,71.00), (43.60,70.06), 41 documents(dist), 41 documents(links), 3403 types, 9753.0 tokens, 0 links)
+#1:  Predicted cell (at rank 230, kl-div 2.395673118138189): GCell((39.00,-82.00)-(40.00,-81.00), (39.50,-81.50), 357 documents(dist), 357 documents(links), 8631 types, 63816.0 tokens, 0 links)
+#1:  Predicted cell (at rank 231, kl-div 2.39567520078226): GCell((34.00,-118.00)-(35.00,-117.00), (34.25,-117.58), 346 documents(dist), 346 documents(links), 24565 types, 176413.0 tokens, 0 links)
+#1:  Predicted cell (at rank 232, kl-div 2.395833867075469): GCell((34.00,104.00)-(35.00,105.00), (34.42,104.46), 3 documents(dist), 3 documents(links), 66 types, 96.0 tokens, 0 links)
+#1:  Predicted cell (at rank 233, kl-div 2.395843149124163): GCell((43.00,-79.00)-(44.00,-78.00), (43.36,-78.64), 268 documents(dist), 268 documents(links), 15361 types, 94230.0 tokens, 0 links)
+#1:  Predicted cell (at rank 234, kl-div 2.3960000377072674): GCell((52.00,-107.00)-(53.00,-106.00), (52.21,-106.60), 200 documents(dist), 200 documents(links), 10943 types, 74453.0 tokens, 0 links)
+#1:  Predicted cell (at rank 235, kl-div 2.3961145245347546): GCell((29.00,-82.00)-(30.00,-81.00), (29.46,-81.36), 281 documents(dist), 281 documents(links), 14364 types, 85016.0 tokens, 0 links)
+#1:  Predicted cell (at rank 236, kl-div 2.396155709523852): GCell((48.00,42.00)-(49.00,43.00), (48.61,42.85), 1 documents(dist), 1 documents(links), 50 types, 66.0 tokens, 0 links)
+#1:  Predicted cell (at rank 237, kl-div 2.3963696880823786): GCell((-33.00,139.00)-(-32.00,140.00), (-32.63,139.53), 4 documents(dist), 4 documents(links), 384 types, 650.0 tokens, 0 links)
+#1:  Predicted cell (at rank 238, kl-div 2.396432579497698): GCell((47.00,96.00)-(48.00,97.00), (47.55,96.64), 4 documents(dist), 4 documents(links), 134 types, 211.0 tokens, 0 links)
+#1:  Predicted cell (at rank 239, kl-div 2.396767008908088): GCell((-33.00,146.00)-(-32.00,147.00), (-32.07,146.32), 1 documents(dist), 1 documents(links), 82 types, 119.0 tokens, 0 links)
+#1:  Predicted cell (at rank 240, kl-div 2.3968480542154302): GCell((55.00,-135.00)-(56.00,-134.00), (55.88,-134.41), 2 documents(dist), 2 documents(links), 300 types, 485.0 tokens, 0 links)
+#1:  Predicted cell (at rank 241, kl-div 2.3969073872042665): GCell((59.00,143.00)-(60.00,144.00), (59.37,143.27), 2 documents(dist), 2 documents(links), 228 types, 317.0 tokens, 0 links)
+#1:  Predicted cell (at rank 242, kl-div 2.3970885925465644): GCell((-27.00,115.00)-(-26.00,116.00), (-26.71,115.74), 3 documents(dist), 3 documents(links), 239 types, 388.0 tokens, 0 links)
+#1:  Predicted cell (at rank 243, kl-div 2.397143917704545): GCell((28.00,-78.00)-(29.00,-77.00), (28.39,-77.11), 1 documents(dist), 1 documents(links), 242 types, 377.0 tokens, 0 links)
+#1:  Predicted cell (at rank 244, kl-div 2.397371872907578): GCell((12.00,27.00)-(13.00,28.00), (12.37,27.45), 1 documents(dist), 1 documents(links), 14 types, 17.0 tokens, 0 links)
+#1:  Predicted cell (at rank 245, kl-div 2.3973817733613414): GCell((49.00,123.00)-(50.00,124.00), (49.45,123.07), 3 documents(dist), 3 documents(links), 699 types, 1188.0 tokens, 0 links)
+#1:  Predicted cell (at rank 246, kl-div 2.397382227100785): GCell((10.00,6.00)-(11.00,7.00), (10.38,6.35), 4 documents(dist), 4 documents(links), 399 types, 614.0 tokens, 0 links)
+#1:  Predicted cell (at rank 247, kl-div 2.397602970068329): GCell((50.00,51.00)-(51.00,52.00), (50.20,51.17), 1 documents(dist), 1 documents(links), 64 types, 78.0 tokens, 0 links)
+#1:  Predicted cell (at rank 248, kl-div 2.3982037507374594): GCell((61.00,12.00)-(62.00,13.00), (61.61,12.24), 8 documents(dist), 8 documents(links), 409 types, 617.0 tokens, 0 links)
+#1:  Predicted cell (at rank 249, kl-div 2.398356473185923): GCell((41.00,-87.00)-(42.00,-86.00), (41.54,-86.44), 301 documents(dist), 301 documents(links), 14305 types, 89084.0 tokens, 0 links)
+#1:  Predicted cell (at rank 250, kl-div 2.398466457654722): GCell((32.00,-94.00)-(33.00,-93.00), (32.48,-93.64), 120 documents(dist), 120 documents(links), 11698 types, 57584.0 tokens, 0 links)
+#1:  Predicted cell (at rank 251, kl-div 2.3985407744857272): GCell((40.00,86.00)-(41.00,87.00), (40.06,86.24), 2 documents(dist), 2 documents(links), 1119 types, 1980.0 tokens, 0 links)
+#1:  Predicted cell (at rank 252, kl-div 2.399007058719876): GCell((-26.00,128.00)-(-25.00,129.00), (-25.04,128.30), 2 documents(dist), 2 documents(links), 222 types, 347.0 tokens, 0 links)
+#1:  Predicted cell (at rank 253, kl-div 2.399094915821164): GCell((10.00,-2.00)-(11.00,-1.00), (10.84,-1.32), 8 documents(dist), 8 documents(links), 491 types, 804.0 tokens, 0 links)
+#1:  Predicted cell (at rank 254, kl-div 2.399124431791937): GCell((13.00,-81.00)-(14.00,-80.00), (13.55,-80.06), 2 documents(dist), 2 documents(links), 114 types, 175.0 tokens, 0 links)
+#1:  Predicted cell (at rank 255, kl-div 2.399293014114957): GCell((-26.00,115.00)-(-25.00,116.00), (-25.05,115.21), 1 documents(dist), 1 documents(links), 224 types, 348.0 tokens, 0 links)
+#1:  Predicted cell (at rank 256, kl-div 2.3993125025798983): GCell((-44.00,172.00)-(-43.00,173.00), (-43.52,172.58), 258 documents(dist), 258 documents(links), 14176 types, 94851.0 tokens, 0 links)
+#1:  Predicted cell (at rank 257, kl-div 2.399424309016094): GCell((45.00,-76.00)-(46.00,-75.00), (45.40,-75.67), 702 documents(dist), 702 documents(links), 29422 types, 231145.0 tokens, 0 links)
+#1:  Predicted cell (at rank 258, kl-div 2.3996024687431308): GCell((-23.00,134.00)-(-22.00,135.00), (-22.62,134.79), 2 documents(dist), 2 documents(links), 439 types, 602.0 tokens, 0 links)
+#1:  Predicted cell (at rank 259, kl-div 2.3996094687919087): GCell((64.00,-141.00)-(65.00,-140.00), (64.43,-140.57), 2 documents(dist), 2 documents(links), 291 types, 476.0 tokens, 0 links)
+#1:  Predicted cell (at rank 260, kl-div 2.399679377453223): GCell((40.00,-84.00)-(41.00,-83.00), (40.39,-83.44), 377 documents(dist), 377 documents(links), 16852 types, 132484.0 tokens, 0 links)
+#1:  Predicted cell (at rank 261, kl-div 2.4000818198241305): GCell((59.00,-145.00)-(60.00,-144.00), (59.85,-144.52), 3 documents(dist), 3 documents(links), 249 types, 430.0 tokens, 0 links)
+#1:  Predicted cell (at rank 262, kl-div 2.4009146344895753): GCell((56.00,-171.00)-(57.00,-170.00), (56.91,-170.04), 1 documents(dist), 1 documents(links), 76 types, 110.0 tokens, 0 links)
+#1:  Predicted cell (at rank 263, kl-div 2.400951616431529): GCell((50.00,60.00)-(51.00,61.00), (50.43,60.51), 1 documents(dist), 1 documents(links), 26 types, 28.0 tokens, 0 links)
+#1:  Predicted cell (at rank 264, kl-div 2.4010161887683914): GCell((-14.00,127.00)-(-13.00,128.00), (-13.96,127.33), 1 documents(dist), 1 documents(links), 45 types, 63.0 tokens, 0 links)
+#1:  Predicted cell (at rank 265, kl-div 2.40113079901592): GCell((20.00,117.00)-(21.00,118.00), (20.28,117.63), 1 documents(dist), 1 documents(links), 297 types, 441.0 tokens, 0 links)
+#1:  Predicted cell (at rank 266, kl-div 2.4016397687660103): GCell((55.00,85.00)-(56.00,86.00), (55.28,85.61), 1 documents(dist), 1 documents(links), 37 types, 49.0 tokens, 0 links)
+#1:  Predicted cell (at rank 267, kl-div 2.4017922815527792): GCell((49.00,-80.00)-(50.00,-79.00), (49.33,-79.40), 2 documents(dist), 2 documents(links), 361 types, 504.0 tokens, 0 links)
+#1:  Predicted cell (at rank 268, kl-div 2.4020154151061424): GCell((35.00,-87.00)-(36.00,-86.00), (35.70,-86.60), 171 documents(dist), 171 documents(links), 9936 types, 48443.0 tokens, 0 links)
+#1:  Predicted cell (at rank 269, kl-div 2.4021143202160316): GCell((41.00,-84.00)-(42.00,-83.00), (41.51,-83.52), 362 documents(dist), 362 documents(links), 17139 types, 123285.0 tokens, 0 links)
+#1:  Predicted cell (at rank 270, kl-div 2.4022226325023897): GCell((56.00,92.00)-(57.00,93.00), (56.08,92.77), 3 documents(dist), 3 documents(links), 242 types, 359.0 tokens, 0 links)
+#1:  Predicted cell (at rank 271, kl-div 2.4023467785412875): GCell((17.00,-33.00)-(18.00,-32.00), (17.28,-32.48), 1 documents(dist), 1 documents(links), 108 types, 147.0 tokens, 0 links)
+#1:  Predicted cell (at rank 272, kl-div 2.402385910161306): GCell((-2.00,98.00)-(-1.00,99.00), (-1.38,98.92), 2 documents(dist), 2 documents(links), 273 types, 417.0 tokens, 0 links)
+#1:  Predicted cell (at rank 273, kl-div 2.4026490506507727): GCell((68.00,-90.00)-(69.00,-89.00), (68.64,-89.68), 4 documents(dist), 4 documents(links), 372 types, 609.0 tokens, 0 links)
+#1:  Predicted cell (at rank 274, kl-div 2.4028098144335663): GCell((-27.00,148.00)-(-26.00,149.00), (-26.56,148.78), 3 documents(dist), 3 documents(links), 146 types, 236.0 tokens, 0 links)
+#1:  Predicted cell (at rank 275, kl-div 2.403015518460635): GCell((42.00,-80.00)-(43.00,-79.00), (42.39,-79.40), 170 documents(dist), 170 documents(links), 11263 types, 61441.0 tokens, 0 links)
+#1:  Predicted cell (at rank 276, kl-div 2.403202905181857): GCell((40.00,-125.00)-(41.00,-124.00), (40.68,-124.16), 113 documents(dist), 113 documents(links), 7919 types, 34870.0 tokens, 0 links)
+#1:  Predicted cell (at rank 277, kl-div 2.4032977387953705): GCell((57.00,153.00)-(58.00,154.00), (57.48,153.84), 1 documents(dist), 1 documents(links), 325 types, 481.0 tokens, 0 links)
+#1:  Predicted cell (at rank 278, kl-div 2.4034328577384647): GCell((53.00,30.00)-(54.00,31.00), (53.64,30.39), 5 documents(dist), 5 documents(links), 557 types, 847.0 tokens, 0 links)
+#1:  Predicted cell (at rank 279, kl-div 2.40346351025793): GCell((43.00,-69.00)-(44.00,-68.00), (43.87,-68.70), 5 documents(dist), 5 documents(links), 1030 types, 1843.0 tokens, 0 links)
+#1:  Predicted cell (at rank 280, kl-div 2.403652441744763): GCell((38.00,-86.00)-(39.00,-85.00), (38.36,-85.65), 628 documents(dist), 628 documents(links), 22585 types, 173621.0 tokens, 0 links)
+#1:  Predicted cell (at rank 281, kl-div 2.4037082696320478): GCell((-79.00,-100.00)-(-78.00,-99.00), (-79.00,-100.00), 1 documents(dist), 1 documents(links), 131 types, 203.0 tokens, 0 links)
+#1:  Predicted cell (at rank 282, kl-div 2.4037195591591507): GCell((38.00,58.00)-(39.00,59.00), (38.02,58.24), 3 documents(dist), 3 documents(links), 171 types, 253.0 tokens, 0 links)
+#1:  Predicted cell (at rank 283, kl-div 2.404010525511344): GCell((44.00,77.00)-(45.00,78.00), (44.61,77.96), 2 documents(dist), 2 documents(links), 242 types, 336.0 tokens, 0 links)
+#1:  Predicted cell (at rank 284, kl-div 2.404045282866539): GCell((-75.00,-120.00)-(-74.00,-119.00), (-74.75,-120.00), 1 documents(dist), 1 documents(links), 78 types, 100.0 tokens, 0 links)
+#1:  Predicted cell (at rank 285, kl-div 2.4043013637745814): GCell((-77.00,-28.00)-(-76.00,-27.00), (-76.63,-27.70), 2 documents(dist), 2 documents(links), 96 types, 127.0 tokens, 0 links)
+#1:  Predicted cell (at rank 286, kl-div 2.4043557471210097): GCell((43.00,-117.00)-(44.00,-116.00), (43.59,-116.41), 118 documents(dist), 118 documents(links), 9049 types, 42771.0 tokens, 0 links)
+#1:  Predicted cell (at rank 287, kl-div 2.4045024499009213): GCell((33.00,57.00)-(34.00,58.00), (33.59,57.36), 6 documents(dist), 6 documents(links), 364 types, 522.0 tokens, 0 links)
+#1:  Predicted cell (at rank 288, kl-div 2.404597403030552): GCell((-17.00,127.00)-(-16.00,128.00), (-16.37,127.43), 3 documents(dist), 3 documents(links), 349 types, 509.0 tokens, 0 links)
+#1:  Predicted cell (at rank 289, kl-div 2.4046790760805847): GCell((13.00,10.00)-(14.00,11.00), (13.74,10.17), 6 documents(dist), 6 documents(links), 557 types, 860.0 tokens, 0 links)
+#1:  Predicted cell (at rank 290, kl-div 2.4046941316398707): GCell((20.00,-13.00)-(21.00,-12.00), (20.49,-12.43), 5 documents(dist), 5 documents(links), 404 types, 648.0 tokens, 0 links)
+#1:  Predicted cell (at rank 291, kl-div 2.404776811029693): GCell((83.00,-75.00)-(84.00,-74.00), (83.08,-74.14), 1 documents(dist), 1 documents(links), 107 types, 150.0 tokens, 0 links)
+#1:  Predicted cell (at rank 292, kl-div 2.4049558470159917): GCell((54.00,27.00)-(55.00,28.00), (54.32,27.68), 9 documents(dist), 9 documents(links), 743 types, 1172.0 tokens, 0 links)
+#1:  Predicted cell (at rank 293, kl-div 2.4050493846407925): GCell((37.00,60.00)-(38.00,61.00), (37.25,60.41), 4 documents(dist), 4 documents(links), 443 types, 689.0 tokens, 0 links)
+#1:  Predicted cell (at rank 294, kl-div 2.40516740143152): GCell((52.00,-3.00)-(53.00,-2.00), (52.51,-2.39), 1954 documents(dist), 1954 documents(links), 51626 types, 629827.0 tokens, 0 links)
+#1:  Predicted cell (at rank 295, kl-div 2.4052376036383345): GCell((41.00,-79.00)-(42.00,-78.00), (41.48,-78.51), 158 documents(dist), 158 documents(links), 8818 types, 49939.0 tokens, 0 links)
+#1:  Predicted cell (at rank 296, kl-div 2.405428240923603): GCell((6.00,149.00)-(7.00,150.00), (6.69,149.30), 1 documents(dist), 1 documents(links), 42 types, 52.0 tokens, 0 links)
+#1:  Predicted cell (at rank 297, kl-div 2.405431043813324): GCell((-72.00,172.00)-(-71.00,173.00), (-71.92,172.50), 1 documents(dist), 1 documents(links), 17 types, 20.0 tokens, 0 links)
+#1:  Predicted cell (at rank 298, kl-div 2.405495504680787): GCell((16.00,-43.00)-(17.00,-42.00), (16.97,-42.54), 1 documents(dist), 1 documents(links), 149 types, 237.0 tokens, 0 links)
+#1:  Predicted cell (at rank 299, kl-div 2.4055748058956765): GCell((8.00,13.00)-(9.00,14.00), (8.61,13.90), 2 documents(dist), 2 documents(links), 377 types, 591.0 tokens, 0 links)
+#1:  Predicted cell (at rank 300, kl-div 2.405613967742501): GCell((36.00,-77.00)-(37.00,-76.00), (36.71,-76.38), 359 documents(dist), 359 documents(links), 19677 types, 140441.0 tokens, 0 links)
+#1:  Predicted cell (at rank 301, kl-div 2.4056467374765296): GCell((55.00,59.00)-(56.00,60.00), (55.21,59.42), 3 documents(dist), 3 documents(links), 162 types, 252.0 tokens, 0 links)

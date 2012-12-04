@@ -27,15 +27,16 @@ object GetCells extends App {
   println("writing cell bounds to #cellsFile")
   cells.zipWithIndex foreach { pair =>
     val (cell, id) = pair
-    cellOut.println("G#id, #cell")
+    cellOut.println("\"G#id\", \"#cell\"")
   }
   cellOut.close()
   println("writing doc locations to #tagsFile")
   val locator = new Locator(cells)
   val docs = CoordsParser.loadDocs(docsFile)
   docs foreach { doc =>
-    val cell = locator.findCell(doc)
-    tagOut.println("#{doc.docId}, G#cell?[#it|NONE]")
+    locator.findCell(doc) foreach { cell => 
+      tagOut.println("\"#{doc.docId}\", \"G#cell\"")
+    }
   }
   tagOut.close()
   println("done")

@@ -3,6 +3,7 @@ package getcells
 import scala.collection.immutable.{Stream, PagedSeq}
 import scala.util.parsing.combinator._
 import scala.util.parsing.input.PagedSeqReader
+import scala.util.matching.Regex
 
 import java.io.{Reader, File, FileReader}
 
@@ -63,8 +64,21 @@ abstract class StreamParser[A] extends JavaTokenParsers {
 
 /**parses out info from the coords document in wikipedia data*/
 object CoordsParser extends StreamParser[Option[DocWithLoc]] {
+  def clean(s:String):String = {
+    val s1 = s.toLowerCase.trim
+    val s2 = alphanum.replaceAllIn(s1, "")
+    spaces.replaceAllIn(s2, " ")
+  }
+
+  val alphanum = """[^\w0-9 ]+""".r ///blank
+  val spaces = """\s+|\-+""".r // single space
+
+
   def front = "Article"
-  def title = front ~> "title:" ~> """.*""".r <~ '\n'
+  def title = front ~> "title:" ~> """.*""".r <~ '\n' ^^ {
+    t => clean(t)
+  }
+
   def id = front ~> "ID:" ~> wholeNumber <~ '\n' ^^ { _.toInt }
   def coordinates = front ~> "coordinates:" ~> (coordPair | noCoord)<~'\n'
 
@@ -95,19 +109,25 @@ object LogParser extends LineStreamParser[LogInfo] {
 
   def cellThingName = "GCell"
 
-  def geocell = """^#\d+:\s+[^:]*:""".r ~> cellThingName ~> "(" ~> coordsList <~ "," <~ repsep(datathing, ",") <~ ")" ^^ {
-    case cl => GeoCell(cl, None)
+  def cellstart1 = """^#\d+:\s+[^:]*:""".r 
+  def cellstart2 = """^.*cell""".r
+  def cellstart = cellstart1 | cellstart2
+
+  def geocell = cellstart ~> cellThingName ~> "(" ~> coordsPair ~ ("," ~> coord) <~ "," <~ repsep(datathing, ",") <~ ")" ^^ {
+    case sq ~ gl => sq.copy(center = Some(gl))
+  }
+ def coordsPair:Parser[SquareCell] = coord ~ ("-" ~> coord) ^^ {
+    case GeoLoc(lat1, lon1) ~ GeoLoc(lat2, lon2) => SquareCell(lat1, lat2, lon1, lon2, None)
   }
   def coordsList = rep1sep(coord, "-" ) ^^ {
     coords => coords.toSet.toList //remove duplicate coordinate points.
   }
-  def coord = "(" ~> floatingPointNumber ~ ("," ~> floatingPointNumber) <~ ")" ^^ {
+  def coord:Parser[GeoLoc] = "(" ~> floatingPointNumber ~ ("," ~> floatingPointNumber) <~ ")" ^^ {
     case lat ~ lon => GeoLoc(lat.toDouble, lon.toDouble)
   }
-  def center = "(" ~> "Center" ~> ":" ~> coord <~ ")"
 
   def countLine:Parser[CellCount] = "Total number of cells:" ~> wholeNumber <~ eol ^^ (cnt => CellCount(cnt.toInt))
-  def cellLine:Parser[GeoCell] = geocell <~ eol
+  def cellLine:Parser[SquareCell] = geocell <~ eol
   def junkLine:Parser[LogInfo] = junk ~> eol ^^^ (Junk)
 
   def line = countLine | cellLine | junkLine
@@ -118,6 +138,7 @@ object LogParser extends LineStreamParser[LogInfo] {
   def group(stuff:Stuff, info:LogInfo):Stuff = info match {
     case CellCount(amt) => (Some(amt), stuff._2)
     case GeoCell(bounds, center)  => (stuff._1, stuff._2 + SquareCell(bounds, center)) 
+    case sq:SquareCell  => (stuff._1, stuff._2 + sq) 
     case Junk => stuff
   }
 

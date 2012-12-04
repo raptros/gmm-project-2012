@@ -7,14 +7,18 @@ package object getcells {
   case class DocWithLoc(docId:DocId, geoTag:GeoLoc)
   //case class DocWithCell(docId:DocId, cell:GeoCell)
   
+  sealed abstract class LogInfo
+
   /**a square cell. it has bounds. it determines if a doc is in those bounds.
   * Note: I have no idea if the math is correct.
   */
-  case class SquareCell(minLat:Double, maxLat:Double, minLon:Double, maxLon:Double, center:Option[GeoLoc]) {
+  case class SquareCell(minLat:Double, maxLat:Double, minLon:Double, maxLon:Double, center:Option[GeoLoc])
+  extends LogInfo {
     def contains(loc:GeoLoc):Boolean = {
-      minLat < loc.lat && loc.lat < maxLat && minLon < loc.lon && loc.lon < maxLon
+      minLat <= loc.lat && loc.lat < maxLat && minLon <= loc.lon && loc.lon < maxLon
     }
   }
+
 
   /**allows constructing a square cell from a geocell.*/
   case object SquareCell {
@@ -26,8 +30,6 @@ package object getcells {
       SquareCell(lats.head, lats.last, lons.head, lons.last, center)
     }
   }
-
-  sealed abstract class LogInfo
 
   case class GeoCell(bounds:Bounds, center:Option[GeoLoc]) extends LogInfo
   case class CellCount(count:Int) extends LogInfo
