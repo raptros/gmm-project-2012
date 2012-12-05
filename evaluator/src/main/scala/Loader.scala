@@ -76,7 +76,7 @@ object LabelLineParsers extends LineStreamParser[LabelPropDoc] {
 }
 
 object GoldLabelLineParsers extends LineStreamParser[GoldLabel] {
-  def streamItem = """\w+""".r ~ """[\w\d_]+""".r ^^ { case i ~ l => i -> l}
+  def streamItem = """\w+""".r ~ """[\w\d_]+""".r  <~ floatingPointNumber ^^ { case i ~ l => i -> l}
 }
 
 object Loaders {
