@@ -1,33 +1,42 @@
-\section{Next steps}
-Getting a comparison of label propagation and Textgrounder for geolocation on
-the uniform grid remains our primary first step.
-\par
-In order to do this, we will need to recreate the uniform case of
+\section{Next steps} Getting a comparison of label propagation and Textgrounder
+for geolocation on the uniform grid remains our primary first step. 
+
+\par In order to do this, we will need to recreate the uniform case of
 \cite{rolleretal:12}, which means successfully getting Textgrounder up and
-running on TACC.
-Once we have a log file from the Textgrounder run, we will also be able to extract the cell information we
-need to create labels for the label propagation system. 
-\par 
-We will also need to modify Textgrounder's existing Wikipedia preprocessing
-scripts to have them output the link structure information. Once we have this
-information, we can set up label propagation so that both Junto and
-Textgrounder use the same training set of articles; Textgrounder for building
-the language models, and Junto for obtaining initial seed labels.
-\par
-Once Junto and Textgrounder are set up, we can run both the systems to get the predicted locations and supply these results to an evaluation mechanism.
-Figuring out how to perform these steps on the simple case of uniform grid will allow us to
-explore more sophisticated models, both for creating geographic cells (i.e.
-using kd-trees), and for experimenting with the article graph.
-\par
-Once we can resolve our current technical difficulties and reach this point, we
-will be able to explore questions such as how similar are the locational
-predictions produced by the IR model vs. the graph-based label-propagation
-model, and how useful is the additional information obtained by running label propagation over non-geotagged articles.
-\par
-To evaluate the performance of the models, we will use measures based on error distances, e.g., mean and median error between predicted and actual distance, instead of IR based methods like precision or recall.
-\cite{rolleretal:12} show that using the centroid of locations of documents in the grid cell as the cell's location results in more accurate predictions than using the mean of document locations (as in \cite{wing-baldridge:11}), even in the uniform-grid case.
-\par
-The ultimate aim of this project is to get a reasonable geolocation accuracy on non-geotagged articles using label propagation, so that these new articles can be included in the language model for Textgrounder cells.
-Once we figure out which, if any, label propagation models will work well
-enough for this purpose, we can explore the possibilities made available in the
-new information from the extended set.
+running on TACC. Once we have a log file from the Textgrounder run, we will also
+be able to extract the cell information we need to create labels for the label
+propagation system.  
+
+\par  We will also need to modify Textgrounder's existing Wikipedia
+preprocessing scripts to have them output the link structure information. Once
+we have this information, we can set up label propagation so that both Junto
+and Textgrounder use the same training set of articles; Textgrounder for
+building the language models, and Junto for obtaining initial seed labels.
+
+\par Once Junto and Textgrounder are set up, we can run both the systems to
+get the predicted locations and supply these results to an evaluation
+mechanism. Figuring out how to perform these steps on the simple case of
+uniform grid will allow us to explore more sophisticated models, both for
+creating geographic cells (i.e. using kd-trees), and for experimenting with
+the article graph. 
+
+\par Once we can resolve our current technical difficulties
+and reach this point, we will be able to explore questions such as how similar
+are the locational predictions produced by the IR model vs. the graph-based
+label- propagation model, and how useful is the additional information
+obtained by running label propagation over non-geotagged articles. 
+
+\par To evaluate the performance of the models, we will use measures based on
+error distances, e.g., mean and median error between predicted and actual
+distance, instead of IR based methods like precision or recall.
+\cite{rolleretal:12} show that using the centroid of locations of documents in
+the grid cell as the cell's location results in more accurate predictions than
+using the mean of document locations (as in \cite{wing-baldridge:11}), even in
+the uniform-grid case.
+
+\par The ultimate aim of this project is to get a reasonable geolocation
+accuracy on non- geotagged articles using label propagation, so that these new
+articles can be included in the language model for Textgrounder cells. Once we
+figure out which, if any, label propagation models will work well enough for
+this purpose, we can explore the possibilities made available in the new
+information from the extended set.
