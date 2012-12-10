@@ -17,7 +17,7 @@ package object evaluator {
     }
   }
 
-  val K_FOR_PR = 10
+  val K_FOR_PR = 50
 
 
   /**allows constructing a square cell from a geocell.*/
@@ -31,5 +31,5 @@ package object evaluator {
   case class LabelPropDoc(id:String, labels:List[LabelWeight])
   type GoldLabel = (String, String)
 
-  case class EvalResults(numDocs:Int, meanErrDistance:Double, precRecAt:Array[(Int, Double, Double)])
+  case class EvalResults(numDocs:Int, notFound:Int, meanErrDistance:Double, precRecAt:Array[(Int, Double, Double)])
 }

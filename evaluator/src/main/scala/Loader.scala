@@ -56,7 +56,7 @@ object LabelLineParsers {
       ll.tail.grouped(2).flatMap {
         case List(l, w) => Some(LabelWeight(l, w.toDouble))
         case _ => None
-      }.toList.dropRight(1).takeRight(100))
+      }.toList.dropRight(1).takeRight(100).filterNot(_.label == "__DUMMY__"))
   }
 }
 

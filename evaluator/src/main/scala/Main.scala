@@ -14,16 +14,22 @@ object TestPathsAidan extends TestPaths {
   val goldLabels = dataDir + "/labels_out"
   val cellDefs = dataDir + "/cells.txt"
   val outputs = List(
-    "label_prop_output_12.5",
-    "label_prop_output_25",
-    "label_prop_output_50"
-    //"label_prop_output_75"
+    //"label_prop_output_12.5",
+    //"label_prop_output_25",
+    //"label_prop_output_50",
+    //"label_prop_output_75_iters_5",
+    //"label_prop_output_75_iters_20",
+    //"label_prop_output_75_iters_50",
+    "label_prop_output_75_iters_100"
   ) map (dataDir + "/" +_)
   val seeds = List(
-    "seeds12.5",
-    "seeds25",
-    "seeds50"
-    //"seeds75"
+    //"seeds12.5",
+    //"seeds25",
+    //"seeds50",
+    "seeds75",
+    "seeds75",
+    "seeds75",
+    "seeds75"
   ) map (dataDir + "/" +_)
   val evals = outputs zip seeds
   //val evals = List(dataDir + "/sample_500_label_prop_output")
@@ -37,7 +43,7 @@ object TestEval extends App {
     case (o, s) => evals.evaluate(o, s)
   }
   results foreach { res =>
-    println("doc count: #res.numDocs")
+    println("doc count: #res.numDocs, where #res.notFound did not have distances found")
     println("mean error dist: #res.meanErrDistance")
     println("k\tprec\trec:")
     res.precRecAt foreach {

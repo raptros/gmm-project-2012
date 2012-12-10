@@ -1,0 +1,61 @@
+\subsection{Textgrounder}
+So far, we have not been successful in using the Textgrounder system of 
+\cite{wing-baldridge:11} and \cite{rolleretal:12} to accomplish our goals. 
+Several issues stand in our way, including structural problems in the
+Textgrounder codebase, mistakes and false starts in attempting to get
+the system up and running, and various problems involving dataset and resource
+availability.
+\par
+The corpora that Textgrounder operates on are usually large enough that fitting them
+in memory is impossible; this requires Textgrounder to be able to
+build its models while iterating over chunks of the corpora.
+The current architecture of Textgrounder accomplishes this by using internal
+iterators - requiring that everything that has to be done to a document be
+coupled to the corpus-loading system.
+\par
+Unfortunately, this makes it difficult for us to use Textgrounder to achieve
+our objective, which is to find the grid cell that a particular geotagged document is located in.
+Our proposed label-propagation model uses the same principle (of dividing the
+world into grid cells) as Textgrounder; in order to build our seed set, we need to
+know the correct cell assignment (under a particular model for generating
+cells) for every geo-tagged document.
+The internal iterator structure makes it very difficult for us to use the
+existing cell grid generation code, as we would most likely need to implement our own
+loading harness.
+\par
+Benjamin Wing (who explained this issue) mentioned in an email conversation that he intends to re-design
+Textgrounder to instead use external iteration; this would allow the cell-grid
+system to be less tightly coupled to the loading system.
+Such a re-design would make it much easier to build upon the parts of the
+Textgrounder codebase that we need. However, our time constraints mean that we cannot wait for the new architecture to be implemented, nor will we have
+time to aid the process by volunteering.
+Instead, we will use a workaround suggested by Stephen Roller; we have built a
+simple tool that parses Textgrounder logfiles, which contain listings of grid
+cells with their geographic boundaries.
+Admittedly, this is a fragile and inelegant solution, but it will allow us to
+get the sets of labels we need for propagation as soon as we manage to run
+Textgrounder itself.
+\par
+We have to admit that most of our lack of progress is the result of our own
+poor decision-making and not understanding the systems we work with.
+The key mistake we made was not focusing on getting Textgrounder up and running
+on TACC as soon as possible; failing to do that led us to
+attempt trying to run it on a personal computer.
+It turns out that running Textgrounder's Wikipedia preprocessing scripts is
+impractically slow on a personal machine. While it may be possible to actually
+perform an evaluation (such as replicating the results of \cite{rolleretal:12})
+on such a machine, we recommend against trying.
+In the end, hours of work were wasted on figuring out how to set up
+Textgrounder's environment correctly locally (and often having to repeat time consuming
+steps after false starts), only for us to decide it was not worth the trouble.
+\par
+At this point, we decided to try to run Textgrounder on the Linguistics
+department machines, where we eventually discovered that (contrary to the notes
+in Textgrounder's README) the Wikipedia corpus is not correctly set up
+there for running an evaluation.
+Since we do not know what exactly is wrong with the setup on department machines, even if we had write
+access to the relevant directories, we would not be able to fix the problem
+ourselves.
+As it turns out, we have been told that at least one other person
+has been able to successfully run Textgrounder on the TACC cluster, so our plan
+now is to do the same and perform the setup, preprocessing and evaluations there.

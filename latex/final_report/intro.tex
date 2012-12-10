@@ -1,0 +1,85 @@
+\begin{abstract}
+    We believe that the link structure of Wikipedia contains information that
+    would be useful for geolocation, but hasn't been used so far.
+    We propose that by using label-propagation algorithms to push geolocation information
+    around that link structure, we will be able to explore new possibilities
+    for geolocation, especially locating non-geotagged articles. 
+    Furthermore, the labeling model gives us a way to associate articles with
+    multiple locations, which would allow bringing in new information about
+    closely-associated locations. The results of this work could be used to aid the traditional IR based geolocation models by providing them with additional data to learn their language models from.
+    \par
+    Unfortunately, our progress has been stymied by a host of technical issues;
+    these issues directly affect our ability to obtain label information and
+    graph structures.
+    We have been working on overcoming these issues so that we can construct
+    and evaluate our models.
+\end{abstract}
+
+\section{Introduction}
+\comment{You can now enclose text in a comment block to comment it out inline}
+Geographic information is relevant in several contexts; for example, geographic
+information retrieval for exploring document collections
+\cite{ding2000computing}, toponym resolution in historical texts
+\cite{smith2001disambiguating}, summarizing travelogues and travel
+recommendation \cite{hao-et-al:10}, socio-linguistic studies
+\cite{eisenstein-smith-xing:11} and targeted advertising on the internet. 
+With the widespread use of mobile devices, geographic information is becoming
+increasingly ubiquitous and important. 
+In this project we propose a method for predicting the geographic location of
+Wikipedia articles with a graph based semi-supervised algorithm and a small
+amount of labeled data.
+
+Prior work on geolocating Wikipedia articles, e.g., \cite{wing-baldridge:11} and 
+\cite{rolleretal:12}, has so far only used a subset of the English language
+Wikipedia for training; specifically, it uses those articles that already have
+geolocation tags associated with them. 
+These articles constitute a relatively small portion of the English language
+Wikipedia. \comment{find actual figure} 
+This is not surprising, since most articles on Wikipedia are not about
+geographic locations, or objects at specific locations.
+On the other hand, the number of articles that have links to or from such
+geolocated articles is much larger, which can be a potential source of useful
+information. \comment{ find actual figure}
+
+Earlier approaches used geotagged article content indirectly by first building
+unigram language models from the text of the articles during training, and then
+comparing similarity of test documents with these language models.
+This ignores the potentially useful information present in the  hyperlinks
+between articles, which is a strong indicator of semantic and geographic
+relatedness, and hence can be used to improve prediction accuracy.
+
+Another assumption inherent in prior work is that each article is associated
+with a single location, i.e. the location specified by the geo-tag.
+While this is a fair assumption for some articles, e.g., those about historical
+monuments and physical objects, this assumption is not necessarily valid for
+articles about geographically distributed concepts such as states (e.g., Texas)
+or personal biographies (e.g., George Washington). 
+
+Our hypothesis is that we can infer the location for non-geotagged articles by
+using the location information present in other geotagged articles that they
+link to, or receive incoming links from.
+Unlike prior work, our proposed approach makes use of the link structure of the
+articles in addition to the text based language models.
+We will use the label propagation algorithm to infer a distribution over
+locations for each non-geotagged article starting from a small seed set of
+geotagged articles.
+This in turn would allow us to include the text from newly geo-tagged articles
+in the language models for the locations they are strongly associated with.
+
+The majority of our time so far has been spent dealing with a host of
+technical issues that we need to solve in order to set up our preprocessing and
+evaluation system.
+These issues have prevented us from being able to even set up a simple case of
+our proposed model; we have only recently been able to develop method that will
+allow us to obtain cell information from Textgrounder, which we will need in
+order to define the labels for propagation.
+Furthermore, obtaining a proper graph representation of Wikipedia remains a
+major technical obstacle for us; we have determined that our best option will
+require us to build custom scripts on top of certain Textgrounder utilities.
+We report on these issues in depth in a section on our current status, and
+though we have faced major obstacle, we remain optimistic that we will be able
+to achieve our goals.
+To that end, we have reviewed and revised our plans for getting results, and we
+have updated the section on our next steps to reflect our intentions.
+
+

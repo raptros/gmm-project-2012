@@ -1,0 +1,22 @@
+\section{Related Work}
+\subsection{Geolocation}
+Traditional geolocation systems have used either gazetteer location information, or an information retrieval system, as explained in \cite{skiles:12}.
+Most IR-based approaches divide the world into discrete grid cells, each of which are treated as pseudo-documents that consist of texts from documents located in them.
+Documents are then geolocated by comparing their language model with the language models of each of the grid cells and assigning the documents to the cells with which they have the highest similarity scores.
+\cite{eisenstein-smith-xing:11} show the effectiveness of this language modeling approach by explicitly removing geo-references from documents and predicting their location using only the linguistic and dialectical features present in the text.
+
+The use of Wikipedia for article geolocation, classification and toponym resolution was suggested in \cite{overell2009geographic}.
+While he uses the metadata associated with the articles alone, others have extended his approach by adopting the language modeling approach. 
+This is the approach used by \cite{wing-baldridge:11}, who divide the world into a uniform grid of equal cell size.
+\cite{rolleretal:12} developed an adaptive grid based on KD-trees that splits grid cells such that they contain roughly equal number of documents each.
+A different model for geolocation is presented by \cite{eisensteinetal:11}; they use a general generative model as an alternative to LDA, and model distributions as a mixture of gaussians over the earth's surface instead of discrete grid cells. 
+
+Furthermore, \cite{kumar-et-al:11} show that language models learned from Wikipedia can be used for prediction tasks in other unrelated domains by predicting publication date for books from Project Gutenberg.
+This is a promising result that suggests that the language models learned from Wikipedia are generalizable to other domains and may be used for geolocating documents from other sources. 
+
+\subsection{Label Propagation}
+Label propagation is a general purpose graph-based semi-supervised learning algorithm, as described in \cite{zhu2002learning} and \cite{talukdar:09}.
+Given a graph G = \{V, E, W\}, where V are the graph vertices, E are the edges and W is a matrix representing the edge weights, the label propagation algorithm produces a set of class labels for each node in the graph starting from a small seed set of labeled nodes.
+The algorithm iteratively propagates the class labels on the seed nodes to their neighbors in proportion to the weight of the edge between them.
+The edge weights are chosen to be proportional to the similarity between the nodes.
+Label propagation has been successfully used for sentiment analysis \cite{speriosu2011twitter}, community detection \cite{raghavan2007near}, classification and ranking \cite{talukdar:10}, and video recommendations on youtube \cite{baluja2008video}.

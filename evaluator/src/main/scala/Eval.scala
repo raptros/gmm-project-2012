@@ -31,7 +31,7 @@ class Evals(goldLabels:String, cellDefs:String) {
     /** Which item is the true cell according to the gold labelling. -1 if not present. */
     val trueLoc:Int = oTrueLoc getOrElse(-1)
     /** Distance in km (accounting for globe) between true and first predicted points */
-    val distFromTopToTrue:Double = oDistFromTopToTrue getOrElse (1000000.)
+    //val distFromTopToTrue:Double = oDistFromTopToTrue getOrElse (000000.)
   }
 
   def evalStream(labelProps:String, seedsFile:String) = {
@@ -43,24 +43,27 @@ class Evals(goldLabels:String, cellDefs:String) {
   class Aggregator {
     var docCount:Int = 0 
     var distance:Double = 0.0
+    var dists:List[Double] = Nil
+    var notFound = 0 
     val kTruePos:Array[Int] = Array.fill(K_FOR_PR)(0)
     def update(item:EvalItem) = {
       docCount += 1
-      distance += item.distFromTopToTrue
+      item.oDistFromTopToTrue match {
+        case Some(dist) => {distance += dist; dists = dist::dists}
+        case None => {docCount -= 1; notFound += 1}
+      }
       (0 until K_FOR_PR) foreach { i =>
         kTruePos.update(i, kTruePos(i) + (if (0 <= item.trueLoc && item.trueLoc < (i+1)) 1 else 0))
       }
     }
-    def gen = Aggregate(docCount, distance, kTruePos)
   }
-  case class Aggregate(docCount:Int, distance:Double, kTruePos:Array[Int])
 
 
   /** runs aggregator over the item stream, counting up various values.*/
-  def aggregate(items:Iterator[EvalItem]):Aggregate = {
+  def aggregate(items:Iterator[EvalItem]):Aggregator = {
     val aggor = new Aggregator
     items foreach (aggor update _)
-    aggor gen
+    aggor
   }
 
   /** carry out the evaluation:
@@ -68,12 +71,21 @@ class Evals(goldLabels:String, cellDefs:String) {
     * aggregate them
     * compute results based on aggregated counts.
     */
-
+  @EnhanceStrings
   def evaluate(outputs:String, seeds:String):EvalResults = {
     val agg = aggregate(evalStream(outputs,seeds))
+    val total = agg.docCount + agg.notFound
+    println("#agg.dists[#it]{, }*")
+    /*val median = { 
+      val sort = agg.dists.toArray.sorted
+      val size = sort.size
+      println("min #{{sort.head}} max #{{sort.last}}")
+      //if (size % 2 == 1) sort(sort.size/2) else ((sort(sort.size/2) + sort(sort.size/2 - 1))/2)
+      sort(size/2)
+    }*/
     val precRecAt = agg.kTruePos.zipWithIndex map { 
-      case (tp, i) => (i, tp.toDouble/(agg.docCount * (i+1)), tp.toDouble/agg.docCount)
+      case (tp, i) => (i, tp.toDouble/(total * (i+1)), tp.toDouble/total)
     }
-    EvalResults(agg.docCount, agg.distance / agg.docCount, precRecAt)
+    EvalResults(agg.docCount + agg.notFound, agg.notFound, agg.distance / agg.docCount, precRecAt)
   }
 }

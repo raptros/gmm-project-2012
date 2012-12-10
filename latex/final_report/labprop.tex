@@ -1,0 +1,55 @@
+\subsection{Label propagation}
+In order to run label propagation, we first need to create a graph structure from
+Wikipedia articles. In our project, this graph structure is meant to be derived from the
+links between articles. Specifically, the graph is to be represented using the
+adjacency list notation (v -$>$ link1 link2 ...), where each vertex is a Wikipedia
+article and is associated with a list of vertices, which are the other Wikipedia articles that the article has outgoing links to.
+\par
+However, to the best of our knowledge, such a graph representation cannot be
+directly obtained from the current implementation of the Textgrounder
+framework, and will require additions to the preprocessing code.
+There is some code in place that handles the links in an article, but the
+extent to which this code can be reused or updated remains to be determined.
+There are a few open source projects
+\footnote{http://haselgrove.id.au/wikipedia.htm}
+\footnote{https://github.com/mirkonasato/graphipedia}
+\footnote{http://code.google.com/p/wikipedia-netflix/wiki/WikipediaNetflix}
+that attempt to create this graph by parsing xml dumps of wikipedia pages.
+However, each of these projects has its idiosyncrasies that makes
+interoperability with Textgrounder difficult. 
+Most importantly, they all use a different scheme for generating unique article
+IDs than the one used in Textgrounder.
+For some reason, perhaps for ease of implementation, these tools use the fact
+that all article titles on wikipedia are unique to extract the title for each
+article.
+They do this by sorting the article titles lexicographically (or in the order
+of input), and using the index of the article title in this sorted list as the
+article ID.
+Reconciling the article IDs between the output of these tools and Textgrounder
+is a nontrivial problem.
+Furthermore, due to different preprocessing strategies (for dealing with
+disambiguation pages, Wikipedia specific pages, external links, etc.), each of
+these tools generates a slightly different set of articles than the one
+produced by Textgrounder.
+\par
+Following a conversation with Mike Speriosu and Ben Wing, we have decided to
+invest some time upfront in updating the Textgrounder preprocessing script to
+generate this graph for us.
+This is an unexpected source of delay, but we must have a link graph before we
+can do any label propagation with the Junto toolkit.
+\par
+An alternative, that works around this issue, is to use a fully connected graph
+with an edge between all pairs of articles as the input for label propagation.
+This is similar to the approach used in the original label propagation
+algorithm suggested in \cite{zhu2002learning}.
+In this scenario, the performance of label propagation would depend only on the edge weights, and not on the structure of the graph.
+However in this case, it's not clear to us what the edge weights for our geolocation task should be.
+We believe that the usual document similarity metrics based on word
+distributions are not appropriate as edge weights, since they do not directly
+reflect the notion of geographical similarity.
+For example, we suspect that document similarity metrics alone would not be
+able to capture the fact that Austin and Houston are more geographically
+similar than Austin and San Francisco.
+We are interested in feedback on this hypothesis, especially on whether it is
+worth spending some time testing it, as opposed to proceeding with
+modifications to the Textgrounder preprocessing scripts.
