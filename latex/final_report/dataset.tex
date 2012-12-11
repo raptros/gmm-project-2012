@@ -1,0 +1,32 @@
+\par
+Since our project is focused on Wikipedia documents, our primary dataset is, of
+course, a dump of Wikipedia documents. In particular, we use the dump from
+March 7th, 2012. This dump contains 12,131,628 documents, of which 730,953 are
+geotagged documents - i.e. little more than 6\% of the documents in this
+Wikipedia dump are geotagged articles.  We further reduce this number by only
+considering geotagged documents that link to at least one other geotagged
+document; this leaves us with 273,606 articles for our main experiments.
+\par
+There are multiple preparation steps required to use this data in our 
+experiments. The most important, and the most complex, is the generation of the 
+link structure graph needed to run label propagation on the corpus. This 
+preparation involves extracting the internal links from the dumped Wikipedia 
+articles, assigning each article a node ID (and producing a translated links 
+graph), and then extracting the subgraph of inter-linked geotagged articles (as 
+described before). Since we use grid cells as the labels for propagation, 
+another important preparation is to assign every geographically labeled article 
+to the correct grid cell. We use Textgrounder to generate the grid for us; 
+given the correct parameters, it will dump out information for (at least) every 
+non-empty grid cell that it generates. We extract these cells from the output 
+log, and then determine, for every located article, which cell it belongs to.  
+Having assigned every cell an identifier, we can feed our label propagation 
+system (Junto) a subset of these documents with their gold labels to seed the 
+label propagation. We also use the extracted cell information for evaluating, 
+both for measures of correct cell prediction and measures of error distance.
+\par %graph stats, cell stats.
+Our current set of experiments use the 273,606 document graph; this graph has 
+2,188,860 edges altogether, and an average degree (number of edges for any 
+specific node) of 8 with a minimum of one and a maximum of 21,353. Our initial 
+experiments use uniform geographic cells of size 1 degree, yielding 64,800 
+cells, with 15,982 of them being non-empty (i.e. 24.6\% of the cells contain at 
+least 1 document). 
