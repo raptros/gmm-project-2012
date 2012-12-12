@@ -1,0 +1,9 @@
+\section{Results}
+We report the learning curves for the label propagation algorithm.
+To measure the performance of the model, we calculate the mean error distance, median error distance, precision and recall at k curves for different amounts of seed data.
+In our model, the error distance is defined as the distance between the centers of the predicted and the actual grid cells. \comment{confirm if the centers of the grid cells are centroids or geometric centers} With this definition, the mean error distance is the mean of the error distances for all the test documents. Similarily, the median error distance is the median of errors for all the documents. \comment{We also show the error curves, which are a better indicator of system performance.}
+Precision is defined as the fraction of test documents for which the model predicts the correct grid cell.
+Since our model returns a ranked list of probable grid cells for each document, \comment{more motivation for why this is a good thing} we also calculate the recall at k curves for the results. For a ranked list of results, recall at k refers to ...
+\comment{calculate average precision/ mean average precision}
+
+Since the error distances are sensitive to the grid size \comment{explain} bla bla
