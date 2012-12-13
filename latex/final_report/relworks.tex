@@ -4,29 +4,29 @@
 
 Traditional geolocation systems have used either
 gazetteer location information, or an information retrieval system, as
-explained in \cite{skiles:12}. Most IR-based approaches divide the world into
+explained in \newcite{skiles:12}. Most IR-based approaches divide the world into
 discrete grid cells, each of which are treated as pseudo-documents that
 consist of texts from the documents located in them. New documents are then
 geolocated by comparing their language model with the language models of each
 of the grid cells and assigning the documents to the cells with which they
-have the highest similarity scores. \cite{eisenstein-smith-xing:11} show the
+have the highest similarity scores. \newcite{eisenstein-smith-xing:11} show the
 effectiveness of this language modeling approach by explicitly removing geo-
 references from documents and predicting their location using only the
 linguistic and dialectical features present in their text.
 
 \par The use of Wikipedia for article geolocation, classification and toponym
-resolution was suggested in \cite{overell2009geographic}. While they only use
+resolution was suggested in \newcite{overell2009geographic}. While they only use
 the metadata associated with the articles, others have extended that work by
 adopting the language modeling approach to geolocation.  This is the approach
-used by \cite{wing-baldridge:11}, who divide the world into a uniform grid of
-equal cell size. \cite{rolleretal:12} developed an adaptive grid based on KD-
+used by \newcite{wing-baldridge:11}, who divide the world into a uniform grid of
+equal cell size. \newcite{rolleretal:12} developed an adaptive grid based on KD-
 trees that splits grid cells such that they contain roughly equal number of
 documents each. A different model for geolocation is presented by
-\cite{eisensteinetal:11}; they use a general generative model as an
+\newcite{eisensteinetal:11}; they use a general generative model as an
 alternative to LDA, and model distributions as a mixture of gaussians over the
 earth's surface instead of discrete grid cells.
 
-\par Furthermore, \cite{kumar-et-al:11} show that language models learned from
+\par Furthermore, \newcite{kumar-et-al:11} show that language models learned from
 Wikipedia can be used for prediction tasks in other unrelated domains by
 predicting publication date for books from Project Gutenberg. This is a
 promising result that suggests that the language models learned from Wikipedia
@@ -36,7 +36,7 @@ from other sources.
 \subsection{Label Propagation} 
 
 Label propagation is a general purpose graph- based semi-supervised learning
-algorithm, as described in \cite{zhu2002learning} and \cite{talukdar:09}.
+algorithm, as described in \newcite{zhu2002learning} and \newcite{talukdar:09}.
 Given a graph G = \{V, E, W\}, where V are the graph vertices, E are the edges
 and W is a matrix representing the edge weights, the label propagation
 algorithm produces a set of class labels for each node in the graph starting
@@ -47,6 +47,6 @@ proportional to the similarity between the nodes.
 \comment{write about MAD.}
 
 \par Label propagation has been successfully used for sentiment analysis
-\cite{speriosu2011twitter}, community detection \cite{raghavan2007near},
-classification and ranking \cite{talukdar:10}, and video recommendations on
-youtube \cite{baluja2008video}.
+\newcite{speriosu2011twitter}, community detection \newcite{raghavan2007near},
+classification and ranking \newcite{talukdar:10}, and video recommendations on
+youtube \newcite{baluja2008video}.

@@ -5,7 +5,7 @@
 Wikipedia articles\comment{explain why: previous work, geotagged documents
 available for evaluation}. In particular, we use the wikipedia dump from March
 7th, 2012. We use Textgrounder - the toolkit for preprocessing and geolocating
-Wikipedia articles developed for \cite{wing-baldridge:11}, for our
+Wikipedia articles developed for \newcite{wing-baldridge:11}, for our
 preprocessing requirements.
 
 \par The Wikipedia dump contains 12,131,628 documents, \comment{find usable
@@ -55,12 +55,12 @@ Grid cell size is a consideration we have not yet been able to investigate.
 There are trade-offs related to cell-size; shrinking cell size increases the
 number of cells which increases the number of labels that have to be
 propogated, which could reduce precision and recall. On the other hand,
-\cite{wing-baldridge:11} find that decreasing cell size improves results;
+\newcite{wing-baldridge:11} find that decreasing cell size improves results;
 possibly because it produces more fine-grained cells, which will reduce the
 error distances when retrieving incorrect but geographically close cells.
 Further work would explore how variation of cell size affects label propagation
 results, and additionally explore the use of the kd-trees adaptive grid of
-\cite{rolleretal:12}.
+\newcite{rolleretal:12}.
 
 
 \comment{explain why the grid cell size matters, and say that we plan it for future}
