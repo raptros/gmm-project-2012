@@ -1,32 +1,36 @@
 \section{Future Work}  
 
-As the results of our preliminary investigations are encouraging, we would like to explore an number of additional avenues
-for improving the results of our approach. In the rest of this section we discuss the potential sources of improvements and future work.
+As the results of our preliminary investigations are encouraging, we would
+like to explore an number of additional avenues for improving the results of
+our approach. In the rest of this section we discuss the potential sources of
+improvements and future work.
 
-\par Firstly, there are a few options to consider while determining the structure of the
-graph. The first question is whether the graph should be directed, with edges
-pointing from referring document to the referred document, or undirected. 
+\par Firstly, there are a few options to consider while determining the
+structure of the graph. The first question is whether the graph should be
+directed, with edges pointing from referring document to the referred
+document, or undirected.
 
 \par The second set of questions pertain to the method to be used for inducing
-the edges between the documents which serve as the vertices in the graph. Some of these questions are :
+the edges between the documents which serve as the vertices in the graph. Some
+of these questions are :
 
 \begin{enumerate}
     \item Should the edges be based solely on hyperlinks between nodes, or also based on similarity of their texts?
     \item Should the edges be transitive?
-    \item Should we induce a dense graph with edges between most nodes, or a sparse graph with a few edges with high weights. 
+    \item Should we induce a dense graph with edges between all nodes or a sparse graph with a few edges with high weights? The first approach is similar to the one used in the original label propagation algorithm suggested in \newcite{zhu2002learning}, 
 \end{enumerate}
 
-Additionally, we could induce an edge between
-all documents that fall in a particular grid cell to increase locality, or
-between documents in adjacent cells, to introduce smoothing.
+Additionally, we could induce an edge between all documents that fall in a
+particular grid cell to increase locality, or between documents in adjacent
+cells, to introduce smoothing.
 
 \par A third challenge is determining the weights of edges. Intuitively, the
 weight of an edge should be proportional to the similarity of the two nodes
 (documents). This notion of similarity can be formalized in a number of ways.
 One approach would be to take the similarity between the language models for
 the two documents as the edge weights. This could be the cosine similarity,
-tf-idf weighted cosine similarity, or the KL divergence score for the document pair. 
-In our experiments, we use the straightforward alternative of using the 
+tf-idf weighted cosine similarity, or the KL divergence score for the document
+pair.  In our experiments, we use the straightforward alternative of using the
 same edge weight for all edges regardless of document similarity.
 
  
@@ -45,7 +49,7 @@ the optimal parameters (for the label propagation algorithm). While the label
 propagation algorithm converges \comment{yes?}
 
 \par We would also like to explore the label propagation results for a larger
-graph consisting of no-geotagged documents too, using Hadoop. Apart from
+graph consisting of non-geotagged documents using Hadoop. Apart from
 implementation issues, which are hopefully already dealt with in the Hadoop
 based implementation of Junto, a big challenge is evaluating the model
 performance. This is problematic since we don't have the true grid cell labels
@@ -59,7 +63,7 @@ Specifically, we want to qualitatively confirm if the label propagation
 algorithm generates a sensible distribution of locations for a document even
 when it doesn't get the exact location right. This property that we hypothesize
 to hold is critical for the feasibility of integrating label propagation with
-textgrounder.
+Textgrounder.
 
 \par Finally, if label propagation
 gives promising results, we can then examine the possibility of augmenting the
