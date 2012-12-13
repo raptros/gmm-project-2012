@@ -33,11 +33,12 @@ empty grid cell that it generates to us. We extract these cells from the
 output  log, and then for every geo-tagged article determine which cell it
 belongs to.
 
-\par \comment{this needs rephrasing and more clarification}
-Having assigned every cell an identifier, we can feed our label propagation 
-system (Junto) a subset of these documents with their correct labels to seed the 
-label propagation. We also use the extracted cell information for evaluating, 
-both for measures of correct cell prediction and measures of error distance.
+\par 
+We give our label propagation system (Junto) a subset of the geolocated
+documents with their correct cell assignments to seed the propagation. We then
+evaluate the labelings both in terms of precision and recall and of error
+distance by comparing the predictions to the correct cell information, as
+extracted in preparations.
 
 \par %graph stats, cell stats. 
 Our current set of experiments use the 273,606
@@ -46,5 +47,18 @@ degree (number of edges for any  specific node) of 8 with a minimum of one and
 a maximum of 21,353. Our initial  experiments use uniform geographic cells of
 size 1 degree, yielding 64,800  cells, with 15,982 of them being non-empty
 (i.e. 24.6\% of the cells contain at  least 1 document).
+
+\par
+Grid cell size is a consideration we have not yet been able to investigate.
+There are trade-offs related to cell-size; shrinking cell size increases the
+number of cells which increases the number of labels that have to be
+propogated, which could reduce precision and recall. On the other hand,
+\cite{wing-baldridge:11} find that decreasing cell size improves results;
+possibly because it produces more fine-grained cells, which will reduce the
+error distances when retrieving incorrect but geographically close cells.
+Further work would explore how variation of cell size affects label propagation
+results, and additionally explore the use of the kd-trees adaptive grid of
+\cite{rolleretal:12}.
+
 
 \comment{explain why the grid cell size matters, and say that we plan it for future}
