@@ -1,9 +1,26 @@
-\section{Results}
-We report the learning curves for the label propagation algorithm.
-To measure the performance of the model, we calculate the mean error distance, median error distance, precision and recall at k curves for different amounts of seed data.
-In our model, the error distance is defined as the distance between the centers of the predicted and the actual grid cells. \comment{confirm if the centers of the grid cells are centroids or geometric centers} With this definition, the mean error distance is the mean of the error distances for all the test documents. Similarily, the median error distance is the median of errors for all the documents. \comment{We also show the error curves, which are a better indicator of system performance.}
-Precision is defined as the fraction of test documents for which the model predicts the correct grid cell.
-Since our model returns a ranked list of probable grid cells for each document, \comment{more motivation for why this is a good thing} we also calculate the recall at k curves for the results. For a ranked list of results, recall at k refers to ...
-\comment{calculate average precision/ mean average precision}
+\section{Results} 
 
-Since the error distances are sensitive to the grid size \comment{explain} bla bla
+As an indicator of the performance of our model, we report the learning curves
+for the label propagation algorithm.  To measure the performance of the model,
+we calculate the mean error distance, median error distance, precision and
+recall at k curves for different amounts of seed data. In our model, the error
+distance is defined as the distance between the centers of the predicted and
+the actual grid cells. \comment{confirm if the centers of the grid cells are
+centroids or geometric centers} With this definition, the mean error distance
+is the mean of the error distances for all the test documents. Similarily, the
+median error distance is the median of errors for all the documents.
+\comment{We also show the error curves, which are a better indicator of system
+performance.} Precision is defined as the fraction of test documents for which
+the model predicts the correct grid cell. Since our model returns a ranked
+list of probable grid cells for each document, \comment{more motivation for
+why this is a good thing} we also calculate the recall at k curves for the
+results. For our experiments, rekall at k is defined as the fraction of the
+test documents for which the correct label is present within to top k grid
+cells predicted by label propagation.
+
+It is to be noted that the error distances are sensitive to the grid size,
+since they are calculated as the distance between the centers of predicted and
+the actual cells. Because of this, a smaller grid size (up to a point) results
+in better mean error distances since the penalty for predicting a neighboring
+but only partly correct cell is lower. We leave repeating the experiments with
+different grid sizes and adaptive grids as future work.
