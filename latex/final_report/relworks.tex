@@ -33,6 +33,19 @@ promising result that suggests that the language models learned from Wikipedia
 are generalizable to other domains and may be used for geolocating documents
 from other sources.
 
+\par More recently, there has been a rising interest in geolocation of online
+and social media streams. A number of these applications are related to
+detecting geo-references or geographic topics on Twitter. Some of these
+Twitter-based applications are real-time local-event detection in
+\newcite{watanabe2011jasmine}, recognizing references to geographic objects in
+tweets in \newcite{dalvi2012object} and discovering geographic topics in tweets in
+\newcite{hong2012discovering}. Another emphasis of recent research has been on
+geolocating photographs and pictures found online.
+\newcite{van2012georeferencing} discuss geolocating flickr photos using
+language models of different granularity, while \newcite{hauff2012placing}
+discuss geolocating images found on microblogging services like Twitter and
+Tumblr.
+
 \subsection{Label Propagation} 
 
 Label propagation is a general purpose graph- based semi-supervised learning
@@ -50,3 +63,6 @@ proportional to the similarity between the nodes.
 \newcite{speriosu2011twitter}, community detection \newcite{raghavan2007near},
 classification and ranking \newcite{talukdar:10}, and video recommendations on
 youtube \newcite{baluja2008video}.
+
+\par To the best of our knowledge, label propagation hasn't been used with
+Wikipedia articles and their link structure, for geolocation or otherwise.
