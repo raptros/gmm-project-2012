@@ -1,3 +1,4 @@
+%!TEX root = final_report.tex
 \section{Introduction}
 
 \comment{You can now enclose text in a comment block to comment it out inline}
@@ -5,23 +6,23 @@ Geographic information is relevant in several contexts; for example,
 geographic information retrieval for exploring document collections
 \cite{ding2000computing}, toponym resolution in historical texts
 \cite{smith2001disambiguating}, summarizing travelogues and travel
-recommendation \cite{hao-et-al:10}, socio-linguistic studies
-\cite{eisenstein-smith-xing:11} and targeted advertising on the internet.  With
-the widespread use of mobile devices, geographic information is becoming
-increasingly ubiquitous and important.  In this project we propose a method for
-predicting the geographic location of Wikipedia articles with a graph based
-semi- supervised algorithm and a small amount of labeled data.
+recommendation \cite{hao-et-al:10}, socio-linguistic studies \cite{eisenstein-
+smith-xing:11} and targeted advertising on the internet.  With the widespread
+use of mobile devices, geographic information is becoming increasingly
+ubiquitous and important.  In this project we propose a method for predicting
+the geographic location of Wikipedia articles with a graph based semi-
+supervised algorithm and a small amount of labeled data.
 
-\par Prior work on geolocating Wikipedia articles, e.g.,
-\cite{wing-baldridge:11} and  \cite{rolleretal:12}, has so far only used a
-subset of the English language Wikipedia for training; specifically, it uses
-those articles that already have geolocation tags associated with them.  These
-articles constitute a relatively small portion of the English language
-Wikipedia.  \comment{find actual figure}  This is not surprising, since most
-articles on Wikipedia are not about geographic locations, or objects at
-specific locations. On the other hand, the number of articles that have links
-to or from such geolocated articles is much larger, which can be a potential
-source of useful information. \comment{find actual figures}
+\par Prior work on geolocating Wikipedia articles, e.g., \cite{wing-
+baldridge:11} and  \cite{rolleretal:12}, has so far only used a subset of the
+English language Wikipedia for training; specifically, it uses those articles
+that already have geolocation tags associated with them.  These articles
+constitute a relatively small portion of the English language Wikipedia.
+\comment{find actual figure}  This is not surprising, since most articles on
+Wikipedia are not about geographic locations, or objects at specific
+locations. On the other hand, the number of articles that have links to or
+from such geolocated articles is much larger, which can be a potential source
+of useful information. \comment{find actual figures}
 
 \par Earlier approaches used the content of the geotagged articles by building
 unigram language models from the text of the articles during training, and
