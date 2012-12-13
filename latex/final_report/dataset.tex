@@ -1,52 +1,56 @@
 %!TEX root = final_report.tex
 
-\section{Dataset} 
-\par In our project we focus on a dataset consisting of
-Wikipedia articles\comment{explain why: previous work, geotagged documents
-available for evaluation}. In particular, we use the wikipedia dump from March
-7th, 2012. We use Textgrounder - the toolkit for preprocessing and geolocating
+\section{Dataset}   
+\par Following the previous work in \newcite{wing-baldridge:11} and 
+\newcite{rolleretal:12}, in our project we focus on a
+dataset consisting of Wikipedia articles. Wikipedia is a rich and meaningful
+source of geographic information, with a number of geotagged article and
+natural language text that talks about those geographic locations, and hence
+is a good source for building geographic language models. Besides, the link
+structure of and metadata associated with each  article contains additional
+useful information. In this project, we use the Wikipedia dump from March 7th,
+2012. We use Textgrounder - the toolkit for preprocessing and geolocating
 Wikipedia articles developed for \newcite{wing-baldridge:11}, for our
 preprocessing requirements.
 
-\par The Wikipedia dump contains 12,131,628 documents, \comment{find usable
-articles, ie, not categories etc.} of which 730,953 are geotagged documents -
-i.e. little more than 6\% of the documents in this Wikipedia dump are
-geotagged articles.  For label propagation, we restrict ourselves to only
-those documents that have at least one incoming our outgoing link to a
-geotagged document. In other words, the link graph that we use for label
-propagation only contains those edges that have geotagged documents as the
-source and destination vertices. This leaves us with 273,606 articles for our
-main experiments.
+\par The Wikipedia dump contains 12,131,628 documents, of which 8,846,243 are
+actual articles  (as opposed to lists, category pages, talk pages etc.).
+494,740 of these are geotagged documents - i.e. little more than 5.5\% of the
+documents in this Wikipedia dump are geotagged articles.  For label
+propagation, we restrict ourselves to only those documents that have at least
+one incoming our outgoing link to a geotagged document. In other words, the
+link graph that we use for label propagation only contains those edges that
+have geotagged documents as the source and destination vertices. This leaves
+us with 273,606 articles for our main experiments.
 
 \par There are multiple preparation steps required to use this data in our
 experiments. The most important, and the most complex, is the generation of
 the  link structure graph needed to run label propagation on the corpus. This
 preparation involves extracting the internal links (i.e., links to other
 articles within Wikipedia)  from the Wikipedia articles, assigning each
-article a node ID (and producing a translated links  graph), and then
-extracting the sub-graph of inter-linked geotagged articles (as  described
-earlier). Since we use grid cells as the labels for propagation,  another
-major preparation step is to label every geographically tagged article  with
-the grid cell that its coordinates fall in. We use Textgrounder to generate the
-grid for us;  given a set of parameters (grid type, grid cell size),
-Textgrounder splits the the world into a number of grid cells, and can provide
-the information (i.e, bounding coordinates, grid cell centers) for every  non-
-empty grid cell that it generates to us. We extract these cells from the
-output  log, and then for every geo-tagged article determine which cell it
-belongs to.
+article a node ID, producing a translated links  graph, and then extracting
+the sub-graph of inter-linked geotagged articles. Since we use grid cells as
+the labels for propagation,  another major preparation step is to label every
+geographically tagged article  with the grid cell that its coordinates fall
+in. We use Textgrounder to generate the grid for us;  given a set of
+parameters (grid type, grid cell size etc.), Textgrounder splits the the world into
+a number of grid cells, and provides the information (i.e, bounding
+coordinates, grid cell centers) for every  non- empty grid cell that it
+generates to us. We extract these cells from the output  log, and then for
+every geo-tagged article determine which cell it belongs to.
 
 \par 
-We give our label propagation system (Junto) a subset of the geolocated
+We give the label propagation system (Junto) a subset of the geolocated
 documents with their correct cell assignments to seed the propagation. We then
-evaluate the labelings both in terms of precision and recall and of error
-distance by comparing the predictions to the correct cell information, as
-extracted in preparations.
+evaluate the labelings in terms of precision, recall and mean error
+distance by comparing the predictions to the correct cell information.
 
 \par %graph stats, cell stats. 
 Our current set of experiments use the 273,606
 document graph; this graph has  2,188,860 edges altogether, and an average
 degree (number of edges for any  specific node) of 8 with a minimum of one and
-a maximum of 21,353. Our initial  experiments use uniform geographic cells of
+a maximum of 21,353. For comparision, the entire wikipedia graph has 56,223,737 links.
+Our initial  experiments use uniform geographic cells of
 size 1 degree, yielding 64,800  cells, with 15,982 of them being non-empty
 (i.e. 24.6\% of the cells contain at  least 1 document).
 
@@ -61,6 +65,3 @@ error distances when retrieving incorrect but geographically close cells.
 Further work would explore how variation of cell size affects label propagation
 results, and additionally explore the use of the kd-trees adaptive grid of
 \newcite{rolleretal:12}.
-
-
-\comment{explain why the grid cell size matters, and say that we plan it for future}
